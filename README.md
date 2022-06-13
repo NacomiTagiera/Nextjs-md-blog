@@ -9,3 +9,5 @@ Tekken 7: https://nacomitagiera.github.io/Kocham-Gry/Tekken%207/index.html
 Street Fighter IV: https://nacomitagiera.github.io/Kocham-Gry/Street%20Fighter%20IV/index.html
 
 O autorze: https://nacomitagiera.github.io/Kocham-Gry/O%20autorze/index.html
+
+Call of Duty: https://nacomitagiera.github.io/Kocham-Gry/Call%20of%20Duty/index.html
