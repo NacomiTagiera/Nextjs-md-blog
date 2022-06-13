@@ -2,3 +2,4 @@ Kocham gry to strona o grach komputerowych i też trochę o mnie. To jak dotąd 
 
 Gwint: https://nacomitagiera.github.io/Kocham-Gry/Gwint/gwint.html
 FIFA 22: https://nacomitagiera.github.io/Kocham-Gry/FIFA%2022/index.html
+Tekken 7: https://nacomitagiera.github.io/Kocham-Gry/Tekken%207/index.html
