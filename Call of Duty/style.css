@@ -1,0 +1,52 @@
+@import url('../common-style.css');
+
+.slider-container 
+{
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;  
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
+}
+
+.image-container 
+{
+  display: flex;
+  transition: transform .4s ease-in-out;  
+}
+
+.btn 
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white !important;  
+  opacity: .5;
+  cursor: pointer;    
+}
+
+.btn.prev 
+{
+  left: 10px;
+}
+
+.btn.next 
+{
+  right: 10px;
+}
+
+.btn:hover 
+{
+  opacity: 1;
+}
+
+@media (max-width: 767px)
+{
+  .slider-container
+  {
+    width: 100%;      
+  }   
+}
