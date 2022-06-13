@@ -16,6 +16,8 @@ Call of Duty: https://nacomitagiera.github.io/Kocham-Gry/Call%20of%20Duty/index.
 
 FIFA 22: https://nacomitagiera.github.io/Kocham-Gry/FIFA%2022/index.html
 
+NBA 2K22: https://nacomitagiera.github.io/Kocham-Gry/NBA%202K22/index.html
+
 Gwint: https://nacomitagiera.github.io/Kocham-Gry/Gwint/gwint.html
 
 O autorze: https://nacomitagiera.github.io/Kocham-Gry/O%20autorze/index.html
