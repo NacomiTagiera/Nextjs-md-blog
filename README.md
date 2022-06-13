@@ -2,6 +2,8 @@ Kocham gry to strona o grach komputerowych i też trochę o mnie. To jak dotąd 
 
 Strona główna: https://nacomitagiera.github.io/Kocham-Gry/Strona%20g%C5%82%C3%B3wna/index.html
 
+Mortal Kombat 11: https://nacomitagiera.github.io/Kocham-Gry/Mortal%20Kombat%2011/index.html
+
 Tekken 7: https://nacomitagiera.github.io/Kocham-Gry/Tekken%207/index.html
 
 Street Fighter IV: https://nacomitagiera.github.io/Kocham-Gry/Street%20Fighter%20IV/index.html
