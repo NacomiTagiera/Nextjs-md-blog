@@ -11,3 +11,5 @@ Street Fighter IV: https://nacomitagiera.github.io/Kocham-Gry/Street%20Fighter%2
 O autorze: https://nacomitagiera.github.io/Kocham-Gry/O%20autorze/index.html
 
 Call of Duty: https://nacomitagiera.github.io/Kocham-Gry/Call%20of%20Duty/index.html
+
+CS:GO: https://nacomitagiera.github.io/Kocham-Gry/CSGO/index.html
