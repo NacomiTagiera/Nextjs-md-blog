@@ -1,0 +1,25 @@
+@import url("../common-style.css");
+
+iframe
+{   
+    width: 560px;
+    height: calc(560px * (9 / 16));
+}
+
+@media (max-width: 768px)
+{       
+    iframe
+    {
+        width: 60vw;
+        height: calc(60vw * (9 / 16));
+    }
+}
+
+@media (max-width: 575px)
+{       
+    iframe
+    {
+        width: 85vw;
+        height: calc(85vw * (9 / 16));
+    }
+}
