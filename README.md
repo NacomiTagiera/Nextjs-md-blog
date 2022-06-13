@@ -8,6 +8,8 @@ Street Fighter IV: https://nacomitagiera.github.io/Kocham-Gry/Street%20Fighter%2
 
 CS:GO: https://nacomitagiera.github.io/Kocham-Gry/CSGO/index.html
 
+PUBG: https://nacomitagiera.github.io/Kocham-Gry/PUBG/index.html
+
 Call of Duty: https://nacomitagiera.github.io/Kocham-Gry/Call%20of%20Duty/index.html
 
 FIFA 22: https://nacomitagiera.github.io/Kocham-Gry/FIFA%2022/index.html
