@@ -22,4 +22,8 @@ F1 2021: https://nacomitagiera.github.io/Kocham-Gry/F1%202021/index.html
 
 Gwint: https://nacomitagiera.github.io/Kocham-Gry/Gwint/gwint.html
 
+Hearthstone: https://nacomitagiera.github.io/Kocham-Gry/Hearthstone/index.html
+
+Faeria: https://nacomitagiera.github.io/Kocham-Gry/Faeria/index.html
+
 O autorze: https://nacomitagiera.github.io/Kocham-Gry/O%20autorze/index.html
