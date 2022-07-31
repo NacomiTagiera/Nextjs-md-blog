@@ -1,263 +1,332 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Witaj na stronie, na której przedstawię ci swoje ulubione gry z kilku różnych kategorii."/>
-	<meta name="keywords" content="gra, gry, konsola, komputer, pc, strzelanki, bijatyki, karciane, sportowe, granie, kocham"/>
-    <title>CS:GO</title>    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Witaj na stronie, na której przedstawię ci swoje ulubione gry z kilku różnych kategorii." />
+  <meta name="keywords"
+    content="gra, gry, konsola, komputer, pc, strzelanki, bijatyki, karciane, sportowe, granie, kocham" />
+  <title>CS:GO</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">  
-    
-    <link rel="stylesheet" href="style.css" type="text/css">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
 
 <body>
-    
-    <header>
 
-        <h1 class="logo">
-            <i class="fas fa-gamepad"></i>
-            <span style="color: #c34f4f">KOCHAM</span> GRY
-        </h1>
-        
-    </header>
+  <header>
 
-    <nav class="navbar navbar-dark navbar-expand-lg menu-top sticky-top" id="navbar">     
-        
-        <a href="../Strona główna/index.html" style="border: none;" class="nav-link"><i class="fas fa-gamepad fa-2x mx-lg-3 mx-sm-2"></i></a>
+    <h1 class="logo">
+      <i class="fas fa-gamepad"></i>
+      <span style="color: #c34f4f">KOCHAM</span> GRY
+    </h1>
 
-        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  </header>
 
-        <div class="collapse navbar-collapse ms-3 ms-lg-0" id="mainmenu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="../Strona główna/index.html" class="nav-link">Strona Główna</a>						
+  <nav class="navbar navbar-dark navbar-expand-lg menu-top sticky-top" id="navbar">
+
+    <a href="../Strona główna/index.html" style="border: none;" class="nav-link"><i
+        class="fas fa-gamepad fa-2x mx-lg-3 mx-sm-2"></i></a>
+
+    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"
+      aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ms-3 ms-lg-0" id="mainmenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="../Strona główna/index.html" class="nav-link">Strona Główna</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            id="submenu" aria-haspopup="true">Bijatyki</a>
+
+          <div class="dropdown-menu" aria-labelledby="submenu">
+            <a href="../Mortal Kombat 11/index.html" class="dropdown-item">Mortal Kombat 11</a>
+            <a href="../Tekken 7/index.html" class="dropdown-item">Tekken 7</a>
+            <a href="../Street Fighter IV/index.html" class="dropdown-item">Street Fighter IV</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            id="submenu" aria-haspopup="true">Strzelanki</a>
+
+          <div class="dropdown-menu" aria-labelledby="submenu">
+            <a href="../CSGO/index.html" class="dropdown-item disabled">CS:GO</a>
+            <a href="../PUBG/index.html" class="dropdown-item">PUBG</a>
+            <a href="../Call of Duty/index.html" class="dropdown-item">Call of Duty</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            id="submenu" aria-haspopup="true">Gry Sportowe</a>
+
+          <div class="dropdown-menu" aria-labelledby="submenu">
+            <a href="../FIFA 22/index.html" class="dropdown-item">FIFA 22</a>
+            <a href="../NBA 2K22/index.html" class="dropdown-item">NBA 2K22</a>
+            <a href="../F1 2021/index.html" class="dropdown-item">F1 2021</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            id="submenu" aria-haspopup="true">Gry karciane</a>
+
+          <div class="dropdown-menu" aria-labelledby="submenu">
+            <a href="../Gwint/gwint.html" class="dropdown-item">Gwint</a>
+            <a href="../Hearthstone/index.html" class="dropdown-item">Hearthstone</a>
+            <a href="../Faeria/index.html" class="dropdown-item">Faeria</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="../O autorze/index.html" class="nav-link">O autorze</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <main class="col-lg-8 bg-white text-body mt-5 mb-2 wpis">
+
+        <article>
+
+          <section>
+
+            <header>
+              <h2>CS:GO</h2>
+            </header>
+
+            <p class="lead">Counter-Strike: Global Offensive to wieloosobowa strzelanka pierwszoosobowa, stworzona oraz
+              wydana przez Valve Corporation i Hidden Path Entertainment, które już wcześniej pracowały nad
+              Counter-Strike: Source. Jest to czwarta gra z serii Counter-Strike, wydana na platformy Microsoft Windows,
+              macOS, Xbox 360 i PlayStation 3 21 sierpnia 2012 i na Linuxa 23 września 2014.</p>
+
+          </section>
+
+          <section>
+
+            <a href="https://csgo.fandom.com/pl/wiki/Lista_broni" target="_blank">
+              <img src="img/anty-terro.png" alt="Terrorysta i antyterrorysta"
+                class="img-fluid float-lg-end ms-lg-3 photo">
+            </a>
+
+            <header>
+              <h2>Rozgrywka</h2>
+            </header>
+
+            <p>W grze do walki stają dwie drużyny: terroryści i antyterroryści. Zadaniem każdej z nich jest eliminacja
+              drużyny przeciwnej lub wykonanie określonego zadania. W przypadku terrorystów jest to podłożenie bomby lub
+              przetrzymywanie zakładników, zaś w przypadku antyterrorystów ochrona strefy detonacji przed podłożeniem
+              bomby lub uratowanie zakładników. W grze występuje wiele różnych trybów, z których każdy ma odrębne cechy
+              charakterystyczne. CS:GO oprócz wbudowanego systemu matchmakingu, pozwalającego graczom na rozgrywkę na
+              dedykowanych serwerach Valve, ma również możliwość tworzenia i rozgrywki na serwerach społeczności z
+              niestandardowymi mapami i trybami gry. Od momentu wydania, CS:GO jest jedną z najpopularniejszych
+              strzelanek pierwszoosobowych rozgrywanych w ramach sportu elektronicznego. Najważniejszymi turniejami są
+              tzw. „majory”, zawody sponsorowane przez wydawcę gry, Valve. <br>
+              W grze, oprócz samouczka („Kurs szkoleniowy”), występuje osiem głównych trybów gry: „Turniejowy”,
+              „Uproszczony”, „Deathmatch”, „Wyścig zbrojeń”, „Demolka”, „Latający skaut”, „Skrzydłowy”, „Odbijanie" oraz
+              „Strefa zagrożenia”. Możliwa jest także rozgrywka offline z botami oraz po sieci lokalnej. W każdym z
+              trybów online możliwe jest rozpoczęcie gry wspólnie ze znajomymi z poziomu tzw. poczekalni. </p>
+
+          </section>
+
+          <section>
+
+            <a href="https://csgo.fandom.com/pl/wiki/Lista_broni" target="_blank">
+              <img src="img/broń.jpg" alt="Karabiny leżące na ziemi" class="img-fluid float-lg-start me-lg-3 photo">
+            </a>
+
+            <header>
+              <h2>Wyposażenie</h2>
+            </header>
+
+            <p>W grze występuje sześć kategorii wyposażenia: pistolety, broń ciężka, pistolety maszynowe, karabiny,
+              granaty oraz dodatkowy sprzęt. Każda broń w grze posiada unikalne właściwości, takie jak ilość amunicji w
+              magazynku, szybkostrzelność, zadawane obrażenia czy rozrzut kul w ogniu ciągłym. Gracz może posiadać
+              ograniczoną ilość wyposażenia, zakupioną przed początkiem rundy: jedną broń podstawową (pistolet
+              maszynowy, karabin lub broń ciężką), jedną broń dodatkową (pistolet), cztery granaty (lub trzy w
+              zależności od trybu gry), paralizator oraz nóż. Podstawowym wyposażeniem, przyznawanym graczom
+              automatycznie na początku rundy jest pistolet (USP-S lub P2000 w drużynie antyterrorystów oraz Glock-18 w
+              drużynie terrorystów) oraz nóż. Pozwala to na rozgrywanie rund bez zakupu broni, celem zaoszczędzenia
+              środków na kolejne rundy (ang. eco, force-buy i full-buy). Z wyjątkiem noży, gracze mogą wyrzucać swoją
+              broń i podnosić ją od innych graczy, także po śmierci przeciwników. Przetrwanie do końca rundy pomimo
+              przegranej pozwala zachować zdobytą broń na kolejną rundę. <br>
+              W grze występuje kilka rodzajów granatów ręcznych: granat dymny, granat błyskowo-hukowy, granat zaczepny,
+              wabik oraz granat zapalający. Obie drużyny mają dodatkowo możliwość zakupienia przed rundą kamizelki
+              kuloodpornej i hełmu, zwiększającą odporność na obrażenia. Dodatkowo, gracze antyterrorystów mają
+              możliwość zakupienia - w zależności od trybu gry - zestawu do rozbrajania (zmniejszającego czas
+              rozbrajania bomby) lub zestawu ratunkowego (skracającego czas ratowania zakładnika).</p>
+
+          </section>
+
+        </article>
+
+      </main>
+
+      <aside class="col-lg-4 col-10 offset-1 offset-lg-0 text-center text-lg-start my-5">
+
+        <a href="https://blog.counter-strike.net/" target="_blank">
+          <img class="img-fluid w-100 h-auto photo" src="img/logocs.webp" alt="Logo gry">
+        </a>
+
+        <nav>
+
+          <ol class="list-group list-unstyled mt-3">
+
+            <li><a href="../Strona główna/index.html" class="list-group-item list-group-item-action mb-2">Strona
+                główna</a></li>
+
+            <li>
+              <h3>Bijatyki</h3>
+              <ul>
+                <li><a href="../Mortal Kombat 11/index.html" class="list-group-item list-group-item-action">Mortal
+                    Kombat 11</a></li>
+                <li><a href="../Tekken 7/index.html" class="list-group-item list-group-item-action">Tekken 7</a></li>
+                <li><a href="../Street Fighter IV/index.html" class="list-group-item list-group-item-action mb-2">Street
+                    Fighter IV</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <h3>Strzelanki</h3>
+              <ul>
+                <li><a href="../CSGO/index.html"
+                    class="list-group-item list-group-item-action active disabled">CS:GO</a></li>
+                <li><a href="../PUBG/index.html" class="list-group-item list-group-item-action">PUBG</a></li>
+                <li><a href="../Call of Duty/index.html" class="list-group-item list-group-item-action mb-2">Call of
+                    Duty</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <h3>Gry sportowe</h3>
+              <ul>
+                <li><a href="../FIFA 22/index.html" class="list-group-item list-group-item-action">FIFA 22</a></li>
+                <li><a href="../NBA 2K22/index.html" class="list-group-item list-group-item-action">NBA 2K22</a></li>
+                <li><a href="../F1 2021/index.html" class="list-group-item list-group-item-action mb-2">F1 2021</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <h3>Gry karciane</h3>
+              <ul>
+                <li><a href="../Gwint/gwint.html" class="list-group-item list-group-item-action">Gwint</a></li>
+                <li><a href="../Hearthstone/index.html" class="list-group-item list-group-item-action">Hearthstone</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Bijatyki</a>	
-                    
-                    <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a href="../Mortal Kombat 11/index.html" class="dropdown-item">Mortal Kombat 11</a>
-                        <a href="../Tekken 7/index.html" class="dropdown-item">Tekken 7</a> 
-                        <a href="../Street Fighter IV/index.html" class="dropdown-item">Street Fighter IV</a>                        
-                    </div>                    
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Strzelanki</a>	
-                    
-                    <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a href="../CSGO/index.html" class="dropdown-item disabled">CS:GO</a>
-                        <a href="../PUBG/index.html" class="dropdown-item">PUBG</a>
-                        <a href="../Call of Duty/index.html" class="dropdown-item">Call of Duty</a>                        
-                    </div>					
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Gry Sportowe</a>	
-                    
-                    <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a href="../FIFA 22/index.html" class="dropdown-item">FIFA 22</a>
-                        <a href="../NBA 2K22/index.html" class="dropdown-item">NBA 2K22</a>
-                        <a href="../F1 2021/index.html" class="dropdown-item">F1 2021</a>                        
-                    </div>						
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true">Gry karciane</a>	
-                    
-                    <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a href="../Gwint/gwint.html" class="dropdown-item">Gwint</a>
-                        <a href="../Hearthstone/index.html" class="dropdown-item">Hearthstone</a>
-                        <a href="../Faeria/index.html" class="dropdown-item">Faeria</a>                        
-                    </div>						
-                </li>
-                <li class="nav-item">
-                    <a href="../O autorze/index.html" class="nav-link">O autorze</a>						
-                </li>
-            </ul>				
+                <li><a href="../Faeria/index.html" class="list-group-item list-group-item-action mb-2">Faeria</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../O autorze/index.html" class="list-group-item list-group-item-action mt-3">O autorze</a>
+            </li>
+
+          </ol>
+
+        </nav>
+
+      </aside>
+
+      <section>
+
+        <div class="col-12 col-lg-8 text-center mt-4 mb-5">
+
+          <header>
+            <h2>Mapy</h2>
+          </header>
+
+          <p class="lead">Na oficjalnych serwerach gry jest dostępnych kilkanaście różnych map. Poniżej przedstawiłem
+            te, na których grałem najczęściej</p>
+
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Cache" target="_blank"><img src="img/mapy/slajd1.webp"
+                  alt="Mapa Cache"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Cache" target="_blank">
+                <p>Cache</p>
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Dust2" target="_blank"><img src="img/mapy/slajd2.webp"
+                  alt="Mapa Dust 2"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Dust2" target="_blank">
+                <p>Dust 2</p>
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Mirage" target="_blank"><img src="img/mapy/slajd3.webp"
+                  alt="Mapa Mirage"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Mirage" target="_blank">
+                <p>Mirage</p>
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Train" target="_blank"><img src="img/mapy/slajd4.webp"
+                  alt="Mapa Train"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Train" target="_blank">
+                <p>Train</p>
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Inferno" target="_blank"><img src="img/mapy/slajd5.webp"
+                  alt="Mapa Inferno"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Inferno" target="_blank">
+                <p>Inferno</p>
+              </a>
+            </div>
+          </div>
+          <div class="map">
+            <div class="overlay">
+              <a href="https://csgo.fandom.com/pl/wiki/Cobblestone" target="_blank"><img src="img/mapy/slajd6.webp"
+                  alt="Mapa Cobblestone"></a>
+              <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Cobblestone" target="_blank">
+                <p>Cobblestone</p>
+              </a>
+            </div>
+          </div>
+
         </div>
-    </nav>
 
-
-    <div class="container">
-
-        <div class="row">                    
-
-            <main class="col-lg-8 bg-white text-body mt-5 mb-2 wpis">
-
-                <article>
-
-                    <section>
-
-                        <header>
-                            <h2>CS:GO</h2>
-                        </header>
-
-                        <p class="lead">Counter-Strike: Global Offensive to wieloosobowa strzelanka pierwszoosobowa, stworzona oraz wydana przez Valve Corporation i Hidden Path Entertainment, które już wcześniej pracowały nad Counter-Strike: Source. Jest to czwarta gra z serii Counter-Strike, wydana na platformy Microsoft Windows, macOS, Xbox 360 i PlayStation 3 21 sierpnia 2012 i na Linuxa 23 września 2014.</p>
-                    
-                    </section>
-
-                    <section>
-
-                        <a href="https://csgo.fandom.com/pl/wiki/Lista_broni" target="_blank">
-                            <img src="img/anty-terro.png" alt="Terrorysta i antyterrorysta" class="img-fluid float-lg-end ms-lg-3 photo">
-                        </a>
-
-                        <header>
-                            <h2>Rozgrywka</h2>
-                        </header>
-
-                        <p>W grze do walki stają dwie drużyny: terroryści i antyterroryści. Zadaniem każdej z nich jest eliminacja drużyny przeciwnej lub wykonanie określonego zadania. W przypadku terrorystów jest to podłożenie bomby lub przetrzymywanie zakładników, zaś w przypadku antyterrorystów ochrona strefy detonacji przed podłożeniem bomby lub uratowanie zakładników. W grze występuje wiele różnych trybów, z których każdy ma odrębne cechy charakterystyczne.  CS:GO oprócz wbudowanego systemu matchmakingu, pozwalającego graczom na rozgrywkę na dedykowanych serwerach Valve, ma również możliwość tworzenia i rozgrywki na serwerach społeczności z niestandardowymi mapami i trybami gry. Od momentu wydania, CS:GO jest jedną z najpopularniejszych strzelanek pierwszoosobowych rozgrywanych w ramach sportu elektronicznego. Najważniejszymi turniejami są tzw. „majory”, zawody sponsorowane przez wydawcę gry, Valve. <br>              
-                        W grze, oprócz samouczka („Kurs szkoleniowy”), występuje osiem głównych trybów gry: „Turniejowy”, „Uproszczony”, „Deathmatch”, „Wyścig zbrojeń”, „Demolka”, „Latający skaut”, „Skrzydłowy”, „Odbijanie" oraz „Strefa zagrożenia”. Możliwa jest także rozgrywka offline z botami oraz po sieci lokalnej. W każdym z trybów online możliwe jest rozpoczęcie gry wspólnie ze znajomymi z poziomu tzw. poczekalni. </p>
-
-                    </section>                       
-                    
-                    <section>                                
-                        
-                        <a href="https://csgo.fandom.com/pl/wiki/Lista_broni" target="_blank">
-                            <img src="img/broń.jpg" alt="Karabiny leżące na ziemi" class="img-fluid float-lg-start me-lg-3 photo">
-                        </a>                            
-
-                        <header>
-                            <h2>Wyposażenie</h2>
-                        </header>
-
-                        <p>W grze występuje sześć kategorii wyposażenia: pistolety, broń ciężka, pistolety maszynowe, karabiny, granaty oraz dodatkowy sprzęt. Każda broń w grze posiada unikalne właściwości, takie jak ilość amunicji w magazynku, szybkostrzelność, zadawane obrażenia czy rozrzut kul w ogniu ciągłym. Gracz może posiadać ograniczoną ilość wyposażenia, zakupioną przed początkiem rundy: jedną broń podstawową (pistolet maszynowy, karabin lub broń ciężką), jedną broń dodatkową (pistolet), cztery granaty (lub trzy w zależności od trybu gry), paralizator oraz nóż. Podstawowym wyposażeniem, przyznawanym graczom automatycznie na początku rundy jest pistolet (USP-S lub P2000 w drużynie antyterrorystów oraz Glock-18 w drużynie terrorystów) oraz nóż. Pozwala to na rozgrywanie rund bez zakupu broni, celem zaoszczędzenia środków na kolejne rundy (ang. eco, force-buy i full-buy). Z wyjątkiem noży, gracze mogą wyrzucać swoją broń i podnosić ją od innych graczy, także po śmierci przeciwników. Przetrwanie do końca rundy pomimo przegranej pozwala zachować zdobytą broń na kolejną rundę. <br>
-                        W grze występuje kilka rodzajów granatów ręcznych: granat dymny, granat błyskowo-hukowy, granat zaczepny, wabik oraz granat zapalający. Obie drużyny mają dodatkowo możliwość zakupienia przed rundą kamizelki kuloodpornej i hełmu, zwiększającą odporność na obrażenia. Dodatkowo, gracze antyterrorystów mają możliwość zakupienia - w zależności od trybu gry - zestawu do rozbrajania (zmniejszającego czas rozbrajania bomby) lub zestawu ratunkowego (skracającego czas ratowania zakładnika).</p>  
-                        
-                    </section>  
-                    
-                </article>
-                
-            </main>                    
-
-            <aside class="col-lg-4 col-10 offset-1 offset-lg-0 text-center text-lg-start my-5">	
-
-                <a href="https://blog.counter-strike.net/" target="_blank">
-                    <img class="img-fluid w-100 h-auto photo" src="img/logocs.webp" alt="Logo gry">
-                </a>	
-                
-                <nav>
-                                    
-                    <ol class="list-group list-unstyled mt-3">
-
-                        <li><a href="../Strona główna/index.html" class="list-group-item list-group-item-action mb-2">Strona główna</a></li>
-
-                        <li>
-                            <h3>Bijatyki</h3>                                    
-                            <ul>
-                                <li><a href="../Mortal Kombat 11/index.html" class="list-group-item list-group-item-action">Mortal Kombat 11</a></li>
-                                <li><a href="../Tekken 7/index.html" class="list-group-item list-group-item-action">Tekken 7</a></li>
-                                <li><a href="../Street Fighter IV/index.html" class="list-group-item list-group-item-action mb-2">Street Fighter IV</a></li>
-                            </ul>
-                        </li> 
-
-                        <li>
-                            <h3>Strzelanki</h3>
-                            <ul>
-                                <li><a href="../CSGO/index.html" class="list-group-item list-group-item-action active disabled">CS:GO</a></li>
-                                <li><a href="../PUBG/index.html" class="list-group-item list-group-item-action">PUBG</a></li>
-                                <li><a href="../Call of Duty/index.html" class="list-group-item list-group-item-action mb-2">Call of Duty</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h3>Gry sportowe</h3>
-                            <ul>
-                                <li><a href="../FIFA 22/index.html" class="list-group-item list-group-item-action">FIFA 22</a></li>
-                                <li><a href="../NBA 2K22/index.html" class="list-group-item list-group-item-action">NBA 2K22</a></li>
-                                <li><a href="../F1 2021/index.html" class="list-group-item list-group-item-action mb-2">F1 2021</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <h3>Gry karciane</h3>
-                            <ul>
-                                <li><a href="../Gwint/gwint.html" class="list-group-item list-group-item-action">Gwint</a></li>
-                                <li><a href="../Hearthstone/index.html" class="list-group-item list-group-item-action">Hearthstone</a></li>
-                                <li><a href="../Faeria/index.html" class="list-group-item list-group-item-action mb-2">Faeria</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="../O autorze/index.html" class="list-group-item list-group-item-action mt-3">O autorze</a>                                    
-                        </li>
-                                                        
-                    </ol>
-
-                </nav>
-
-            </aside>
-
-            <section>
-
-                <div class="col-12 col-lg-8 text-center mt-4 mb-5">
-                    
-                    <header>
-                        <h2>Mapy</h2>
-                    </header>
-
-                    <p class="lead">Na oficjalnych serwerach gry jest dostępnych kilkanaście różnych map. Poniżej przedstawiłem te, na których grałem najczęściej</p>
-
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Cache" target="_blank"><img src="img/mapy/slajd1.webp" alt="Mapa Cache"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Cache" target="_blank"><p>Cache</p></a>
-                        </div>
-                    </div>
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Dust2" target="_blank"><img src="img/mapy/slajd2.webp" alt="Mapa Dust 2"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Dust2" target="_blank"><p>Dust 2</p></a>
-                        </div>
-                    </div>                            
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Mirage" target="_blank"><img src="img/mapy/slajd3.webp" alt="Mapa Mirage"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Mirage" target="_blank"><p>Mirage</p></a>
-                        </div>
-                    </div>                                                       
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Train" target="_blank"><img src="img/mapy/slajd4.webp" alt="Mapa Train"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Train" target="_blank"><p>Train</p></a>
-                        </div>
-                    </div>                            
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Inferno" target="_blank"><img src="img/mapy/slajd5.webp" alt="Mapa Inferno"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Inferno" target="_blank"><p>Inferno</p></a>
-                        </div>
-                    </div>
-                    <div class="map">
-                        <div class="overlay">
-                            <a href="https://csgo.fandom.com/pl/wiki/Cobblestone" target="_blank"><img src="img/mapy/slajd6.webp" alt="Mapa Cobblestone"></a>
-                            <a class="map-link" href="https://csgo.fandom.com/pl/wiki/Cobblestone" target="_blank"><p>Cobblestone</p></a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
+      </section>
 
     </div>
-        
 
-    <footer class="text-center py-5 stopka">Jakub Pawlak - przyszły Junior Front-end Developer &copy; Wszelkie prawa zastrzeżone</footer>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
-    
+
+  <footer class="text-center py-5 stopka">Jakub Pawlak - przyszły Junior Front-end Developer &copy; Wszelkie prawa
+    zastrzeżone</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
