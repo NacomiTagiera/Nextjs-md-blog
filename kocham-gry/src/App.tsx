@@ -1,12 +1,3 @@
-import "./App.css";
-import TopNavbar from "./components/TopNavbar";
-
-function App() {
-  return (
-    <div className="App">
-      <TopNavbar />
-    </div>
-  );
+export default function App() {
+  return <div>Test</div>;
 }
-
-export default App;
