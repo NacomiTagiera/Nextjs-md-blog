@@ -1,0 +1,62 @@
+@use "../../scss" as *;
+
+@mixin nav-toggler {
+  color: $white;
+  border-color: $white;
+}
+
+.navbar {
+  background-color: $primary;
+
+  &-toggler {
+    @include nav-toggler();
+
+    &-icon {
+      @include nav-toggler();
+    }
+  }
+}
+
+.nav {
+  &-link {
+    background-color: transparent;
+    color: $white;
+    display: inline-block;
+    font-size: $base-font-size;
+    font-weight: $font-bold;
+
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
+
+  &-item {
+    background-color: transparent;
+    color: $white;
+    font-size: $base-font-size;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: $white;
+    }
+
+    @include breakpoint-up(lg) {
+      border-right: $base-border-white;
+      text-align: center;
+    }
+  }
+}
+
+.dropdown-item {
+  background-color: $primary;
+  border-bottom: $base-border-white;
+  color: $white;
+  font-size: $base-font-size * 1.2;
+  text-align: center;
+
+  &:hover {
+    background-color: $secondary;
+    color: $white;
+  }
+}
