@@ -1,15 +1,6 @@
 @use "../../scss/globals" as *;
 
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: $primary;
-  color: $white;
   font-size: $base-font-size * 1.5;
-  font-weight: $font-bold;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }

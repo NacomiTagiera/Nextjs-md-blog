@@ -1,0 +1,18 @@
+@use "../../scss" as *;
+
+h1 {
+  color: $white;
+  font-size: 3.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  .bi-controller {
+    width: 3.7rem;
+    height: auto;
+  }
+
+  span {
+    color: $primary;
+  }
+}

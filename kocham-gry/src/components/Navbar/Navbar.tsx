@@ -5,12 +5,10 @@ import "./Navbar.scss";
 export default function NavBar() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg sticky-top">
-        <NavLink to="/" className="nav-link mx-lg-3 mx-sm-2">
+      <nav className="navbar navbar-expand-md sticky-top mb-5">
+        <NavLink to="/" className="nav-link mx-2 mx-md-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="26"
             fill="currentColor"
             className="bi bi-controller"
             viewBox="0 0 16 16"
@@ -41,7 +39,7 @@ export default function NavBar() {
           </svg>
         </button>
 
-        <div className="collapse navbar-collapse ms-3 ms-lg-0" id="mainmenu">
+        <div className="collapse navbar-collapse ms-3 ms-md-0" id="mainmenu">
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink to="/" className="nav-link">
@@ -56,15 +54,15 @@ export default function NavBar() {
                   </NavLink>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item className="dropdown-item">
+                  <NavLink to="Mortal_Kombat" className="dropdown-item">
                     Mortal Kombat
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">
-                    Tekken 7
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">
-                    Street Fighter IV
-                  </Dropdown.Item>
+                  </NavLink>
+                  <NavLink to="Tekken" className="dropdown-item">
+                    Tekken
+                  </NavLink>
+                  <NavLink to="Street_Fighter" className="dropdown-item">
+                    Street Fighter
+                  </NavLink>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
@@ -76,11 +74,15 @@ export default function NavBar() {
                   </NavLink>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item className="dropdown-item">
+                  <NavLink to="CoD" className="dropdown-item">
                     Call of Duty
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">CS:GO</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">PUBG</Dropdown.Item>
+                  </NavLink>
+                  <NavLink to="CS:GO" className="dropdown-item">
+                    CS:GO
+                  </NavLink>
+                  <NavLink to="PUBG" className="dropdown-item">
+                    PUBG
+                  </NavLink>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
@@ -92,17 +94,22 @@ export default function NavBar() {
                   </NavLink>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item className="dropdown-item">
-                    FIFA 23
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">
-                    NBA 2K23
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item">
-                    F1 2022
-                  </Dropdown.Item>
+                  <NavLink to="FIFA" className="dropdown-item">
+                    FIFA
+                  </NavLink>
+                  <NavLink to="NBA_2K" className="dropdown-item">
+                    NBA 2K
+                  </NavLink>
+                  <NavLink to="F1" className="dropdown-item">
+                    F1
+                  </NavLink>
                 </Dropdown.Menu>
               </Dropdown>
+            </li>
+            <li className="nav-item">
+              <NavLink to="O_autorze" className="nav-link">
+                O autorze
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -34,14 +34,10 @@
   &-item {
     background-color: transparent;
     color: $white;
-    font-size: $base-font-size;
+    font-size: $base-font-size * 1.2;
     padding: 0.5rem 1rem;
 
-    &:hover {
-      color: $white;
-    }
-
-    @include breakpoint-up(lg) {
+    @include breakpoint-up(md) {
       border-right: $base-border-white;
       text-align: center;
     }
@@ -52,11 +48,21 @@
   background-color: $primary;
   border-bottom: $base-border-white;
   color: $white;
-  font-size: $base-font-size * 1.2;
+  font-size: $base-font-size;
   text-align: center;
+
+  &.active {
+    background-color: $secondary;
+    cursor: default;
+  }
 
   &:hover {
     background-color: $secondary;
     color: $white;
   }
+}
+
+.bi-controller {
+  width: 3rem;
+  height: auto;
 }

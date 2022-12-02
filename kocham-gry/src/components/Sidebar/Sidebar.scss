@@ -1,0 +1,6 @@
+@use "../../scss" as *;
+
+.img {
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius;
+}

@@ -7,10 +7,10 @@ $breakpoints-up: (
 );
 
 $breakpoints-down: (
-  "xs": 575px,
-  "sm": 767px,
-  "md": 991px,
-  "lg": 1199px,
+  "sm": 575px,
+  "md": 767px,
+  "lg": 991px,
+  "xl": 1199px,
 );
 
 @mixin breakpoint-up($size) {
