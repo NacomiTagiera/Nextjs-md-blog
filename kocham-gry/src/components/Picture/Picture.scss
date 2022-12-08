@@ -1,0 +1,28 @@
+@use "../../scss" as *;
+
+img {
+  height: auto;
+
+  &.large {
+    border-radius: $border-radius-xl;
+    margin-inline: auto;
+    width: 90%;
+
+    @include breakpoint-down(lg) {
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  &.responsive {
+    border-radius: $base-border-radius;
+    width: 59%;
+
+    @include breakpoint-down(lg) {
+      width: 80%;
+    }
+
+    @include breakpoint-down(sm) {
+      width: 90%;
+    }
+  }
+}

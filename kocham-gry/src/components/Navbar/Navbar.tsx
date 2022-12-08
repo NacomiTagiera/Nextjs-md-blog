@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <Router>
       <nav className="navbar navbar-expand-md sticky-top mb-5">
-        <NavLink to="/" className="nav-link mx-2 mx-md-3">
+        <NavLink to="/" className="nav-link navbar-brand mx-2 mx-md-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

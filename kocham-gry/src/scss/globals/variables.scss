@@ -11,12 +11,10 @@ $white: #eeefff;
 $base-border-white: 0.1rem solid $white;
 $border-primary: 0.2rem solid $primary;
 $base-border-radius: 0.5rem;
+$border-radius-lg: $base-border-radius * 2;
+$border-radius-xl: $base-border-radius * 3;
 
 //fonts
-$base-font-weight: 400;
-$font-bold: 700;
-$font-extra-bold: 900;
-
 $base-font-size: 1.6rem;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2.5;
