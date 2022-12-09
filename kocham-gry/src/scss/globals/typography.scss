@@ -27,12 +27,17 @@ a:active,
 a:hover,
 a:visited {
   color: $white;
+  cursor: pointer;
   text-decoration: none;
 }
 
 p {
   font-size: $base-font-size;
   text-align: justify;
+
+  &.lead {
+    font-size: $base-font-size * 1.25;
+  }
 }
 
 ul,

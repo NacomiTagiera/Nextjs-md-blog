@@ -10,9 +10,9 @@ interface Props {
 export default function Picture({ alt, classes, lazyLoading, source }: Props) {
   return (
     <img
-      loading={lazyLoading ? "lazy" : undefined}
       src={source}
       alt={alt}
+      loading={lazyLoading ? "lazy" : undefined}
       className={`d-block ${classes}`}
     />
   );
