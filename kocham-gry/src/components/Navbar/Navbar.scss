@@ -1,26 +1,13 @@
 @use "../../scss" as *;
 
-@mixin nav-toggler {
-  color: $white;
-  border-color: $white;
-}
-
 .navbar {
   background-color: $primary;
-
-  &-toggler {
-    @include nav-toggler();
-
-    &-icon {
-      @include nav-toggler();
-    }
-  }
 }
 
 .nav {
   &-link {
     background-color: transparent;
-    color: $white;
+    color: $white !important;
     display: inline-block;
     font-size: $base-font-size;
     font-weight: 600;
@@ -37,9 +24,13 @@
     font-size: $base-font-size * 1.2;
     padding: 0.5rem 1rem;
 
-    @include breakpoint-up(md) {
-      border-right: $base-border-white;
+    @include breakpoint-up(lg) {
+      border-left: $base-border-white;
       text-align: center;
+
+      &:last-child {
+        border-right: $base-border-white;
+      }
     }
   }
 }
@@ -51,18 +42,13 @@
   font-size: $base-font-size;
   text-align: center;
 
-  &.active {
-    background-color: $secondary;
-    cursor: default;
-  }
-
   &:hover {
     background-color: $secondary;
     color: $white;
   }
 }
 
-.bi-controller {
+.controller {
   width: 3rem;
   height: auto;
 }

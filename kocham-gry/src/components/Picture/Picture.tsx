@@ -1,19 +1,19 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 import "./Picture.scss";
 
 interface Props {
   alt: string;
   classes: string;
-  lazyLoading: boolean;
   source: string;
 }
 
-export default function Picture({ alt, classes, lazyLoading, source }: Props) {
+export default function Picture({ alt, classes, source }: Props) {
   return (
-    <img
-      src={source}
+    <LazyLoadImage
       alt={alt}
-      loading={lazyLoading ? "lazy" : undefined}
-      className={`d-block ${classes}`}
+      className={`d-block picture ${classes}`}
+      src={source}
     />
   );
 }

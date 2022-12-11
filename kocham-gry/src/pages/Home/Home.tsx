@@ -66,12 +66,7 @@ export default function Home() {
                 producent PDP – 1 dołączał tę grę do swoich egzemplarzy. Steve
                 Russell nigdy nie skończył studiów.
               </p>
-              <Picture
-                source={spacewar}
-                alt="Spacewar!"
-                classes="my-3 large"
-                lazyLoading={true}
-              />
+              <Picture source={spacewar} alt="Spacewar!" classes="my-3 large" />
             </section>
 
             <section id="firstConsole">
@@ -140,7 +135,6 @@ export default function Home() {
                 source={magnavox_odyssey}
                 alt="Magnavox Odyssey - pierwsza konsola w historii gier"
                 classes="large"
-                lazyLoading={true}
               />
             </section>
 
@@ -183,7 +177,6 @@ export default function Home() {
                 source={arcadeMachines}
                 alt="Maszyny arcade'owe"
                 classes="large"
-                lazyLoading={true}
               />
             </section>
 
@@ -316,12 +309,7 @@ export default function Home() {
                 ponad 30 milionach egzemplarzy.
               </p>
 
-              <Picture
-                source={commodore}
-                alt="Commodore 64"
-                classes="large"
-                lazyLoading={true}
-              />
+              <Picture source={commodore} alt="Commodore 64" classes="large" />
             </section>
 
             <section id="summary">
@@ -358,7 +346,7 @@ export default function Home() {
         </Col>
 
         <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 0 }}>
-          <Sidebar>
+          <Sidebar isSticky={true}>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
             <ol className="list-group list-group-numbered border border-light border-1 rounded">
               <SidebarLink sectionId="firstGame">

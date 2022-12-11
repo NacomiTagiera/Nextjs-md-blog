@@ -1,8 +1,15 @@
 import CommonProps from "../types/commonProps";
 
-export default function Sidebar({ children }: CommonProps) {
+interface Props extends CommonProps {
+  isSticky: boolean;
+}
+
+export default function Sidebar({ children, isSticky }: Props) {
   return (
-    <aside className="mt-5 sticky-top" style={{ top: "10rem" }}>
+    <aside
+      className={`mt-5 ${isSticky ? "sticky-top" : ""}`}
+      style={{ top: "10rem" }}
+    >
       {children}
     </aside>
   );
