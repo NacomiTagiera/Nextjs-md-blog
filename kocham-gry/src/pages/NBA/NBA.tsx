@@ -52,12 +52,6 @@ export default function NBA() {
                 <h2>Rozgrywka</h2>
               </header>
 
-              <Picture
-                alt="asaba"
-                classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
-                source={articleImg}
-              />
-
               <p>
                 Zgodnie z gatunkowym kanonem, gry z serii <i>NBA 2K</i>{" "}
                 pozwalają graczom pokierować zawodnikami ulubionych drużyn
@@ -65,6 +59,13 @@ export default function NBA() {
                 NBA, nazwy zespołów, nazwiska koszykarzy, składy i logotypy są
                 zgodne z autentycznymi odpowiednikami.
               </p>
+
+              <Picture
+                alt="Stephen Curry"
+                classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
+                source={articleImg}
+              />
+
               <p>
                 Rozgrywka łączy elementy sportowej symulacji, gry
                 zręcznościowej, a nawet strategii. Gracz nie tylko kontroluje

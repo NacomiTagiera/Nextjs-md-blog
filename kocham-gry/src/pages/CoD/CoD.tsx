@@ -60,10 +60,10 @@ export default function CoD() {
 
               <p>
                 Call of Duty wywodzi się z nowoczesnej w swoim czasie produkcji
-                <i>Medal of Honor: Allied Assault</i>, stworzonej w 2002 roku
+                <i> Medal of Honor: Allied Assault</i>, stworzonej w 2002 roku
                 przez amerykańskie studio 2015, Inc. Konflikt pracowników studia
                 z wydającym Allied Assault przedsiębiorstwem{" "}
-                <i>Electronic Arts</i>
+                <i>Electronic Arts </i>
                 spowodował, że opuścili oni 2015, Inc. i założyli nowe studio
                 pod nazwą Infinity Ward. W porozumieniu z Activision zdecydowali
                 się na produkcję gry, która konkurowałaby z serią gier Medal of

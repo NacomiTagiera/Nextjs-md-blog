@@ -1,5 +1,4 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/opacity.css";
 import "./Picture.scss";
 
 interface Props {
@@ -14,6 +13,7 @@ export default function Picture({ alt, classes, source }: Props) {
       alt={alt}
       className={`d-block picture ${classes}`}
       src={source}
+      title={alt}
     />
   );
 }
