@@ -20,7 +20,7 @@ export default function NavBar() {
                 Mortal Kombat
               </NavDropdown.Item>
               <NavDropdown.Item href="Tekken">Tekken</NavDropdown.Item>
-              <NavDropdown.Item href="Street Fighter">
+              <NavDropdown.Item href="Street_Fighter">
                 Street Fighter
               </NavDropdown.Item>
             </NavDropdown>

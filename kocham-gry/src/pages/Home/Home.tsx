@@ -1,16 +1,46 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 
+//components
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarLink from "../../components/SidebarLink/SidebarLink";
 
+import { LinkToSection } from "../../types/LinkToSection";
 import "../../scss/_index.scss";
 
+//images
 import arcadeMachines from "./assets/arcade_machines.jpg";
 import commodore from "./assets/commodore.jpg";
 import spacewar from "./assets/spacewar.jpg";
 import magnavox_odyssey from "./assets/magnavox_odyssey.jpg";
+
+const linksToSections: LinkToSection[] = [
+  {
+    id: "firstGame",
+    text: "Pierwsza gra komputerowa",
+  },
+  {
+    id: "firstConsole",
+    text: "Prototyp pierwszej konsoli",
+  },
+  {
+    id: "Magnavox_Odyssey",
+    text: "Pierwsza konsola w historii - Magnavox Odyssey",
+  },
+  {
+    id: "arcadeMachines",
+    text: "Gaming w barze - era maszyn arcade'owych",
+  },
+  {
+    id: "homeGaming",
+    text: "Gaming w domu",
+  },
+  {
+    id: "summary",
+    text: "Podsumowanie historii gier",
+  },
+];
 
 export default function Home() {
   return (
@@ -346,26 +376,19 @@ export default function Home() {
         </Col>
 
         <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 0 }}>
-          <Sidebar isSticky={true}>
+          <Sidebar>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
-            <ol className="list-group list-group-numbered border border-light border-1 rounded">
-              <SidebarLink sectionId="firstGame">
-                Pierwsza gra komputerowa
-              </SidebarLink>
-              <SidebarLink sectionId="firstConsole">
-                Prototyp pierwszej konsoli
-              </SidebarLink>
-              <SidebarLink sectionId="Magnavox_Odyssey">
-                Pierwsza konsola w historii - Magnavox Odyssey
-              </SidebarLink>
-              <SidebarLink sectionId="arcadeMachines">
-                Gaming w barze - era maszyn arcade'owych
-              </SidebarLink>
-              <SidebarLink sectionId="homeGaming">Gaming w domu</SidebarLink>
-              <SidebarLink sectionId="summary">
-                Podsumowanie historii gier
-              </SidebarLink>
-            </ol>
+            <ListGroup
+              as="ol"
+              numbered
+              className="border border-1 border-light rounded"
+            >
+              {linksToSections.map((link) => (
+                <SidebarLink key={link.id} sectionId={link.id}>
+                  {link.text}
+                </SidebarLink>
+              ))}
+            </ListGroup>
 
             <h3 className="mb-2 mt-4 text-center text-white">Ciekawostki</h3>
             <ul className="text-white" style={{ listStyleType: "disc" }}>

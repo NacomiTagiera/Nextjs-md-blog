@@ -1,10 +1,10 @@
 import CommonProps from "../types/commonProps";
 
 interface Props extends CommonProps {
-  isSticky: boolean;
+  isSticky?: boolean;
 }
 
-export default function Sidebar({ children, isSticky }: Props) {
+export default function Sidebar({ children, isSticky = true }: Props) {
   return (
     <aside
       className={`mt-5 ${isSticky ? "sticky-top" : ""}`}
