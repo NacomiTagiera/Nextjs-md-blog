@@ -1,6 +1,5 @@
 import { Container, Row, Col, ListGroup } from "react-bootstrap";
 
-//components
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -9,7 +8,6 @@ import SidebarLink from "../../components/SidebarLink/SidebarLink";
 import { LinkToSection } from "../../types/LinkToSection";
 import "../../scss/_index.scss";
 
-//images
 import arcadeMachines from "./assets/arcade_machines.jpg";
 import commodore from "./assets/commodore.jpg";
 import spacewar from "./assets/spacewar.jpg";

@@ -89,12 +89,12 @@ export default function NBA() {
           </MainContent>
         </Col>
 
-        <Col lg={4}>
-          <Sidebar isSticky={false}>
+        <Col className="d-none d-lg-block">
+          <Sidebar>
             <Picture
               source={sidebarImg}
               alt="Mickey Ardell"
-              classes="d-none d-lg-block img-fluid shadow-lg large"
+              classes="img-fluid shadow-lg large"
             />
           </Sidebar>
         </Col>

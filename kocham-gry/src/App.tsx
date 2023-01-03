@@ -16,9 +16,11 @@ const CoD = lazy(() => import("./pages/CoD/CoD"));
 const Hearthstone = lazy(() => import("./pages/Hearthstone/Hearthstone"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const NBA = lazy(() => import("./pages/NBA/NBA"));
+const PUBG = lazy(() => import("./pages/PUBG/Pubg"));
 const StreetFighter = lazy(
   () => import("./pages/Street_Fighter/Street_Fighter")
 );
+const Tekken = lazy(() => import("./pages/Tekken/Tekken"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,7 +29,9 @@ const router = createBrowserRouter(
       <Route path="Call_of_Duty" element={<CoD />} />
       <Route path="Hearthstone" element={<Hearthstone />} />
       <Route path="NBA_2K" element={<NBA />} />
+      <Route path="PUBG" element={<PUBG />} />
       <Route path="Street_Fighter" element={<StreetFighter />} />
+      <Route path="Tekken" element={<Tekken />} />
     </Route>
   )
 );

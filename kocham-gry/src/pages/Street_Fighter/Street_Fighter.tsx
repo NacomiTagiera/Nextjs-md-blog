@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 
-//components
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -10,11 +9,12 @@ import SidebarLink from "../../components/SidebarLink/SidebarLink";
 import { LinkToSection } from "../../types/LinkToSection";
 import "./Street_Fighter.scss";
 
-//images
 import abel from "./assets/abel.jpg";
 import dudley from "./assets/dudley.jpg";
 import hakan from "./assets/hakan.jpg";
 import seth from "./assets/seth.jpg";
+import fighters from "./assets/articleImg1.jpg";
+import streetFigher from "./assets/article-st6.jpg";
 
 interface Character {
   image: string;
@@ -42,7 +42,7 @@ const characters: Character[] = [
 
 const linksToSections: LinkToSection[] = [
   {
-    id: "lead",
+    id: "intro",
     text: "Wstęp",
   },
   {
@@ -79,7 +79,7 @@ export default function StreetFighter() {
       <Row>
         <Col xs={12} lg={8}>
           <MainContent>
-            <section id="lead">
+            <section id="intro">
               <header>
                 <h2>Street Fighter</h2>
               </header>
@@ -97,6 +97,12 @@ export default function StreetFighter() {
                 Fighter.
               </p>
             </section>
+
+            <Picture
+              source={fighters}
+              alt="Street Fighter characters"
+              classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
+            />
 
             <section id="history">
               <header>
@@ -145,6 +151,7 @@ export default function StreetFighter() {
                 te nowe możliwości w grze.
               </p>
             </section>
+
             <section id="st3">
               <header>
                 <h3>Street Fighter III</h3>
@@ -164,6 +171,13 @@ export default function StreetFighter() {
                 Chun-Li i dodając cztery nowe postacie grywalne.
               </p>
             </section>
+
+            <Picture
+              source={streetFigher}
+              alt="Street Fighter VI"
+              classes="float-lg-end ms-lg-3 my-3 my-lg-0 responsive"
+            />
+
             <section id="st4">
               <header>
                 <h3>Street Fighter IV</h3>
@@ -195,6 +209,7 @@ export default function StreetFighter() {
                 z serii.
               </p>
             </section>
+
             <section id="st5">
               <header>
                 <h3>Street Fighter V</h3>
@@ -210,6 +225,7 @@ export default function StreetFighter() {
                 została wydana 14 lutego 2020 r.
               </p>
             </section>
+
             <section id="st6">
               <header>
                 <h3>Street Fighter VI</h3>
@@ -251,30 +267,20 @@ export default function StreetFighter() {
               </h2>
             </header>
             <div className="d-flex">
-              <div
-                className="gallery-item active"
-                style={{ backgroundImage: `url(${abel})` }}
-              >
-                <h3 className="gallery-item-header active">Abel</h3>
-              </div>
-              <div
-                className="gallery-item"
-                style={{ backgroundImage: `url(${dudley})` }}
-              >
-                <h3 className="gallery-item-header">Dudley</h3>
-              </div>
-              <div
-                className="gallery-item"
-                style={{ backgroundImage: `url(${hakan})` }}
-              >
-                <h3 className="gallery-item-header">Hakan</h3>
-              </div>
-              <div
-                className="gallery-item"
-                style={{ backgroundImage: `url(${seth})` }}
-              >
-                <h3 className="gallery-item-header">Seth</h3>
-              </div>
+              {characters.map((character, index) => (
+                <div
+                  key={index}
+                  className={`gallery-item ${
+                    activeImg === index ? "active" : ""
+                  }`}
+                  style={{ backgroundImage: `url(${character.image})` }}
+                  onClick={() => {
+                    setActiveImg(index);
+                  }}
+                >
+                  <h3>{character.name}</h3>
+                </div>
+              ))}
             </div>
           </section>
         </Col>

@@ -14,8 +14,42 @@ import modernWarfare2 from "./assets/mw2.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 import worldAtWar from "./assets/worldAtWar.jpg";
 
+interface CarouselItem {
+  alt: string;
+  caption: string;
+  src: string;
+}
+
+const carouselItems: CarouselItem[] = [
+  {
+    alt: "Call of Duty: Modern Warfare",
+    caption: "Modern Warfare",
+    src: modernWarfare,
+  },
+  {
+    alt: "Call of Duty: Modern Warfare 2",
+    caption: "Modern Warfare 2",
+    src: modernWarfare2,
+  },
+  {
+    alt: "Call of Duty 2",
+    caption: "Call of Duty 2",
+    src: cod2,
+  },
+  {
+    alt: "Call of Duty: Black Ops",
+    caption: "Black Ops",
+    src: blackOps,
+  },
+  {
+    alt: "Call of Duty: World at War",
+    caption: "World at War",
+    src: worldAtWar,
+  },
+];
+
 export default function CoD() {
-  const interval: number = 2500;
+  const interval = 2500;
   const [index, setIndex] = useState<number>(0);
 
   const handleSelect = (selectedIndex: number) => {
@@ -136,56 +170,14 @@ export default function CoD() {
             </header>
 
             <Carousel activeIndex={index} onSelect={handleSelect}>
-              <Carousel.Item interval={interval}>
-                <Picture
-                  source={modernWarfare}
-                  alt="Call of Duty: Modern Warfare"
-                  classes="large"
-                />
-                <Carousel.Caption>
-                  <h3>Modern Warfare</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item interval={interval}>
-                <Picture
-                  source={modernWarfare2}
-                  alt="Call of Duty: Modern Warfare 2"
-                  classes="large"
-                />
-                <Carousel.Caption>
-                  <h3>Modern Warfare 2</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item interval={interval}>
-                <Picture source={cod2} alt="Call of Duty 2" classes="large" />
-                <Carousel.Caption>
-                  <h3>Call of Duty 2</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item interval={interval}>
-                <Picture
-                  source={blackOps}
-                  alt="Call of Duty: Black Ops"
-                  classes="large"
-                />
-                <Carousel.Caption>
-                  <h3>Black Ops</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item interval={interval}>
-                <Picture
-                  source={worldAtWar}
-                  alt="Call of Duty: World at War"
-                  classes="large"
-                />
-                <Carousel.Caption>
-                  <h3>World at War</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
+              {carouselItems.map((item) => (
+                <Carousel.Item key={item.caption} interval={interval}>
+                  <Picture source={item.src} alt={item.alt} classes="large" />
+                  <Carousel.Caption style={{ fontSize: "2rem" }}>
+                    {item.caption}
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
             </Carousel>
           </section>
         </Col>
