@@ -80,9 +80,7 @@ export default function StreetFighter() {
         <Col xs={12} lg={8}>
           <MainContent>
             <section id="intro">
-              <header>
-                <h2>Street Fighter</h2>
-              </header>
+              <h2>Street Fighter</h2>
 
               <p className="lead">
                 Street Fighter (ストリートファイターSutorīto Faitā) w skrócie
@@ -100,14 +98,12 @@ export default function StreetFighter() {
 
             <Picture
               source={fighters}
-              alt="Street Fighter characters"
+              alt="Postacie z gry Street Fighter"
               classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
             />
 
             <section id="history">
-              <header>
-                <h2>Historia i rozwój</h2>
-              </header>
+              <h2>Historia i rozwój</h2>
 
               <p>
                 Street Fighter zadebiutował w salonach gier 1987 roku. Został on
@@ -131,9 +127,7 @@ export default function StreetFighter() {
             </section>
 
             <section id="st2">
-              <header>
-                <h3>Street Fighter II</h3>
-              </header>
+              <h3>Street Fighter II</h3>
 
               <p>
                 Został wydany w 1991 roku i był pierwszym prawdziwym sequelem
@@ -153,9 +147,7 @@ export default function StreetFighter() {
             </section>
 
             <section id="st3">
-              <header>
-                <h3>Street Fighter III</h3>
-              </header>
+              <h3>Street Fighter III</h3>
 
               <p>
                 Street Fighter III jest prawdziwym sequelem Street Fighter II, o
@@ -179,9 +171,7 @@ export default function StreetFighter() {
             />
 
             <section id="st4">
-              <header>
-                <h3>Street Fighter IV</h3>
-              </header>
+              <h3>Street Fighter IV</h3>
 
               <p>
                 Street Fighter IV to gra wydana w 2008 roku i została
@@ -211,9 +201,7 @@ export default function StreetFighter() {
             </section>
 
             <section id="st5">
-              <header>
-                <h3>Street Fighter V</h3>
-              </header>
+              <h3>Street Fighter V</h3>
 
               <p>
                 Street Fighter V jest dotychczas najnowszą grą wyprodukowaną
@@ -227,9 +215,7 @@ export default function StreetFighter() {
             </section>
 
             <section id="st6">
-              <header>
-                <h3>Street Fighter VI</h3>
-              </header>
+              <h3>Street Fighter VI</h3>
 
               <p>
                 Street Fighter VI zostanie wydany na PS5, PS4, Xbox Series X|S,
@@ -243,17 +229,19 @@ export default function StreetFighter() {
         <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 0 }}>
           <Sidebar>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
-            <ListGroup
-              as="ol"
-              numbered
-              className="border border-1 border-light rounded"
-            >
-              {linksToSections.map((link) => (
-                <SidebarLink key={link.id} sectionId={link.id}>
-                  {link.text}
-                </SidebarLink>
-              ))}
-            </ListGroup>
+            <nav>
+              <ListGroup
+                as="ol"
+                numbered
+                className="border border-1 border-light rounded"
+              >
+                {linksToSections.map((link) => (
+                  <SidebarLink key={link.id} sectionId={link.id}>
+                    {link.text}
+                  </SidebarLink>
+                ))}
+              </ListGroup>
+            </nav>
           </Sidebar>
         </Col>
       </Row>
@@ -261,11 +249,9 @@ export default function StreetFighter() {
       <Row>
         <Col xs={{ span: 12, offset: 0 }} md={{ span: 10, offset: 1 }}>
           <section>
-            <header>
-              <h2 className="py-3 text-center text-white">
-                Moje ulubione postacie
-              </h2>
-            </header>
+            <h2 className="py-3 text-center text-white">
+              Moje ulubione postacie
+            </h2>
             <div className="d-flex">
               {characters.map((character, index) => (
                 <div

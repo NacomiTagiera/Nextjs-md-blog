@@ -1,21 +1,47 @@
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import {
+  ArrowLeftCircleFill,
+  ArrowRightCircleFill,
+} from "react-bootstrap-icons";
 
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
+import "./Pubg.scss";
+
+import articleImg from "./assets/articleImg.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
+import slide1 from "./assets/slide1.jpg";
+import slide2 from "./assets/slide2.jpg";
+import slide3 from "./assets/slide3.jpg";
+import slide4 from "./assets/slide4.jpg";
+
+const slides: string[] = [slide1, slide2, slide3, slide4];
 
 export default function Pubg() {
+  const [activeSlide, setActiveSlide] = useState<number>(0);
+
+  const nextSlide = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+    );
+  };
+
   return (
     <Container fluid="md">
       <Row>
         <Col xs={12} lg={8}>
           <MainContent>
             <section>
-              <header>
-                <h2>PUBG</h2>
-              </header>
+              <h2>PUBG</h2>
 
               <p className="lead">
                 Playerunknown's Battleground to gra multiplayer zaliczana do
@@ -28,9 +54,7 @@ export default function Pubg() {
             </section>
 
             <section>
-              <header>
-                <h2>Rozgrywka</h2>
-              </header>
+              <h2>Rozgrywka</h2>
 
               <p>
                 O miejscu rozpoczęcia zabawy decydujesz samodzielnie - musisz
@@ -44,10 +68,14 @@ export default function Pubg() {
               </p>
             </section>
 
+            <Picture
+              source={articleImg}
+              alt="Mężczyzna z karabinem przy samochodzie"
+              classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
+            />
+
             <section>
-              <header>
-                <h2>Produkcja</h2>
-              </header>
+              <h2>Produkcja</h2>
 
               <p>
                 W 2016 roku PUBG Corporation (wtedy jeszcze występujące pod
@@ -100,6 +128,27 @@ export default function Pubg() {
                 momencie rozgrywki oglądało 80 tysięcy osób.
               </p>
             </section>
+
+            <section className="h-auto mx-auto my-5 p-relative ratio ratio-16x9 slider-container">
+              {slides.map((_, index) => (
+                <img
+                  key={index}
+                  src={slides[activeSlide]}
+                  alt={`Slajd ${index + 1}`}
+                  className={`w-100 h-auto slide ${
+                    activeSlide === index ? "active" : ""
+                  }`}
+                />
+              ))}
+              <ArrowLeftCircleFill
+                className="p-absolute top-50 start-0 translate-middle btn"
+                onClick={prevSlide}
+              />
+              <ArrowRightCircleFill
+                className="p-absolute top-50 start-100 translate-middle btn"
+                onClick={nextSlide}
+              />
+            </section>
           </MainContent>
         </Col>
 
@@ -107,7 +156,7 @@ export default function Pubg() {
           <Sidebar>
             <Picture
               source={sidebarImg}
-              alt="Soldier with a rifle in front of an explosion"
+              alt="Żołnierz w hełmie i z karabinem na tle wybuchu"
               classes="img-fluid shadow-lg rounded"
             />
           </Sidebar>

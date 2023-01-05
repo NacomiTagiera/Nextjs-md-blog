@@ -4,8 +4,6 @@ import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
-import "../../scss/_index.scss";
-
 import articleImg from "./assets/articleImg.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 
@@ -16,9 +14,7 @@ export default function NBA() {
         <Col xs={12} lg={8}>
           <MainContent>
             <section>
-              <header>
-                <h2>Seria gier NBA 2K</h2>
-              </header>
+              <h2>Seria gier NBA 2K</h2>
 
               <p>
                 Seria gier sportowych na licencji amerykańskiej ligi
@@ -29,9 +25,7 @@ export default function NBA() {
             </section>
 
             <section>
-              <header>
-                <h2>Historia</h2>
-              </header>
+              <h2>Historia</h2>
 
               <p>
                 Korzenie serii sięgają końca lat 90. ubiegłego wieku i wydanej w
@@ -48,9 +42,7 @@ export default function NBA() {
             </section>
 
             <section>
-              <header>
-                <h2>Rozgrywka</h2>
-              </header>
+              <h2>Rozgrywka</h2>
 
               <p>
                 Zgodnie z gatunkowym kanonem, gry z serii <i>NBA 2K</i>{" "}
@@ -77,6 +69,7 @@ export default function NBA() {
                 multiplayer pozwala także na pojedynki toczone poprzez sieć
                 Internet.
               </p>
+
               <p>
                 Na tle konkurencyjnych produkcji, seria NBA 2K wyróżnia się
                 przede wszystkim obsługą innowacyjnych rozwiązań technicznych. W

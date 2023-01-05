@@ -13,6 +13,7 @@ const RootLayout = lazy(() => import("./layouts/RootLayout"));
 
 // pages
 const CoD = lazy(() => import("./pages/CoD/CoD"));
+const Csgo = lazy(() => import("./pages/CSGO/Csgo"));
 const Hearthstone = lazy(() => import("./pages/Hearthstone/Hearthstone"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const NBA = lazy(() => import("./pages/NBA/NBA"));
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="Call_of_Duty" element={<CoD />} />
+      <Route path="CSGO" element={<Csgo />} />
       <Route path="Hearthstone" element={<Hearthstone />} />
       <Route path="NBA_2K" element={<NBA />} />
       <Route path="PUBG" element={<PUBG />} />

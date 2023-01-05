@@ -5,6 +5,7 @@ import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
+import articleImg from "./assets/articleImg.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 
 export default function Tekken() {
@@ -14,9 +15,7 @@ export default function Tekken() {
         <Col xs={12} lg={8}>
           <MainContent>
             <section>
-              <header>
-                <h2>Tekken</h2>
-              </header>
+              <h2>Tekken</h2>
 
               <p className="lead">
                 Tekken jest bijatyką 3D stworzoną i wydaną przez japońską firmę
@@ -29,9 +28,7 @@ export default function Tekken() {
             </section>
 
             <section>
-              <header>
-                <h2>Historia</h2>
-              </header>
+              <h2>Historia</h2>
 
               <p>
                 Wprawdzie Tekken nie był pierwszą trójwymiarową bijatyką, gdyż
@@ -52,10 +49,14 @@ export default function Tekken() {
               </p>
             </section>
 
+            <Picture
+              source={articleImg}
+              alt="Tekken 7 - Kazuya"
+              classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
+            />
+
             <section>
-              <header>
-                <h2>Rozgrywka</h2>
-              </header>
+              <h2>Rozgrywka</h2>
 
               <p>
                 Każdy z dostępnych wojowników miał swoje własne nemezis, które

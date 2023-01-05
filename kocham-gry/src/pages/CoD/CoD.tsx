@@ -5,8 +5,6 @@ import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
-import "../../scss/_index.scss";
-
 import blackOps from "./assets/blackOps.jpg";
 import cod2 from "./assets/cod2.jpg";
 import modernWarfare from "./assets/mw1.jpg";
@@ -62,9 +60,7 @@ export default function CoD() {
         <Col xs={12} lg={8}>
           <MainContent>
             <section>
-              <header>
-                <h2>Call of Duty</h2>
-              </header>
+              <h2>Call of Duty</h2>
 
               <p>
                 Call of Duty seria gier komputerowych z gatunku strzelanek
@@ -82,9 +78,7 @@ export default function CoD() {
             </section>
 
             <section>
-              <header>
-                <h2>Historia</h2>
-              </header>
+              <h2>Historia</h2>
 
               <Picture
                 source={modernWarfare2}
@@ -115,6 +109,7 @@ export default function CoD() {
                 Interactive) oraz przeznaczona na konsole gra Call of Duty:
                 Finest Hour (producent – Spark Unlimited).
               </p>
+
               <p>
                 W 2005 roku Infinity Ward ukończyło kontynuację Call of Duty.
                 Powstała na bazie autorskiego silnika Call of Duty 2 stanowiła
@@ -163,11 +158,9 @@ export default function CoD() {
           lg={{ span: 8, offset: 2 }}
         >
           <section>
-            <header>
-              <h2 className="py-2 text-center text-white">
-                5 najlepszych odsłon serii Call of Duty
-              </h2>
-            </header>
+            <h2 className="py-2 text-center text-white">
+              5 najlepszych odsłon serii Call of Duty
+            </h2>
 
             <Carousel activeIndex={index} onSelect={handleSelect}>
               {carouselItems.map((item) => (

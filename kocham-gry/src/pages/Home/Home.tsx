@@ -6,7 +6,6 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarLink from "../../components/SidebarLink/SidebarLink";
 
 import { LinkToSection } from "../../types/LinkToSection";
-import "../../scss/_index.scss";
 
 import arcadeMachines from "./assets/arcade_machines.jpg";
 import commodore from "./assets/commodore.jpg";
@@ -55,9 +54,7 @@ export default function Home() {
             </p>
 
             <section id="firstGame">
-              <header>
-                <h2>Pierwsza gra komputerowa</h2>
-              </header>
+              <h2>Pierwsza gra komputerowa</h2>
 
               <p>
                 Tak prawdziwa, że bardziej się nie da. Tutaj wszyscy badacze są
@@ -98,9 +95,7 @@ export default function Home() {
             </section>
 
             <section id="firstConsole">
-              <header>
-                <h2>Prototyp pierwszej konsoli</h2>
-              </header>
+              <h2>Prototyp pierwszej konsoli</h2>
 
               <p>
                 Historia gier wideo przeżywa trudny okres. Świat już załapał, że
@@ -126,11 +121,7 @@ export default function Home() {
             </section>
 
             <section id="Magnavox_Odyssey">
-              <header>
-                <h2>
-                  Pierwsza konsola w historii gier wideo – Magnavox Odyssey
-                </h2>
-              </header>
+              <h2>Pierwsza konsola w historii gier wideo – Magnavox Odyssey</h2>
 
               <p>
                 Chętnych do wydania konsoli, która obsługiwałaby gry za bardzo
@@ -167,11 +158,9 @@ export default function Home() {
             </section>
 
             <section id="arcadeMachines">
-              <header>
-                <h2>
-                  Gaming w barze – Era maszyn arcade'owych w historii gier wideo
-                </h2>
-              </header>
+              <h2>
+                Gaming w barze – Era maszyn arcade'owych w historii gier wideo
+              </h2>
 
               <p>
                 Nieprzypadkowo era. Mowa tutaj o prawdziwym, dochodowym
@@ -209,11 +198,9 @@ export default function Home() {
             </section>
 
             <section id="homeGaming">
-              <header>
-                <h2>
-                  Gaming w domu – historia branży gier wideo pod domowym dachem
-                </h2>
-              </header>
+              <h2>
+                Gaming w domu – historia branży gier wideo pod domowym dachem
+              </h2>
 
               <h3>Konsole</h3>
               <p>
@@ -341,9 +328,7 @@ export default function Home() {
             </section>
 
             <section id="summary">
-              <header>
-                <h2>Podsumowanie historii gier</h2>
-              </header>
+              <h2>Podsumowanie historii gier</h2>
 
               <p>
                 Kilka dekad rozwoju branży gier wideo tworzy (nie)krótką
@@ -376,17 +361,19 @@ export default function Home() {
         <Col xs={{ span: 10, offset: 1 }} lg={{ span: 4, offset: 0 }}>
           <Sidebar>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
-            <ListGroup
-              as="ol"
-              numbered
-              className="border border-1 border-light rounded"
-            >
-              {linksToSections.map((link) => (
-                <SidebarLink key={link.id} sectionId={link.id}>
-                  {link.text}
-                </SidebarLink>
-              ))}
-            </ListGroup>
+            <nav>
+              <ListGroup
+                as="ol"
+                numbered
+                className="border border-1 border-light rounded"
+              >
+                {linksToSections.map((link) => (
+                  <SidebarLink key={link.id} sectionId={link.id}>
+                    {link.text}
+                  </SidebarLink>
+                ))}
+              </ListGroup>
+            </nav>
 
             <h3 className="mb-2 mt-4 text-center text-white">Ciekawostki</h3>
             <ul className="text-white" style={{ listStyleType: "disc" }}>

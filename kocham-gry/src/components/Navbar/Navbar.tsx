@@ -28,7 +28,7 @@ export default function NavBar() {
               <NavDropdown.Item href="Call_of_Duty">
                 Call of Duty
               </NavDropdown.Item>
-              <NavDropdown.Item href="CS:GO">CS:GO</NavDropdown.Item>
+              <NavDropdown.Item href="CSGO">CS:GO</NavDropdown.Item>
               <NavDropdown.Item href="PUBG">PUBG</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Gry sportowe">
