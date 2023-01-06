@@ -5,6 +5,8 @@ import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
+import "./assets/Tekken.scss";
+
 import articleImg from "./assets/articleImg.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 

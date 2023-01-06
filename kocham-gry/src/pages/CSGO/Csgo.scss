@@ -1,0 +1,18 @@
+@use "../../scss" as *;
+
+.map {
+  position: relative;
+
+  &-name {
+    color: #fff;
+    font-size: $font-size-lg;
+    overflow: hidden;
+    padding: 1rem 0;
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

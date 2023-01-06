@@ -247,7 +247,7 @@ export default function StreetFighter() {
       </Row>
 
       <Row>
-        <Col xs={{ span: 12, offset: 0 }} md={{ span: 10, offset: 1 }}>
+        <Col md={{ span: 10, offset: 1 }}>
           <section>
             <h2 className="py-3 text-center text-white">
               Moje ulubione postacie

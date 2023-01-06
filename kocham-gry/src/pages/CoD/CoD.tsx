@@ -152,11 +152,7 @@ export default function CoD() {
       </Row>
 
       <Row>
-        <Col
-          xs={{ span: 12, offset: 0 }}
-          md={{ span: 10, offset: 1 }}
-          lg={{ span: 8, offset: 2 }}
-        >
+        <Col md={{ span: 10, offset: 1 }} lg={{ span: 8, offset: 2 }}>
           <section>
             <h2 className="py-2 text-center text-white">
               5 najlepszych odsłon serii Call of Duty

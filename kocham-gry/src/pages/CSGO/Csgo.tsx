@@ -4,38 +4,20 @@ import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
+import "./Csgo.scss";
+
 import articleImg from "./assets/articleImg.png";
 import sidebarImg from "./assets/sidebarImg.jpg";
 import cache from "./assets/cache.jpg";
+import dust from "./assets/dust.jpg";
 import inferno from "./assets/inferno.jpg";
 import mirage from "./assets/mirage.jpg";
 import nuke from "./assets/nuke.jpg";
-
-interface Map {
-  imgSrc: string;
-  name: string;
-}
-
-const maps: Map[] = [
-  {
-    imgSrc: mirage,
-    name: "Mirage",
-  },
-  {
-    imgSrc: cache,
-    name: "Cache",
-  },
-  {
-    imgSrc: inferno,
-    name: "Inferno",
-  },
-  {
-    imgSrc: nuke,
-    name: "Nuke",
-  },
-];
+import overpass from "./assets/overpass.jpg";
 
 export default function Csgo() {
+  const imgStyles = "img-fluid my-3 rounded shadow-md";
+
   return (
     <Container fluid="md">
       <Row>
@@ -139,6 +121,45 @@ export default function Csgo() {
               classes="img-fluid shadow-lg large"
             />
           </Sidebar>
+        </Col>
+      </Row>
+
+      <Row className="my-5">
+        <h2 className="pb-3 text-center text-white">Najpopularniejsze mapy</h2>
+
+        <Col
+          sm={6}
+          md={{ span: 5, offset: 1 }}
+          lg={{ span: 6, offset: 0 }}
+          className="map"
+        >
+          <Picture source={mirage} alt="Mirage" classes={imgStyles} />
+          <p className="map-name">Mirage</p>
+        </Col>
+        <Col sm={6} md={5} lg={6} className="map">
+          <Picture source={cache} alt="Cache" classes={imgStyles} />
+          <p className="map-name">Cache</p>
+        </Col>
+        <Col sm={6} md={4} lg={3} className="map">
+          <Picture source={inferno} alt="Inferno" classes={imgStyles} />
+          <p className="map-name">Inferno</p>
+        </Col>
+        <Col sm={6} md={4} lg={3} className="map">
+          <Picture source={dust} alt="Dust 2" classes={imgStyles} />
+          <p className="map-name">Dust 2</p>
+        </Col>
+        <Col sm={6} md={4} lg={3} className="map">
+          <Picture source={nuke} alt="Nuke" classes={imgStyles} />
+          <p className="map-name">Nuke</p>
+        </Col>
+        <Col
+          sm={6}
+          md={{ span: 4, offset: 4 }}
+          lg={{ span: 3, offset: 0 }}
+          className="map"
+        >
+          <Picture source={overpass} alt="Overpass" classes={imgStyles} />
+          <p className="map-name">Overpass</p>
         </Col>
       </Row>
     </Container>
