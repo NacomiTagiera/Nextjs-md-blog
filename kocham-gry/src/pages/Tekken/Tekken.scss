@@ -1,1 +1,32 @@
 @use "../../scss" as *;
+
+.slides-container {
+  border-radius: $base-border-radius;
+  margin: 10rem auto;
+  position: relative;
+  width: 30rem;
+  max-width: 95vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  transform-style: preserve-3d;
+  transform: perspective(100rem) rotateY(0deg);
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(40rem);
+}
+
+.btn {
+  opacity: 0.5;
+  width: 5rem;
+  height: auto;
+
+  &:hover {
+    opacity: 1;
+  }
+}

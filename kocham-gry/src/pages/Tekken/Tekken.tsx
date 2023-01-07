@@ -1,16 +1,47 @@
-import { useState } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import {
+  ArrowLeftCircleFill,
+  ArrowRightCircleFill,
+} from "react-bootstrap-icons";
 
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
-import "./assets/Tekken.scss";
+import "./Tekken.scss";
 
-import articleImg from "./assets/articleImg.jpg";
+import slide1 from "./assets/slide1.jpg";
+import slide2 from "./assets/slide2.jpg";
+import slide3 from "./assets/slide3.jpg";
+import slide4 from "./assets/slide4.jpg";
+import slide5 from "./assets/slide5.png";
+import slide6 from "./assets/slide6.jpg";
+import slide7 from "./assets/slide7.jpg";
+import slide8 from "./assets/slide8.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 
 export default function Tekken() {
+  const [degrees, setDegrees] = React.useState<number>(0);
+  const slides = [
+    slide1,
+    slide2,
+    slide3,
+    slide4,
+    slide5,
+    slide6,
+    slide7,
+    slide8,
+  ];
+
+  const nextSlide = () => {
+    setDegrees((prevState) => prevState - 45);
+  };
+
+  const prevSlide = () => {
+    setDegrees((prevState) => prevState + 45);
+  };
+
   return (
     <Container fluid="md">
       <Row>
@@ -52,8 +83,8 @@ export default function Tekken() {
             </section>
 
             <Picture
-              source={articleImg}
-              alt="Tekken 7 - Kazuya"
+              source={slide1}
+              alt="Kazuya"
               classes="float-lg-start me-lg-3 my-3 my-lg-0 responsive"
             />
 
@@ -99,6 +130,34 @@ export default function Tekken() {
             />
           </Sidebar>
         </Col>
+      </Row>
+
+      <Row>
+        <section
+          className="slides-container"
+          style={{ transform: `perspective(100rem) rotateY(${degrees}deg)` }}
+        >
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide}
+              alt={`slide ${index + 1}`}
+              loading="lazy"
+              className="slide"
+              style={{ "--i": index + 1 } as React.CSSProperties}
+            />
+          ))}
+        </section>
+        <div className="my-5 mx-auto d-flex justify-content-around">
+          <ArrowLeftCircleFill
+            className="cursor-pointer text-white btn prev"
+            onClick={prevSlide}
+          />
+          <ArrowRightCircleFill
+            className="cursor-pointer text-white btn next"
+            onClick={nextSlide}
+          />
+        </div>
       </Row>
     </Container>
   );

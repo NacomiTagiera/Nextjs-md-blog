@@ -4,6 +4,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { CarouselItem } from "../../types/CarouselItem";
 
 import blackOps from "./assets/blackOps.jpg";
 import cod2 from "./assets/cod2.jpg";
@@ -11,12 +12,6 @@ import modernWarfare from "./assets/mw1.jpg";
 import modernWarfare2 from "./assets/mw2.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
 import worldAtWar from "./assets/worldAtWar.jpg";
-
-interface CarouselItem {
-  alt: string;
-  caption: string;
-  src: string;
-}
 
 const carouselItems: CarouselItem[] = [
   {
@@ -140,12 +135,12 @@ export default function CoD() {
           </MainContent>
         </Col>
 
-        <Col>
+        <Col className="d-none d-lg-block">
           <Sidebar isSticky={false}>
             <Picture
               source={sidebarImg}
               alt="Call of Duty: Black Ops"
-              classes="d-none d-lg-block img-fluid shadow-lg large"
+              classes="img-fluid shadow-lg large"
             />
           </Sidebar>
         </Col>

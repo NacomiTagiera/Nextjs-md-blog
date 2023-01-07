@@ -141,11 +141,11 @@ export default function Pubg() {
                 />
               ))}
               <ArrowLeftCircleFill
-                className="p-absolute top-50 start-0 translate-middle btn"
+                className="cursor-pointer p-absolute top-50 start-0 translate-middle btn"
                 onClick={prevSlide}
               />
               <ArrowRightCircleFill
-                className="p-absolute top-50 start-100 translate-middle btn"
+                className="cursor-pointer p-absolute top-50 start-100 translate-middle btn"
                 onClick={nextSlide}
               />
             </section>

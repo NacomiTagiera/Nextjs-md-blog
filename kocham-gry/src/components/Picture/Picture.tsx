@@ -13,7 +13,7 @@ export default function Picture({ alt, classes, source }: Props) {
       alt={alt}
       className={`d-block picture ${classes}`}
       src={source}
-      title={alt}
+      title={alt.includes("slide") ? "" : alt}
     />
   );
 }
