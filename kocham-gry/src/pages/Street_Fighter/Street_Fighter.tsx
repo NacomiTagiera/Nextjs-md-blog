@@ -6,7 +6,7 @@ import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarLink from "../../components/SidebarLink/SidebarLink";
 
-import { LinkToSection } from "../../types/LinkToSection";
+import { LinkToSection, SFCharacter } from "../../types/main";
 import "./Street_Fighter.scss";
 
 import abel from "./assets/abel.jpg";
@@ -16,12 +16,7 @@ import seth from "./assets/seth.jpg";
 import fighters from "./assets/articleImg1.jpg";
 import streetFigher from "./assets/article-st6.jpg";
 
-interface Character {
-  image: string;
-  name: string;
-}
-
-const characters: Character[] = [
+const characters: SFCharacter[] = [
   {
     image: abel,
     name: "Abel",
@@ -230,11 +225,7 @@ export default function StreetFighter() {
           <Sidebar>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
             <nav>
-              <ListGroup
-                as="ol"
-                numbered
-                className="border border-1 border-light rounded"
-              >
+              <ListGroup as="ol" numbered variant="flush">
                 {linksToSections.map((link) => (
                   <SidebarLink key={link.id} sectionId={link.id}>
                     {link.text}

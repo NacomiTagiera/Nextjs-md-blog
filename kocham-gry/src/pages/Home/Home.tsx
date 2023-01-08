@@ -5,7 +5,7 @@ import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarLink from "../../components/SidebarLink/SidebarLink";
 
-import { LinkToSection } from "../../types/LinkToSection";
+import { LinkToSection } from "../../types/main";
 
 import arcadeMachines from "./assets/arcade_machines.jpg";
 import commodore from "./assets/commodore.jpg";
@@ -362,11 +362,7 @@ export default function Home() {
           <Sidebar>
             <h3 className="mb-3 text-center text-white">Spis treści</h3>
             <nav>
-              <ListGroup
-                as="ol"
-                numbered
-                className="border border-1 border-light rounded"
-              >
+              <ListGroup as="ol" numbered variant="flush">
                 {linksToSections.map((link) => (
                   <SidebarLink key={link.id} sectionId={link.id}>
                     {link.text}

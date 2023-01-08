@@ -4,7 +4,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { CarouselItem } from "../../types/CarouselItem";
+import { CarouselItem } from "../../types/main";
 
 import blackOps from "./assets/blackOps.jpg";
 import cod2 from "./assets/cod2.jpg";

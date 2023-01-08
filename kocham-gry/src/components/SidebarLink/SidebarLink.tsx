@@ -1,14 +1,10 @@
 import { ListGroup } from "react-bootstrap";
 import { Link } from "react-scroll";
-import CommonProps from "../types/commonProps";
+import { ISidebarLink } from "../../types/main";
 
-interface Props extends CommonProps {
-  sectionId: string;
-}
-
-export default function SidebarLink({ children, sectionId }: Props) {
+export default function SidebarLink({ children, sectionId }: ISidebarLink) {
   return (
-    <ListGroup.Item as="li">
+    <ListGroup.Item as="li" variant="dark" action>
       <Link activeClass="text-primary" to={sectionId} spy={true} offset={-65}>
         {children}
       </Link>

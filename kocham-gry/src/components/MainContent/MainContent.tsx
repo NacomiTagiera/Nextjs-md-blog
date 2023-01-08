@@ -1,4 +1,4 @@
-import CommonProps from "../types/commonProps";
+import { CommonProps } from "../../types/main";
 
 export default function MainContent({ children }: CommonProps) {
   return (

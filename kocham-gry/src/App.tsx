@@ -8,6 +8,8 @@ import {
 
 import "bootstrap/dist/js/bootstrap.min";
 
+import Loading from "./pages/Loading/Loading";
+
 // layout
 const RootLayout = lazy(() => import("./layouts/RootLayout"));
 
@@ -42,7 +44,7 @@ const router = createBrowserRouter(
 
 export default function App() {
   return (
-    <Suspense fallback={<h1 className="text-center text-white">Loading...</h1>}>
+    <Suspense fallback={<Loading />}>
       <RouterProvider router={router} />
     </Suspense>
   );

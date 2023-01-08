@@ -1,13 +1,8 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { IPicture } from "../../types/main";
 import "./Picture.scss";
 
-interface Props {
-  alt: string;
-  classes: string;
-  source: string;
-}
-
-export default function Picture({ alt, classes, source }: Props) {
+export default function Picture({ alt, classes, source }: IPicture) {
   return (
     <LazyLoadImage
       alt={alt}

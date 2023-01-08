@@ -4,7 +4,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import MainContent from "../../components/MainContent/MainContent";
 import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { CarouselItem } from "../../types/CarouselItem";
+import { CarouselItem } from "../../types/main";
 
 import articleImg from "./assets/articleImg.jpg";
 import sidebarImg from "./assets/sidebarImg.jpg";
@@ -139,8 +139,7 @@ export default function Mortal_Kombat() {
                 Seria Mortal Kombat na stałe wpisała się nie tylko w historię
                 gier wideo, ale szeroko pojętej kultury masowej. Marka doczekała
                 się m.in. dwóch ekranizacji kinowych i seriali telewizyjnych,
-                filmu animowanego oraz serii komiksów. Źródło:
-                https://www.gry-online.pl/gry-z-serii-i-podobne.asp?ID=501
+                filmu animowanego oraz serii komiksów.
               </p>
             </section>
           </MainContent>
@@ -168,7 +167,10 @@ export default function Mortal_Kombat() {
               {carouselItems.map((item) => (
                 <Carousel.Item key={item.caption} interval={interval}>
                   <Picture source={item.src} alt={item.alt} classes="large" />
-                  <Carousel.Caption style={{ fontSize: "2rem" }}>
+                  <Carousel.Caption
+                    className="fw-bold pb-5 text-danger"
+                    style={{ fontSize: "2rem" }}
+                  >
                     {item.caption}
                   </Carousel.Caption>
                 </Carousel.Item>
