@@ -6,11 +6,6 @@ export interface CarouselItem {
   src: string;
 }
 
-export interface SFCharacter {
-  image: string;
-  name: string;
-}
-
 export interface CommonProps {
   children: ReactNode;
 }
@@ -25,11 +20,16 @@ export interface ISidebar extends CommonProps {
   isSticky?: boolean;
 }
 
+export interface ISidebarLink extends CommonProps {
+  sectionId: string;
+}
+
 export interface LinkToSection {
   id: string;
   text: string;
 }
 
-export interface ISidebarLink extends CommonProps {
-  sectionId: string;
+export interface SFCharacter {
+  image: string;
+  name: string;
 }

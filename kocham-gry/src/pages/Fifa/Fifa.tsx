@@ -50,6 +50,7 @@ function Fifa() {
 
             <section>
               <h2>Produkcja</h2>
+
               <p>
                 Za produkcję gier z cyklu FIFA odpowiada przede wszystkim studio
                 deweloperskie EA Canada. Seria rozwijana jest w sposób
@@ -67,6 +68,7 @@ function Fifa() {
 
             <section>
               <h2>Statystyki</h2>
+
               <p>
                 Aktualnie kolejne odsłony cyklu ukazują się w przeszło 50
                 krajach i około 20 wersjach językowych (w tym również polskiej),
