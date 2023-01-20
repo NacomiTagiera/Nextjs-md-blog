@@ -6,7 +6,7 @@ import Picture from "../../components/Picture/Picture";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarLink from "../../components/SidebarLink/SidebarLink";
 
-import { LinkToSection, SFCharacter } from "../../types/main";
+import { LinkToSection } from "../../types/main";
 import "./Street_Fighter.scss";
 
 import abel from "./assets/abel.jpg";
@@ -16,7 +16,12 @@ import seth from "./assets/seth.jpg";
 import fighters from "./assets/articleImg1.jpg";
 import streetFigher from "./assets/article-st6.jpg";
 
-const characters: SFCharacter[] = [
+interface Character {
+  image: string;
+  name: string;
+}
+
+const characters: Character[] = [
   {
     image: abel,
     name: "Abel",

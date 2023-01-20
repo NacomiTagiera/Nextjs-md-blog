@@ -1,6 +1,10 @@
-import { CommonProps } from "../../types/main";
+import { ReactNode } from "react";
 
-export default function MainContent({ children }: CommonProps) {
+interface Props {
+  children: ReactNode;
+}
+
+export default function MainContent({ children }: Props) {
   return (
     <main className="mt-5">
       <article className="bg-white py-1 px-4 text-body">{children}</article>

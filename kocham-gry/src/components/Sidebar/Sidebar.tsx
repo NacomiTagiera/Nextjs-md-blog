@@ -1,6 +1,11 @@
-import { CommonProps, ISidebar } from "../../types/main";
+import { ReactNode } from "react";
 
-export default function Sidebar({ children, isSticky = true }: ISidebar) {
+interface Props {
+  children: ReactNode;
+  isSticky?: boolean;
+}
+
+export default function Sidebar({ children, isSticky = true }: Props) {
   return (
     <aside
       className={`mt-5 ${isSticky ? "sticky-top" : ""}`}
