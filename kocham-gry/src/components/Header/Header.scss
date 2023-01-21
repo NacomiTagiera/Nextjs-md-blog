@@ -1,12 +1,14 @@
 @use "../../scss" as *;
 
-h1 {
+.main-header {
   & .controller {
     width: $font-size-xl;
     height: auto;
   }
-}
 
-span {
-  color: $primary;
+  & span {
+    color: $primary;
+  }
+
+  @include slide-down(1s);
 }
