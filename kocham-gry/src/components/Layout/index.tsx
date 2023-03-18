@@ -11,9 +11,11 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <Fragment>
-      <Header />
-      <Navbar />
-      <main>{children}</main>
+      <div className="flex-grow">
+        <Header />
+        <Navbar />
+        <main>{children}</main>
+      </div>
       <Footer />
     </Fragment>
   );

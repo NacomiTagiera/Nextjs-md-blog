@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primary h-full overflow-x-hidden;
+  @apply bg-primary overflow-x-hidden;
 }
 
 #__next {
-  @apply h-full;
-}
-
-html {
-  @apply h-full;
+  @apply flex flex-col min-h-screen;
 }

@@ -2,7 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "_posts");
+const postsDirectory = join(process.cwd(), "src/posts");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -28,7 +28,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = content;
     }
 
-    if (data[field]) {
+    if (typeof data[field] !== "undefined") {
       items[field] = data[field];
     }
   });

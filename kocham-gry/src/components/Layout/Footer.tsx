@@ -6,7 +6,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="text-light">
+    <footer className="mt-auto text-light">
       <div className="flex justify-center bg-warning py-5">
         <a
           href="https://github.com/NacomiTagiera"
