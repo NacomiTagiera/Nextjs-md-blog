@@ -6,31 +6,31 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-auto text-light">
-      <div className="flex justify-center bg-warning py-5">
+    <footer className="mt-auto">
+      <div className="flex justify-center bg-warning py-2 text-secondary">
         <a
           href="https://github.com/NacomiTagiera"
           target="_blank"
           className="hover:opacity-80 transition"
         >
-          <AiOutlineGithub size={50} />
+          <AiOutlineGithub size={45} />
         </a>
         <a
           href="https://www.facebook.com/kubapawlak123321/"
           target="_blank"
           className="mx-5 hover:opacity-80 transition"
         >
-          <AiFillFacebook size={50} />
+          <AiFillFacebook size={45} />
         </a>
         <a
           href="https://www.linkedin.com/in/jakub-pawlak-frontend-dev/"
           target="_blank"
           className="hover:opacity-80 transition"
         >
-          <AiFillLinkedin size={50} />
+          <AiFillLinkedin size={45} />
         </a>
       </div>
-      <p className="bg-secondary font-semibold px-3 py-4 text-center text-lg md:text-xl">
+      <p className="font-semibold pb-4 px-3 text-center text-lg md:text-xl">
         Jakub Pawlak - przyszły frontend developer &copy; Wszelkie prawa
         zastrzeżone
       </p>

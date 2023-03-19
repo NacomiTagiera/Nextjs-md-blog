@@ -1,4 +1,6 @@
 import { getAllPosts } from "@/lib/api";
+import Intro from "@/components/Home/Intro";
+import PostList from "@/components/Home/PostList";
 import { Post } from "@/interfaces/post";
 
 interface Props {
@@ -6,7 +8,12 @@ interface Props {
 }
 
 export default function Home({ allPosts }: Props) {
-  return <div>Home</div>;
+  return (
+    <article>
+      <Intro />
+      <PostList posts={allPosts} />
+    </article>
+  );
 }
 
 export const getStaticProps = async () => {

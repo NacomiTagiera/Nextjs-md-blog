@@ -1,7 +1,6 @@
 import { Fragment, ReactNode } from "react";
 
 import Footer from "./Footer";
-import Header from "./Header";
 import Navbar from "./Navbar";
 
 interface Props {
@@ -11,11 +10,10 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <Fragment>
-      <div className="flex-grow">
-        <Header />
-        <Navbar />
-        <main>{children}</main>
-      </div>
+      <Navbar />
+      <main className="flex-grow mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        {children}
+      </main>
       <Footer />
     </Fragment>
   );

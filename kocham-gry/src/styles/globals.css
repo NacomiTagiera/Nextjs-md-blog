@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primary overflow-x-hidden;
+  @apply bg-primary overflow-x-hidden text-white;
 }
 
 #__next {
