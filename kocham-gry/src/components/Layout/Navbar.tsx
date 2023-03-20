@@ -12,35 +12,37 @@ export default function Navbar() {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  const links = [
+    ["Strona główna", "/"],
+    ["Posty", "/posts"],
+    ["Kontakt", "/contact"],
+  ];
+
   return (
     <header className="py-7">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Logo />
-          </div>
-          <nav className="hidden sm:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/"
-                className="px-3 py-2 rounded-md text-lg hover:bg-warning"
-              >
-                Strona główna
-              </Link>
-              <Link
-                href="/contact"
-                className="px-3 py-2 rounded-md text-lg hover:bg-warning"
-              >
-                Kontakt
-              </Link>
-            </div>
+          <Logo />
+          <nav className="hidden md:block">
+            <ul className="ml-10 flex items-baseline space-x-6 lg:space-x-9">
+              {links.map(([text, href]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="font-medium text-lg hover:text-secondary transition"
+                  >
+                    {text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
           <button
             type="button"
             aria-controls="mobile-menu"
             aria-label="Menu"
             aria-expanded={isMenuOpen}
-            className="sm:hidden mr-2"
+            className="md:hidden mr-2"
             onClick={handleToggleMenu}
           >
             <span className="sr-only">Open menu</span>
@@ -50,21 +52,19 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <nav className="sm:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              href="/"
-              className="block py-2 rounded-md text-base font-medium text-center hover:underline"
-            >
-              Strona główna
-            </Link>
-            <Link
-              href="/contact"
-              className="block py-2 rounded-md text-base font-medium text-center hover:underline"
-            >
-              Kontakt
-            </Link>
-          </div>
+        <nav className="md:hidden" id="mobile-menu">
+          <ul className="px-2 pt-2 pb-3 space-y-8">
+            {links.map(([text, href]) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="block text-base font-medium text-center hover:text-secondary transition"
+                >
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
       )}
     </header>

@@ -1,49 +1,51 @@
 import fs from "fs";
-import { join } from "path";
+import path from "path";
 import matter from "gray-matter";
+import { Post } from "@/interfaces/post";
 
-const postsDirectory = join(process.cwd(), "src/posts");
+const POSTS_DIRECTORY = path.join(process.cwd(), "src/posts");
+const POPULAR_POSTS_COUNT = 3;
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
+export function getAllPosts(): Post[] {
+  const fileNames = fs.readdirSync(POSTS_DIRECTORY);
+  const posts = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(POSTS_DIRECTORY, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const { data, content } = matter(fileContents);
+    const { category, date, excerpt, isPopular, title, thumbnail } = data;
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
-
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
+    return {
+      category,
+      content,
+      date,
+      excerpt,
+      isPopular,
+      slug,
+      thumbnail,
+      title,
+    };
   });
+  posts.sort((a, b) => (a.date > b.date ? -1 : 1));
 
-  return items;
-}
-
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs.map((slug) => getPostBySlug(slug, fields));
   return posts;
 }
 
-export function getPostsByCategory(category: string) {
+export function getPostsByCategory(category: string): Post[] {
   const allPosts = getAllPosts();
 
-  return allPosts.filter((post) => post.category === category);
+  const filteredPosts = allPosts.filter((post) => post.category === category);
+
+  return filteredPosts;
+}
+
+export function getPopularPosts(): Post[] {
+  const allPosts = getAllPosts();
+
+  const popularPosts = allPosts.filter((post) => post.isPopular);
+  popularPosts
+    .sort((a, b) => (a.date > b.date ? -1 : 1))
+    .slice(0, POPULAR_POSTS_COUNT);
+
+  return popularPosts;
 }

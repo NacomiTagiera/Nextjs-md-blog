@@ -1,5 +1,6 @@
 interface Props {
   category: string;
+  date: string;
   excerpt: string;
   slug: string;
   thumbnail: string;
@@ -8,6 +9,7 @@ interface Props {
 
 export default function PostPreview({
   category,
+  date,
   excerpt,
   slug,
   thumbnail,

@@ -7,7 +7,7 @@ import {
 export default function Footer() {
   return (
     <footer className="mt-auto">
-      <div className="flex justify-center bg-warning py-2 text-secondary">
+      <div className="flex justify-center py-2 text-secondary">
         <a
           href="https://github.com/NacomiTagiera"
           target="_blank"
