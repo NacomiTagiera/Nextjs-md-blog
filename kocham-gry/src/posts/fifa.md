@@ -1,9 +1,9 @@
 ---
-category: 'strzelanki'
-date: '20-03-2023'
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-thumbnail: '/assets/blog/hello-world/cover.jpg'
+category: 'sport'
+date: '22-03-2023'
+title: 'FIFA'
+excerpt: 'Najbardziej znany cykl piłkarskich symulacji i zarazem jedna z najpopularniejszych serii sportowych w historii branży gier wideo.'
+thumbnail: '/images/posts/fifa/thumbnail.jpg'
 isPopular: true
 ---
 

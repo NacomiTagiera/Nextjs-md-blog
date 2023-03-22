@@ -7,18 +7,17 @@ interface Props {
 
 export default function PostList({ posts }: Props) {
   return (
-    <ul className="divide-y divide-red-400">
+    <ul className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-10 mb-14">
       {posts.map((post, index) => (
-        <li key={index} className="py-12">
-          <PostPreview
-            category={post.category}
-            date={post.date}
-            excerpt={post.excerpt}
-            slug={post.slug}
-            thumbnail={post.thumbnail}
-            title={post.title}
-          />
-        </li>
+        <PostPreview
+          key={index}
+          category={post.category}
+          date={post.date}
+          excerpt={post.excerpt}
+          slug={post.slug}
+          thumbnail={post.thumbnail}
+          title={post.title}
+        />
       ))}
     </ul>
   );
