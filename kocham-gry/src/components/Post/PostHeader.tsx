@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Image from "next/image";
 
 interface Props {
   date: string;
@@ -10,24 +11,17 @@ interface Props {
 export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
   return (
     <Fragment>
-      <div className="px-6 py-16 pb-48 mx-auto -mb-48 text-center md:pb-96 md:-mb-96">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-center mb-2 space-x-2 text-sm">
-            <p>{date}</p>
-          </div>
-          <div className="font-extrabold tracking-tight text-w-4xl sm:text-4xl">
-            {title}
-          </div>
-          <div className="max-w-3xl mx-auto mt-3 text-xl leading-8 sm:mt-4">
-            {excerpt}
-          </div>
-        </div>
+      <div className="max-w-3xl">
+        <time className="text-secondary text-sm md:text-md md:text-lg">
+          {date}
+        </time>
+        <h2 className="font-bold mb-6 text-3xl sm:text-4xl md:text-5xl text-center tracking-wide">
+          {title}
+        </h2>
+        <p className="leading-8 max-w-3xl sm:mt-4 text-xl">{excerpt}</p>
       </div>
-      <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
-        <img
-          className="object-cover w-full rounded-xl aspect-video"
-          src={thumbnail}
-        />
+      <div className="relative w-full aspect-video my-8 overflow-hidden px-6 md:px-0 rounded-lg">
+        <Image src={thumbnail} alt={title} width={768} height={432} />
       </div>
     </Fragment>
   );

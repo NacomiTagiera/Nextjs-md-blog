@@ -1,28 +1,28 @@
-import { getAllPosts } from "@/lib/api";
+import { getPopularPosts } from "@/lib/api";
 import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";
 import { Post } from "@/interfaces/post";
 
 interface Props {
-  allPosts: Post[];
+  popularPosts: Post[];
 }
 
-export default function Home({ allPosts }: Props) {
+export default function Posts({ popularPosts }: Props) {
   return (
     <article>
       <Intro
         header="Popularne wpisy"
         introText="Witaj na moim blogu poświęconym najlepszym grom komputerowym!"
       />
-      <PostList posts={allPosts} />
+      <PostList posts={popularPosts} />
     </article>
   );
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts();
+  const popularPosts = getPopularPosts();
 
   return {
-    props: { allPosts },
+    props: { popularPosts },
   };
 };

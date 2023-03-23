@@ -21,7 +21,7 @@ export default function PostPreview({
   title,
 }: Props) {
   return (
-    <li className="relative bg-white rounded-b-lg shadow-md max-w-sm md:max-w-none overflow-hidden">
+    <li className="relative bg-white max-w-sm md:max-w-none overflow-hidden rounded-b-lg shadow-md">
       <div className="relative w-full aspect-video">
         <Image
           src={thumbnail}
@@ -33,11 +33,11 @@ export default function PostPreview({
         />
       </div>
       <div className="p-4 text-primary">
-        <span className="bg-secondary mr-2 rounded-lg py-1 px-2 text-sm text-white uppercase">
+        <span className="bg-secondary mr-2 py-1 px-2 rounded-lg text-sm text-white uppercase">
           {category}
         </span>
-        <h2 className="font-semibold text-xl leading-6 mt-2">{title}</h2>
-        <time className="mb-3 flex items-center text-sm">
+        <h3 className="font-semibold leading-6 mt-2 text-xl">{title}</h3>
+        <time className="flex items-center mb-3 text-sm">
           <BiTimeFive className="mr-1" />
           {date}
         </time>

@@ -1,24 +1,28 @@
-import { getPopularPosts } from "@/lib/api";
+import { getAllPosts } from "@/lib/api";
+import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";
 import { Post } from "@/interfaces/post";
 
 interface Props {
-  popularPosts: Post[];
+  allPosts: Post[];
 }
 
-export default function Posts({ popularPosts }: Props) {
-  console.log(popularPosts);
+export default function Home({ allPosts }: Props) {
   return (
     <article>
-      <PostList posts={popularPosts} />
+      <Intro
+        header="Wszystkie wpisy"
+        introText="Poznaj najlepsze tytuły ze świata gier z różnych kategorii"
+      />
+      <PostList posts={allPosts} />
     </article>
   );
 }
 
 export const getStaticProps = async () => {
-  const popularPosts = getPopularPosts();
+  const allPosts = getAllPosts();
 
   return {
-    props: { popularPosts },
+    props: { allPosts },
   };
 };

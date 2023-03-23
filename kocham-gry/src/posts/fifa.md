@@ -1,5 +1,5 @@
 ---
-category: 'sport'
+category: 'gry sportowe'
 date: '22-03-2023'
 title: 'FIFA'
 excerpt: 'Najbardziej znany cykl piłkarskich symulacji i zarazem jedna z najpopularniejszych serii sportowych w historii branży gier wideo.'
