@@ -1,8 +1,11 @@
-import { useRouter } from "next/router";
+import { Fragment } from "react";
 import ErrorPage from "next/error";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 import { getPostData, getPostsFiles } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
+import Intro from "@/components/Common/Intro";
 import PostHeader from "@/components/Post/PostHeader";
 import PostBody from "@/components/Post/PostBody";
 import { Post } from "@/interfaces/post";
@@ -18,15 +21,25 @@ export default function PostPage({ post }: Props) {
   }
 
   return (
-    <article>
-      <PostHeader
-        date={post.date}
-        excerpt={post.excerpt}
-        thumbnail={post.thumbnail}
-        title={post.title}
-      />
-      <PostBody content={post.content} />
-    </article>
+    <Fragment>
+      {router.isFallback ? (
+        <Intro header="Loading" introText="" />
+      ) : (
+        <article>
+          <Head>
+            <title>{post.title}</title>
+            <meta name="description" content={post.excerpt} />
+          </Head>
+          <PostHeader
+            date={post.date}
+            excerpt={post.excerpt}
+            thumbnail={post.thumbnail}
+            title={post.title}
+          />
+          <PostBody content={post.content} />
+        </article>
+      )}
+    </Fragment>
   );
 }
 

@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { getAllPosts } from "@/lib/api";
 import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";
@@ -10,9 +12,16 @@ interface Props {
 export default function Home({ allPosts }: Props) {
   return (
     <article>
+      <Head>
+        <title>Wszystkie wpisy</title>
+        <meta
+          name="description"
+          content="Poznaj najlepsze tytuły ze świata gier z różnych kategorii."
+        />
+      </Head>
       <Intro
         header="Wszystkie wpisy"
-        introText="Poznaj najlepsze tytuły ze świata gier z różnych kategorii"
+        introText="Poznaj najlepsze tytuły ze świata gier z różnych kategorii."
       />
       <PostList posts={allPosts} />
     </article>

@@ -2,37 +2,25 @@
 category: 'gry wyścigowe'
 date: '18-03-2023'
 title: 'Need For Speed'
-excerpt: 'Need for Speed to seria gier wyścigowych dostępnych na wiele platform, między innymi konsole, komputery czy urządzenia przenośne. Pierwszy tytuł z serii - The Need for Speed - został wydany 31 sierpnia 1994 roku.'
+excerpt: 'Jedna z najstarszych i najpopularniejszych serii gier wyścigowych w historii branży. Need for Speed należy do najbardziej wartościowych marek w portfolio Electronic Arts, a za kolejne jej odsłony zazwyczaj odpowiadają wewnętrzne studia deweloperskie amerykańskiego koncernu, np. EA Black Box, EA Gothenburg czy Criterion Games.'
 thumbnail: '/images/posts/need-for-speed/thumbnail.jpg'
 isPopular: true
 ---
 
-### Rozgrywka
+### Historia
 
-Wczesne tytuły NFS głównie koncentrowały się na ulicznych wyścigach samochodów sportowych przy różnych ustawieniach. The Need for Speed ​​(1994) koncentrowała się na pół-realistycznej jeździe samochodami różnych dyscyplin sportowych. Need for Speed ​​II (1996) wprowadził bardziej arkadowy model jazdy za pomocą ultra rzadkich samochodów egzotycznych. Need for Speed ​​III: Hot Pursuit (1998) wprowadził do serii koncepcję Policjanci kontra Zawodnicy, co pozwala graczom grać po obu stronach prawa.
+Cykl zadebiutował w 1994 roku grą The Need for Speed, przeznaczoną na konsole piątej generacji (3DO, PlayStation, Sega Saturn) oraz PC. Produkcja przygotowana została przez ekipę studia EA Canada, utworzonego w wyniku przejęcia Distinctive Software (twórców gier Test Drive i Test Drive II).
 
-Road Challenge (1999) był technicznie bardzo podobny do swojego poprzednika, lecz umożliwiał tuning wizualny, a także pod względem osiągów. W 2000 roku został wydany Need for Speed: Porsche 2000, w którym dostępne były wyłącznie pojazdy marki Porsche. Gra pozwalała również graczowi pracować jako kierowca testowy dla Porsche AG.
+Wspólnym elementem wszystkich gier z cyklu Need for Speed jest możliwość kierowania różnymi modelami samochodów (wśród których na ogół nie brakuje luksusowych marek – Ferrari, Porsche, Mercedesa i innych). Zależnie od koncepcji, jaka przyświecała twórcom, model jazdy ma mniej lub bardziej realistyczny charakter. Z reguły również dostępnych jest wiele trybów rozgrywki, przeznaczonych zarówno do zabawy jedno-, jak i wieloosobowej.
 
-W 2002 roku ukazał Hot Pursuit 2, który jest bezpośrednim następcą pierwotnego Hot Pursuit. Obie gry nie oferują uszkodzeń mechanicznych. Wersja na PlayStation 2 została stworzona przez EA Black Box, które od tego czasu tworzyło większość tytułów, w tym Need for Speed: Underground (2003).
+Gry z serii Need for Speed wyróżniają się też za sprawą widowiskowej oprawy wizualnej oraz dynamicznego soundtracku. Tę pierwszą zapewniają wydajne silniki graficzne, m.in. z rodziny Chameleon Engine oraz Frostbite.
 
-W przeciwieństwie do pierwszych sześciu gier NFS, gry z podserii Underground miały miejsce w fikcyjnym amerykańskim mieście. Egzotyki zastąpiono japońskimi i europejskimi kompaktami, jak również autami sportowymi. Usunięto również możliwość uczestniczenia w pościgach policyjnych.
+W historii Need for Speed wyróżnia się cztery okresy, odpowiadające zmianom strategii właściciela marki. Pierwszy zakończyła gra Need for Speed: Hot Pursuit 2 (2002). Drugi, trwający od 2003 roku, kiedy to zadebiutował kultowy Need for Speed: Underground, dobiegł końca wraz z premierą Need for Speed: Undercover (2008). Trzeci, zapoczątkowany przez Need for Speed: Shift (2009), zwieńczyło wydanie Need for Speed: The Run (2011), łączącego standardowe wyścigi z dynamicznymi, „filmowymi” scenami.
 
-Ze względu na ogromny sukces gry Underground, postanowiono wydać jego kontynuację Underground 2 (2004). Po raz pierwszy, dodano tryb jazdy dowolnej, co pozwoliło na swobodne poruszanie się po mieście. Rozszerzono również możliwości tuningu, dodając możliwość dostosowania osiągów (tzw. dyno run).
+Czwarty – trwający do dziś – okres rozpoczęło Need for Speed: Most Wanted (2012). Rok później zadebiutowało Need for Speed: Rivals, czyli pierwsza odsłona cyklu, która ukazała się na konsolach ósmej generacji – Xboksie One i PlayStation 4. Większa moc obliczeniowa pozwoliła na podniesienie poziomu graficznego oraz wprowadzenie systemu All Drive, dzięki któremu mogliśmy płynnie przechodzić między rozgrywką w trybie dla pojedynczego gracza i grą sieciową. Wymagało to jednak stałego połączenia z Internetem, co nie spodobało się części społeczności. W 2015 roku zdecydowano się na całkowity reboot marki. Wydane wówczas Need for Speed (bez żadnego podtytułu) stanowiło powrót do rozwiązań wypracowanych na potrzeby Need for Speed: Underground. Produkcja zawierała więc rozbudowane opcje modyfikacji aut oraz elementy autentycznej miejskiej kultury motoryzacyjnej; całość wzbogacono o pełną zwrotów akcji fabułę, rozgrywającą się w otwartym mieście pogrążonym w mroku. Rok 2017 przyniósł premierę gry Need for Speed: Payback, która wprowadziła między innymi możliwość jazdy w terenie, z kolei w 2019 roku na sklepowe półki trafił Need for Speed: Heat, gdzie za dnia braliśmy udział w oficjalnych zawodach, z kolei w nocy uczestniczyliśmy w nielegalnych wyścigach. Wydany w 2022 roku Need for Speed Unbound przyniósł natomiast nową estetykę, łączącą realistyczne lokacje i modele samochodów z kreskówkowymi efektami i modelami postaci, utrzymanymi w stylistyce inspirowanej sztuką uliczną.
 
-W dniu 16 listopada 2005 roku na rynku północnoamerykańskim został wydany Need for Speed: Most Wanted (2005). Most Wanted ponownie pojawiły się pościgi policyjne i supersamochody, ale zachował niektóre opcje tuningowe z Underground 2. W przeciwieństwie do serii Underground, akcja w Most Wanted miała miejsce tylko w ciągu dnia. Carbon, wydany rok później, przejął system pościgów z Most Wanted, lecz udostępniał więcej opcji tuningowych, łącznie z Autosculptem.
+Na przestrzeni dwóch dekad seria doczekała się ponad dwudziestu odsłon zaliczanych do głównego nurtu oraz szeregu spin-offów. W 2015 roku na urządzeniach z systemami iOS i Android ukazała się gra Need for Speed: No Limits. W przeciwieństwie do innych części serii wydanych na platformach przenośnych, tytuł był od początku tworzony z myślą o sterowaniu dotykowym. Produkcję sygnował profesjonalny kierowca wyścigowy Ken Block, który wziął udział w kampanii promocyjnej i wystąpił w oficjalnym zwiastunie. W portfolio twórców znajduje się również produkcja sieciowa – oparte na modelu free-to-play Need for Speed: Edge. Jest to pierwsza darmowa gra wyścigowa działająca na silniku graficznym Frostbite 3. Bazuje ona w głównej mierze na rozwiązaniach zaczerpniętych z Need for Speed: Rivals.
 
-ProStreet (2007) stanowił próbę stworzenia realistycznej gry wyścigowej, z zaawansowanym systemem uszkodzeń, przez EA Black Box. Tytuł został źle przyjęty przez społeczność i wykazywał niskie wyniki sprzedażowe, więc następna gra z serii - Undercover (2008) ponownie koncentrował się na wyścigach ulicznych.
+### Popularność
 
-W 2009 roku, została wydana kolejna gra stanowiąca symulację wyścigów, ale stworzona przez Slightly Mad Studios - Need for Speed: Shift (2009). Wyścigi w Shifcie ponownie rozgrywały się na zamkniętych torach wyścigowych. W tym samym roku Beta została uruchomiona beta Need for Speed: World, która stanowiła MMORG oparte o mapy z Most Wanted i Carbon. World został wydany na całym świecie w 2010 roku.
-
-W 2010 roku została wydana pierwsza część serii stworzona przez Criterion Games - Hot Pursuit. Gra koncentruje się na tej samej koncepcji rozgrywki, co sześć pierwszych tytułów NFS i wprowadziła sieć społecznościową Autolog.
-
-Podobnie jak 2010 roku, w 2011 roku wydano dwa tytuły z serii. Ponownie opracowane przez Slightly Mad Studios, Shift 2: Unleashed zapewniało bardziej realistyczną jazdę niż jego poprzednik i dodał więcej możliwości tuningu, takich jak możliwość kompletnej wymiany silnika.
-
-15 listopada 2011 został wydany The Run, który był ostatnim tytułem w serii od EA Black Box. W przeciwieństwie do poprzednich gier Black Box, The Run był był tworzony przez trzy lata. Gra koncentruje się na nielegalnych wyścigach ulicznych w USA.
-
-Następną grą z serii był Need for Speed: Most Wanted (2012) wydany w dniu 30 października 2012 roku w Ameryce Północnej i 1 listopada 2012 w Europie. Jego celem było dostarczenie całkowicie otwartego świata, jak również niektórych rozwiązań z gry Burnout: Paradise, przy zachowaniu koncepcji Most Wanted z 2005.
-
-W 2013 roku, w wyniku współpracy Criterion Games i Ghost Games powstał Need for Speed: Rivals. Został wydany w dniu 15 listopada na PlayStation 4 w Ameryce Północnej. Następnie - na PC, PlayStation 3 i Xbox 360 dnia 19 listopada 2013 roku. Xbox One i europejska wersja PlayStation 4 otrzymały możliwość dołączenia do gry odpowiednio 22 i 29 listopada. W Rivals wprowadzono funkcję AllDrive, stanowiącą połączenie trybów Singleplayer i Multiplayer.
-
-W 2015 roku po roku przerwy w 20 rocznicę serii, został wydany jej reboot - Need for Speed (2015). Twórcy wrócili do klimatu serii za czasów Underground'ów, Most Wanted'a oraz Carbon'a.
+Seria Need for Speed cieszy się sporą popularnością, która znalazła przełożenie także na inne produkty, w tym zabawki. Wytwórnia filmowa DreamWorks Studios podjęła się również przygotowania ekranizacji, która trafiła do kin w 2014 roku. Główną rolę zagrał w niej Aaron Paul, znany wcześniej z serialu Breaking Bad.
