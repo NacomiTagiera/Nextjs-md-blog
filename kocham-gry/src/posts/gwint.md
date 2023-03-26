@@ -4,7 +4,7 @@ date: '13-03-2023'
 title: 'Gwint'
 excerpt: 'Kolekcjonerska gra karciana oparta na modelu free-to-play, stworzona przez polskie studio CD Projekt Red. Tytuł stanowi samodzielną, bardziej rozbudowaną wersję minigry, która po raz pierwszy pojawiła się w grze Wiedźmin 3: Dziki Gon i szybko okrzyknięta została jedną z najlepszych w historii branży.'
 thumbnail: '/images/posts/gwint/thumbnail.jpg'
-isPopular: false
+isPopular: true
 ---
 
 ### Rozgrywka

@@ -46,14 +46,6 @@ export function getAllPosts(): Post[] {
   return sortedPosts;
 }
 
-export function getPostsByCategory(category: string): Post[] {
-  const allPosts = getAllPosts();
-
-  const filteredPosts = allPosts.filter((post) => post.category === category);
-
-  return filteredPosts;
-}
-
 export function getPopularPosts(): Post[] {
   const allPosts = getAllPosts();
 
