@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import ContactForm from "@/components/Contact/ContactForm";
+
 export default function Contact() {
   return (
     <div>
@@ -10,6 +12,7 @@ export default function Contact() {
           content="Chcesz się dowiedzieć o mnie więcej? Zostaw swoje dane kontaktowe, na pewno się odezwę!"
         />
       </Head>
+      <ContactForm />
     </div>
   );
 }
