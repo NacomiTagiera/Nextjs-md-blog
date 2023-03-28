@@ -1,14 +1,23 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import * as yup from "yup";
+import { MongoClient, Db, MongoClientOptions } from "mongodb";
+import { object, string, ValidationError } from "yup";
 
-import { ContactFormValues } from "@/interfaces/ContactFormValues";
-
-const schema = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  message: yup.string().required(),
+const contactSchema = object({
+  name: string().required(),
+  email: string().email().required(),
+  message: string().required(),
 });
+
+const { MONGODB_URI = "", MONGODB_DB = "" } = process.env;
+
+async function connectToDatabase(): Promise<Db> {
+  const client = await MongoClient.connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  } as MongoClientOptions & { useNewUrlParser: boolean });
+  return client.db(MONGODB_DB);
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -16,16 +25,29 @@ export default async function handler(
 ) {
   if (req.method !== "POST") {
     res.status(405).json({ message: "Method not allowed" });
+    return;
   }
 
   try {
-    const formData: ContactFormValues = await schema.validate(req.body);
-    // Process the form submission here
-    console.log(formData);
-    res.status(200).json({ message: "Form submitted successfully" });
+    const { name, email, message } = req.body;
+
+    await contactSchema.validate(
+      { name, email, message },
+      { abortEarly: false }
+    );
+
+    const db = await connectToDatabase();
+    const collection = db.collection("messages");
+    await collection.insertOne({ name, email, message });
+
+    res.status(201).json({ message: "Contact form submitted successfully" });
   } catch (error) {
-    if (error instanceof Error) {
-      res.status(400).json({ message: error.message });
+    if ((error as ValidationError).name === "ValidationError") {
+      res.status(400).json({ message: "Validation error" });
+      return;
     }
+
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
   }
 }
