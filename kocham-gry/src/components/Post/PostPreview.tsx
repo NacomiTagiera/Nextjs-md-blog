@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { BiTimeFive } from "react-icons/bi";
 
+import getBlurredImagePath from "@/lib/getBlurredImagePath";
+
 interface Props {
   category: string;
   date: string;
@@ -27,6 +29,8 @@ export default function PostPreview({
           src={thumbnail}
           alt={title}
           fill
+          placeholder="blur"
+          blurDataURL={getBlurredImagePath(thumbnail)}
           sizes="(max-width: 767px) 100vw,
                   (max-width: 1023px) 50vw,
                   33vw"
