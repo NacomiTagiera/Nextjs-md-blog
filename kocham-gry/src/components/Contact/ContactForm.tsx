@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
 
-import { ContactFormValues } from "@/interfaces/ContactFormValues";
+import ContactFormValues from "@/interfaces/ContactFormValues";
 
 const ContactFormSchema = Yup.object().shape({
   name: Yup.string().required("Imię jest wymagane"),

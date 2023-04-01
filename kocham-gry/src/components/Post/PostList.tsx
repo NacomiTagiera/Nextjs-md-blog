@@ -1,5 +1,5 @@
 import PostPreview from "./PostPreview";
-import { Post } from "@/interfaces/Post";
+import Post from "@/interfaces/Post";
 
 interface Props {
   posts: Post[];

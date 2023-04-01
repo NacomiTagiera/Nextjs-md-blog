@@ -8,7 +8,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import Intro from "@/components/Common/Intro";
 import PostHeader from "@/components/Post/PostHeader";
 import PostBody from "@/components/Post/PostBody";
-import { Post } from "@/interfaces/Post";
+import Post from "@/interfaces/Post";
 
 interface Props {
   post: Post;

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { getPopularPosts } from "@/lib/api";
 import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";
-import { Post } from "@/interfaces/Post";
+import Post from "@/interfaces/Post";
 
 interface Props {
   popularPosts: Post[];

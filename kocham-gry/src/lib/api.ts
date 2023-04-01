@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { Post } from "@/interfaces/Post";
+import Post from "@/interfaces/Post";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "src/_posts");
 const POPULAR_POSTS_COUNT = 3;

@@ -1,4 +1,4 @@
-Welcome to my blog about my favorite video games, built with TypeScript, Next.js, Formik, Yup, MongoDB, Remark, Remark-HTML, and Tailwind CSS!
+Welcome to my blog about my favorite video games, built with TypeScript, Next.js, Formik, Yup, MongoDB, Remark, Remark-HTML, and Tailwind CSS! Live demo: [kocham-gry-blog.vercel.app](kocham-gry-blog.vercel.app)
 
 ## Table of Contents
 
@@ -6,7 +6,6 @@ Welcome to my blog about my favorite video games, built with TypeScript, Next.js
   - [Introduction](#introduction)
   - [Features](#features)
   - [Technologies used](#technologies-used)
-  - [Installation](#installation)
   - [Usage](#usage)
 
 ### Introduction 
@@ -15,12 +14,11 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 
 ### Features
 
-- Responsive design that looks great on any device
-- Intuitive navigation for easy browsing
 - Markdown support for easy formatting of blog posts
+- Tailwind CSS for customizable and reusable styling
 - Integration with MongoDB to store messages sent by contact form
 - Form validation using Formik and Yup
-- Tailwind CSS for customizable and reusable styling
+- Responsive design that looks great on any device
 
 ### Technologies used
 
@@ -32,20 +30,6 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 - [Remark](https://remark.js.org/) - a Markdown processor for parsing and rendering Markdown content
 - [Remark-HTML](https://github.com/remarkjs/remark-html) - a library for converting Markdown to HTML
 - [Tailwind CSS](https://tailwindcss.com/) - a utility-first CSS framework for building custom designs quickly and easily
-
-### Installation
-
-1. Clone this repository to your local machine using `git clone https://github.com/NacomiTagiera/Kocham-Gry.git`
-2. Navigate to the project directory using `cd kocham-gry`
-3. Install the dependencies using `npm install`
-4. Create a `.env` file in the root directory with the following contents:
-
-`MONGODB_URI=<your-mongodb-uri>` <br/>
-`MONGODB_DB=<your-mongodb-db>`
-
-Replace `<your-mongodb-uri>` with your MongoDB connection string and replace `<your-mongodb-db>` with your database name
-
-5. Start the development server using `npm run dev`
 
 ### Usage 
 
