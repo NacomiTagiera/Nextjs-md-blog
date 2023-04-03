@@ -1,4 +1,4 @@
-Welcome to my blog about my favorite video games, built with TypeScript, Next.js, Formik, Yup, MongoDB, Remark, Remark-HTML, and Tailwind CSS! Live demo: [kocham-gry-blog.vercel.app](kocham-gry-blog.vercel.app)
+Welcome to my blog about my favorite video games, built with TypeScript, Next.js, Formik, Yup, MongoDB, Remark, Remark-HTML, and Tailwind CSS! Live demo: [https://kocham-gry-blog.vercel.app](https://kocham-gry-blog.vercel.app)
 
 ## Table of Contents
 
