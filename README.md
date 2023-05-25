@@ -1,16 +1,8 @@
-Welcome to my blog about my favorite video games, built with TypeScript, Next.js, Formik, Yup, MongoDB, Remark, Remark-HTML, and Tailwind CSS! Live demo: [https://kocham-gry-blog.vercel.app](https://kocham-gry-blog.vercel.app)
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Technologies used](#technologies-used)
-  - [Usage](#usage)
+Welcome to my blog about my favorite video games, built with Next.js and Tailwind CSS! **Live demo**: [https://kocham-gry-blog.vercel.app](https://kocham-gry-blog.vercel.app)
 
 ### Introduction 
 
-This blog is dedicated to showcasing my favorite video games and sharing my experiences with them. With the use of the latest web technologies and design trends, I have created a modern and responsive blog that is easy to navigate and enjoyable to use. From action-packed first-person shooters to engaging role-playing games, this blog covers a variety of genres and titles.
+This blog is dedicated to showcasing my favorite video games and sharing my experiences with them. With the use of the latest web technologies and design trends, I have created a modern and responsive blog that is easy to navigate and enjoyable to use. From action-packed first-person shooters to engaging role-playing games, this blog covers a variety of genres and titles!
 
 ### Features
 
@@ -33,5 +25,5 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 
 ### Usage 
 
-To use this project, simply browse the list of blog posts and click on any post to see game's overview. <br/>
+To use this project, simply browse the list of blog posts and click on any post to see game's overview.\
 If you have any questions or suggestions, please do not hesitate to use the contact form.
