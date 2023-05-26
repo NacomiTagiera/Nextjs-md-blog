@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-
 import { BiTimeFive } from "react-icons/bi";
-
-import getBlurredImagePath from "@/lib/getBlurredImagePath";
+import CustomImage from "../Common/CustomImage";
 
 interface Props {
   category: string;
@@ -25,16 +22,7 @@ export default function PostPreview({
   return (
     <li className="relative bg-white max-w-sm md:max-w-none overflow-hidden rounded-b-lg shadow-md">
       <div className="relative w-full aspect-video">
-        <Image
-          src={thumbnail}
-          alt={title}
-          fill
-          placeholder="blur"
-          blurDataURL={getBlurredImagePath(thumbnail)}
-          sizes="(max-width: 767px) 100vw,
-                  (max-width: 1023px) 50vw,
-                  33vw"
-        />
+        <CustomImage src={thumbnail} alt={title} width={768} height={432} />
       </div>
       <div className="p-4 text-primary">
         <span className="bg-secondary mr-2 py-1 px-2 rounded-lg text-sm text-white uppercase">

@@ -1,6 +1,5 @@
-import Head from "next/head";
 import { Fragment } from "react";
-
+import Head from "next/head";
 import ContactForm from "@/components/Contact/ContactForm";
 import Intro from "@/components/Common/Intro";
 

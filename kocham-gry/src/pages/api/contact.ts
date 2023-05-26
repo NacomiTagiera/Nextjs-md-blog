@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-
 import { MongoClient, Db, MongoClientOptions } from "mongodb";
 import { object, string, ValidationError } from "yup";
 

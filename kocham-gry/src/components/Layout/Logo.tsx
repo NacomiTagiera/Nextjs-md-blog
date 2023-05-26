@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { GiConsoleController } from "react-icons/gi";
 
 export default function Logo() {

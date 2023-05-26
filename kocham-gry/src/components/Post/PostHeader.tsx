@@ -1,7 +1,5 @@
 import { Fragment } from "react";
-import Image from "next/image";
-
-import getBlurredImagePath from "@/lib/getBlurredImagePath";
+import CustomImage from "../Common/CustomImage";
 
 interface Props {
   date: string;
@@ -23,19 +21,7 @@ export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
         <p className="leading-8 max-w-3xl sm:mt-4 text-xl">{excerpt}</p>
       </div>
       <div className="relative w-full aspect-video my-8 overflow-hidden px-6 md:px-0 rounded-lg">
-        <Image
-          src={thumbnail}
-          alt={title}
-          width={768}
-          height={432}
-          placeholder="blur"
-          blurDataURL={getBlurredImagePath(thumbnail)}
-          style={{
-            height: "auto",
-            width: "100%",
-            maxWidth: "768px",
-          }}
-        />
+        <CustomImage src={thumbnail} alt={title} width={768} height={432} />
       </div>
     </Fragment>
   );

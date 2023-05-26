@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import { getAllPosts } from "@/lib/api";
 import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";

@@ -1,8 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
-
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
-
 import ContactFormValues from "@/interfaces/ContactFormValues";
 
 const ContactFormSchema = Yup.object().shape({
@@ -75,6 +73,7 @@ export default function ContactForm() {
             <Field
               type="text"
               name="name"
+              id="name"
               className="bg-gray-200 appearance-none border-2 border-gray-300 rounded py-2 px-4 text-primary leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             />
             <ErrorMessage

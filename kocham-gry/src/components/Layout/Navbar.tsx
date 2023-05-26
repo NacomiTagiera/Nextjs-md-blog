@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-
 import { AiOutlineMenu } from "react-icons/ai";
-
 import Logo from "./Logo";
 
 export default function Navbar() {
