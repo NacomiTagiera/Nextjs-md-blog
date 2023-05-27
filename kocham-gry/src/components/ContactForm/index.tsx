@@ -1,15 +1,8 @@
 import { Fragment, useEffect, useState } from "react";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-import * as Yup from "yup";
+import ContactFormSchema from "@/lib/formSchema";
+import FormField from "./FormField";
 import ContactFormValues from "@/interfaces/ContactFormValues";
-
-const ContactFormSchema = Yup.object().shape({
-  name: Yup.string().required("Imię jest wymagane"),
-  email: Yup.string()
-    .email("Nieprawidłlowy adres email")
-    .required("Email jest wymagany"),
-  message: Yup.string().required("Wiadomość jest wymagana"),
-});
 
 async function sendContactData(contactDetails: ContactFormValues) {
   const response = await fetch("/api/contact", {
@@ -66,23 +59,7 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
       >
         <Form className="space-y-4 text-center">
-          <div>
-            <label htmlFor="name" className="block font-medium mb-2">
-              Imię
-            </label>
-            <Field
-              type="text"
-              name="name"
-              id="name"
-              className="bg-gray-200 appearance-none border-2 border-gray-300 rounded py-2 px-4 text-primary leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
-            />
-            <ErrorMessage
-              name="name"
-              component="p"
-              className="text-red-500 text-sm"
-            />
-          </div>
-
+          <FormField fieldName="name" label="Imię" />
           <div>
             <label htmlFor="email" className="block font-medium mb-2">
               Email

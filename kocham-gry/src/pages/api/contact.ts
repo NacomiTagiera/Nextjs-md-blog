@@ -1,12 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { MongoClient, Db, MongoClientOptions } from "mongodb";
-import { object, string, ValidationError } from "yup";
-
-const contactSchema = object({
-  name: string().required(),
-  email: string().email().required(),
-  message: string().required(),
-});
+import { ValidationError } from "yup";
+import ContactFormSchema from "@/lib/formSchema";
 
 const { MONGODB_URI = "", MONGODB_DB = "" } = process.env;
 
@@ -30,7 +25,7 @@ export default async function handler(
   try {
     const { name, email, message } = req.body;
 
-    await contactSchema.validate(
+    await ContactFormSchema.validate(
       { name, email, message },
       { abortEarly: false }
     );

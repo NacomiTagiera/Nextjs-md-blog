@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import ContactForm from "@/components/Contact/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import Intro from "@/components/Common/Intro";
 
 export default function Contact() {
