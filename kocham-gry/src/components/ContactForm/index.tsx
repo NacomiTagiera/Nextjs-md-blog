@@ -1,24 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
-import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
+import { Form, Formik, FormikHelpers } from "formik";
+import { sendContactData } from "@/lib/api";
 import ContactFormSchema from "@/lib/formSchema";
 import FormField from "./FormField";
 import ContactFormValues from "@/interfaces/ContactFormValues";
-
-async function sendContactData(contactDetails: ContactFormValues) {
-  const response = await fetch("/api/contact", {
-    method: "POST",
-    body: JSON.stringify(contactDetails),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Something went wrong!");
-  }
-}
 
 export default function ContactForm() {
   const [requestStatus, setRequestStatus] = useState<
@@ -60,38 +45,8 @@ export default function ContactForm() {
       >
         <Form className="space-y-4 text-center">
           <FormField fieldName="name" label="Imię" />
-          <div>
-            <label htmlFor="email" className="block font-medium mb-2">
-              Email
-            </label>
-            <Field
-              type="email"
-              name="email"
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-primary leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
-            />
-            <ErrorMessage
-              name="email"
-              component="p"
-              className="text-red-500 text-sm"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block font-medium mb-2">
-              Wiadomość
-            </label>
-            <Field
-              component="textarea"
-              name="message"
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-primary leading-tight focus:outline-none focus:bg-white focus:border-slate-500 w-full"
-              rows="4"
-            />
-            <ErrorMessage
-              name="message"
-              component="p"
-              className="text-red-500 text-sm"
-            />
-          </div>
+          <FormField fieldName="email" label="Email" type="email" />
+          <FormField fieldName="message" label="Wiadomość" large />
 
           {requestStatus === "error" && (
             <p className="text-red-500 text-sm">
