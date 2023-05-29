@@ -1,9 +1,24 @@
 import { Fragment, useEffect, useState } from "react";
 import { Form, Formik, FormikHelpers } from "formik";
-import { sendContactData } from "@/lib/api";
 import ContactFormSchema from "@/lib/formSchema";
 import FormField from "./FormField";
 import ContactFormValues from "@/interfaces/ContactFormValues";
+
+async function sendContactData(contactDetails: ContactFormValues) {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    body: JSON.stringify(contactDetails),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Something went wrong!");
+  }
+}
 
 export default function ContactForm() {
   const [requestStatus, setRequestStatus] = useState<
@@ -43,7 +58,7 @@ export default function ContactForm() {
         validationSchema={ContactFormSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="space-y-4 text-center">
+        <Form className="space-y-6 text-center">
           <FormField fieldName="name" label="Imię" />
           <FormField fieldName="email" label="Email" type="email" />
           <FormField fieldName="message" label="Wiadomość" large />

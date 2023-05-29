@@ -1,11 +1,14 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { MongoClient, Db, MongoClientOptions } from "mongodb";
+import { Db, MongoClient, MongoClientOptions } from "mongodb";
 import { ValidationError } from "yup";
 import ContactFormSchema from "@/lib/formSchema";
 
-const { MONGODB_URI = "", MONGODB_DB = "" } = process.env;
-
 async function connectToDatabase(): Promise<Db> {
+  const { MONGODB_URI, MONGODB_DB } = process.env;
+  if (!MONGODB_URI || !MONGODB_DB) {
+    throw new Error("Please add your Mongo URI and DB name to .env.local");
+  }
+
   const client = await MongoClient.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -41,7 +44,6 @@ export default async function handler(
       return;
     }
 
-    console.error(error);
     res.status(500).json({ message: "Internal server error" });
   }
 }

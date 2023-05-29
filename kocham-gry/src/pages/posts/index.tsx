@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts } from "@/lib/postsUtils";
 import Intro from "@/components/Common/Intro";
 import PostList from "@/components/Post/PostList";
 import Post from "@/interfaces/Post";

@@ -3,7 +3,7 @@ import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { getPostData, getPostsFiles } from "@/lib/api";
+import { getPostData, getPostsFiles } from "@/lib/postsUtils";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Intro from "@/components/Common/Intro";
 import PostHeader from "@/components/Post/PostHeader";
