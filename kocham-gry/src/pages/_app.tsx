@@ -7,8 +7,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kocham Gry</title>
+        <meta
+          name="description"
+          content="Witaj na moim blogu poświęconym najlepszym grom komputerowym!"
+        />
       </Head>
       <Component {...pageProps} />
     </Layout>

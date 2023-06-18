@@ -1,7 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { Db, MongoClient, MongoClientOptions } from "mongodb";
 import { ValidationError } from "yup";
+
 import ContactFormSchema from "@/lib/formSchema";
+import ContactFormValues from "@/interfaces/ContactFormValues";
 
 async function connectToDatabase(): Promise<Db> {
   const { MONGODB_URI, MONGODB_DB } = process.env;
@@ -16,6 +18,14 @@ async function connectToDatabase(): Promise<Db> {
   return client.db(MONGODB_DB);
 }
 
+async function insertContactForm(
+  db: Db,
+  data: ContactFormValues
+): Promise<void> {
+  const collection = db.collection("messages");
+  await collection.insertOne(data);
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -26,7 +36,7 @@ export default async function handler(
   }
 
   try {
-    const { name, email, message } = req.body;
+    const { name, email, message } = req.body as ContactFormValues;
 
     await ContactFormSchema.validate(
       { name, email, message },
@@ -34,12 +44,11 @@ export default async function handler(
     );
 
     const db = await connectToDatabase();
-    const collection = db.collection("messages");
-    await collection.insertOne({ name, email, message });
+    await insertContactForm(db, { name, email, message });
 
     res.status(201).json({ message: "Contact form submitted successfully" });
   } catch (error) {
-    if ((error as ValidationError).name === "ValidationError") {
+    if (error instanceof ValidationError) {
       res.status(400).json({ message: "Validation error" });
       return;
     }
