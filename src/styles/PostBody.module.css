@@ -1,0 +1,15 @@
+.markdown {
+  @apply max-w-3xl text-lg leading-relaxed;
+}
+
+.markdown :is(p, ol, ul) {
+  @apply my-6 md:text-justify;
+}
+
+.markdown h3 {
+  @apply text-secondaary mb-4 mt-8 text-3xl font-semibold leading-snug;
+}
+
+.markdown h4 {
+  @apply font-medium italic;
+}

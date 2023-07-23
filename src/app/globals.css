@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden bg-primary text-white;
+}
+
+#__next {
+  @apply flex min-h-screen flex-col;
+}
