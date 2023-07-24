@@ -4,7 +4,8 @@ const ContactFormSchema = Yup.object().shape({
   name: Yup.string()
     .required('Imię jest wymagane')
     .trim('Usuń początkowe i końcowe spacje')
-    .strict(true),
+    .strict(true)
+    .min(2, 'Wprowadź prawidłowe imię'),
   email: Yup.string()
     .email('Nieprawidłlowy adres email')
     .required('Email jest wymagany')

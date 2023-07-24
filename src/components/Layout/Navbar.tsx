@@ -1,24 +1,41 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import Link from 'next/link';
+
+import { navLinks } from '@/constants';
 
 import Logo from './Logo';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const handleToggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  const links = [
-    ['Strona główna', '/'],
-    ['Posty', '/posts'],
-    ['Kontakt', '/contact'],
-  ];
+  const handleOutsideClick = (event: MouseEvent) => {
+    if (
+      mobileMenuRef.current &&
+      !mobileMenuRef.current.contains(event.target as Node)
+    ) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    } else {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className='py-7'>
@@ -27,14 +44,13 @@ export default function Navbar() {
           <Logo />
           <nav className='hidden md:block'>
             <ul className='ml-10 flex items-baseline space-x-6 lg:space-x-9'>
-              {links.map(([text, href]) => (
-                <li key={href}>
+              {navLinks.map((link) => (
+                <li key={link.href}>
                   <Link
-                    href={href}
+                    href={link.href}
                     className='text-lg font-medium transition hover:text-secondary'
-                    onClick={() => setIsMenuOpen(false)}
                   >
-                    {text}
+                    {link.text}
                   </Link>
                 </li>
               ))}
@@ -54,22 +70,25 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <nav className='md:hidden' id='mobile-menu'>
-          <ul className='space-y-8 px-2 pb-3 pt-2'>
-            {links.map(([text, href]) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className='block text-center text-base font-medium transition hover:text-secondary'
-                >
-                  {text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <div ref={mobileMenuRef}>
+        {isMenuOpen && (
+          <nav className='md:hidden' id='mobile-menu'>
+            <ul className='space-y-8 px-2 pb-3 pt-2'>
+              {navLinks.map(({ text, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className='block text-center text-base font-medium transition hover:text-secondary'
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </div>
     </header>
   );
 }

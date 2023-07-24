@@ -1,4 +1,7 @@
 import { Db, MongoClient, MongoClientOptions } from 'mongodb';
+import { ValidationError } from 'yup';
+
+import { NextResponse } from 'next/server';
 
 import ContactFormValues from '@/interfaces/ContactFormValues';
 import ContactFormSchema from '@/lib/formSchema';
@@ -24,14 +27,32 @@ async function insertContactForm(
   await collection.insertOne(data);
 }
 
-export default async function POST(request: Request) {
-  const { name, email, message }: ContactFormValues = await request.json();
+export async function POST(request: Request) {
+  const { name, email, message } = await request.json();
 
-  await ContactFormSchema.validate(
-    { name, email, message },
-    { abortEarly: false }
-  );
+  try {
+    await ContactFormSchema.validate(
+      { name, email, message },
+      { abortEarly: false }
+    );
 
-  const db = await connectToDatabase();
-  await insertContactForm(db, { name, email, message });
+    const db = await connectToDatabase();
+    await insertContactForm(db, { name, email, message });
+
+    return NextResponse.json(
+      { message: 'Contact form submitted successfully' },
+      { status: 201 }
+    );
+  } catch (error) {
+    if (error instanceof ValidationError)
+      return NextResponse.json(
+        { message: 'Validation Error' },
+        { status: 400 }
+      );
+
+    return NextResponse.json(
+      { message: 'Internal server error' },
+      { status: 500 }
+    );
+  }
 }
