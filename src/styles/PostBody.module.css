@@ -7,7 +7,7 @@
 }
 
 .markdown h3 {
-  @apply text-secondaary mb-4 mt-8 text-3xl font-semibold leading-snug;
+  @apply mb-4 mt-8 text-3xl font-semibold leading-snug text-secondary;
 }
 
 .markdown h4 {

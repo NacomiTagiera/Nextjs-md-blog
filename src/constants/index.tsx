@@ -6,7 +6,7 @@ import {
 
 export const navLinks = [
   { text: 'Strona główna', href: '/' },
-  { text: 'Posty', href: '/posts' },
+  { text: 'Posty', href: '/posty' },
   { text: 'Kontakt', href: '/kontakt' },
 ];
 

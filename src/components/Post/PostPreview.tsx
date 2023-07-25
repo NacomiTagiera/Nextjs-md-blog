@@ -37,7 +37,7 @@ export default function PostPreview({
         </time>
         <p>{excerpt}</p>
       </div>
-      <Link href={`/posts/${slug}`} className='absolute inset-0'></Link>
+      <Link href={`/posty/${slug}`} className='absolute inset-0'></Link>
     </li>
   );
 }
