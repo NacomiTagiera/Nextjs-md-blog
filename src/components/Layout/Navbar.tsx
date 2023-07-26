@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { navLinks } from '@/constants';
 
@@ -11,31 +12,15 @@ import Logo from './Logo';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   const handleToggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
-
-  const handleOutsideClick = (event: MouseEvent) => {
-    if (
-      mobileMenuRef.current &&
-      !mobileMenuRef.current.contains(event.target as Node)
-    ) {
-      setIsMenuOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener('click', handleOutsideClick);
-    } else {
-      document.removeEventListener('click', handleOutsideClick);
-    }
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [isMenuOpen]);
 
   return (
     <header className='py-7'>
@@ -70,7 +55,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div ref={mobileMenuRef}>
+      <div>
         {isMenuOpen && (
           <nav className='md:hidden' id='mobile-menu'>
             <ul className='space-y-8 px-2 pb-3 pt-2'>
@@ -79,7 +64,6 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className='block text-center text-base font-medium transition hover:text-secondary'
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {text}
                   </Link>
