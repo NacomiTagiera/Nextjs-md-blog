@@ -1,9 +1,9 @@
 .markdown {
-  @apply max-w-3xl text-lg leading-relaxed;
+  @apply text-lg leading-relaxed;
 }
 
 .markdown :is(p, ol, ul) {
-  @apply my-6 md:text-justify;
+  @apply my-4 md:my-6 md:text-justify;
 }
 
 .markdown h3 {

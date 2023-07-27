@@ -5,6 +5,7 @@ interface Props {
   src: string;
   height: number;
   width: number;
+  priority?: boolean;
 }
 
 const shimmer = (w: number, h: number) => `
@@ -26,19 +27,26 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str);
 
-export default function CustomImage({ alt, src, width, height }: Props) {
+export default function CustomImage({
+  alt,
+  src,
+  height,
+  width,
+  priority = false,
+}: Props) {
   return (
     <Image
       src={src}
       alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
       placeholder='blur'
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
         shimmer(width, height)
       )}`}
-      width={width}
-      height={height}
       style={{
-        maxWidth: '100%',
+        width: '100%',
         height: 'auto',
       }}
     />

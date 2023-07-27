@@ -43,7 +43,7 @@ export default async function PostPage({
   const contentHtml = await markdownToHtml(content);
 
   return (
-    <article>
+    <article className='mx-auto max-w-3xl'>
       <PostHeader
         date={date}
         excerpt={excerpt}
