@@ -5,6 +5,7 @@ interface Props {
   src: string;
   height: number;
   width: number;
+  className?: string;
   priority?: boolean;
 }
 
@@ -32,10 +33,12 @@ export default function CustomImage({
   src,
   height,
   width,
+  className,
   priority = false,
 }: Props) {
   return (
     <Image
+      className={className}
       src={src}
       alt={alt}
       width={width}

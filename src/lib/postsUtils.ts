@@ -2,10 +2,10 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
+import { POPULAR_POSTS_COUNT } from '@/constants';
 import Post from '@/interfaces/Post';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
-const POPULAR_POSTS_COUNT = 3;
 
 export function getPostsFiles() {
   return fs.readdirSync(POSTS_DIRECTORY);
@@ -47,12 +47,14 @@ export function getAllPosts(): Post[] {
 }
 
 export function getPopularPosts(): Post[] {
-  const allPosts = getAllPosts();
-
-  const popularPosts = allPosts.filter((post) => post.isPopular);
+  const popularPosts = getAllPosts().filter((post) => post.isPopular);
   popularPosts
     .sort((a, b) => (a.date > b.date ? -1 : 1))
     .slice(0, POPULAR_POSTS_COUNT);
 
   return popularPosts;
+}
+
+export function getCategories() {
+  return getAllPosts().flatMap(({ category }) => category);
 }

@@ -23,11 +23,9 @@ export default function PostPreview({
 }: Props) {
   return (
     <li className='relative max-w-sm overflow-hidden rounded-b-lg bg-white shadow-md md:max-w-none'>
-      <div className='relative aspect-video w-full'>
-        <CustomImage src={thumbnail} alt={title} width={768} height={432} />
-      </div>
+      <CustomImage src={thumbnail} alt={title} width={768} height={432} />
       <div className='p-4 text-primary'>
-        <span className='mr-2 rounded-lg bg-secondary px-2 py-1 text-sm uppercase text-white'>
+        <span className='rounded-md bg-secondary px-2 py-1 text-sm uppercase text-white md:rounded-lg'>
           {category}
         </span>
         <h3 className='mt-2 text-xl font-semibold leading-6'>{title}</h3>
@@ -37,7 +35,7 @@ export default function PostPreview({
         </time>
         <p>{excerpt}</p>
       </div>
-      <Link href={`/posty/${slug}`} className='absolute inset-0'></Link>
+      <Link href={`/posty/${slug}`} className='absolute inset-0' />
     </li>
   );
 }

@@ -1,5 +1,3 @@
-import styles from '@/styles/PostBody.module.css';
-
 interface Props {
   content: string;
 }
@@ -7,7 +5,7 @@ interface Props {
 export default function PostBody({ content }: Props) {
   return (
     <div
-      className={styles.markdown}
+      className='prose prose-invert max-w-none md:prose-lg lg:prose-xl prose-headings:text-secondary prose-h4:italic prose-h4:text-white prose-p:text-justify'
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );
