@@ -1,5 +1,5 @@
 ---
-category: 'RPG'
+category: 'rpg'
 date: '25-03-2023'
 title: 'Elden Ring'
 excerpt: 'Elden Ring to trzecioosobowa gra RPG wyprodukowana przez FromSoftware i wydana przez Namco Bandai Games. W Elden Ring gracz kontroluje postać, która wyrusza w podróż, aby naprawić Eldeński Krąg i zostać nowym Eldeńskim Władcą. Gracz swobodnie przemierza fikcyjną krainę Ziemie Pomiędzy.'
@@ -9,7 +9,7 @@ isPopular: true
 
 ### Fabuła
 
-#### Świat 
+#### Świat
 
 Akcja Elden Ring toczy się na Ziemiach Pomiędzy, fikcyjnej krainie rządzonej przez kilku półbogów. W przeszłości rządziła nią królowa Marika Wieczna, która pełniła funkcję strażnika Eldeńskiego Kręgu, potężnej siły, która manifestowała się jako fizyczna koncepcja porządku. Kiedy Marika rozbiła Eldeński Krąg i zniknęła, jej dzieci zaczęły walczyć o kawałki Kręgu w wydarzeniu zwanym Roztrzaskaniem. Każdy półbóg posiadł odłamek Kręgu zwany Wielką Runą, który z czasem zaczął niszczyć ich swoją mocą. W grze postać gracza to zmatowieniec, jeden z grupy wygnańców z Krain Pomiędzy, którzy zostali przywołani ponownie po Roztrzaskaniu. Jako jeden ze zmatowieńców, gracz musi przemierzyć krainę, aby naprawić Eldeński Krąg i zostać władcą krainy.
 

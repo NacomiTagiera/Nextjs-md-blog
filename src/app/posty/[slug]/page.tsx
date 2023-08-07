@@ -5,6 +5,12 @@ import PostHeader from '@/components/Post/PostHeader';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { getAllPosts, getPostData } from '@/lib/postsUtils';
 
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
 export function generateStaticParams() {
   const posts = getAllPosts();
 
@@ -29,13 +35,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function PostPage({ params: { slug } }: Props) {
   const posts = getAllPosts();
-  const { slug } = params;
 
   if (!posts.find((post) => post.slug === slug)) notFound();
 

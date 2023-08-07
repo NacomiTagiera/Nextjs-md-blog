@@ -7,9 +7,7 @@ import Post from '@/interfaces/Post';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
 
-export function getPostsFiles() {
-  return fs.readdirSync(POSTS_DIRECTORY);
-}
+export const getPostsFiles = () => fs.readdirSync(POSTS_DIRECTORY);
 
 export function getPostData(postIdentifier: string): Post {
   const postSlug = postIdentifier.replace(/\.md$/, '');
@@ -55,6 +53,8 @@ export function getPopularPosts(): Post[] {
   return popularPosts;
 }
 
-export function getCategories() {
-  return getAllPosts().flatMap(({ category }) => category);
-}
+export const getAllCategories = () =>
+  getAllPosts().flatMap(({ category }) => category);
+
+export const getPostsByCategory = (category: string) =>
+  getAllPosts().filter((post) => post.category === category);

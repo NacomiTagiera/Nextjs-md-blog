@@ -1,13 +1,10 @@
 import { Fragment } from 'react';
 
+import Post from '@/interfaces/Post';
+
 import CustomImage from '../Common/CustomImage';
 
-interface Props {
-  date: string;
-  excerpt: string;
-  thumbnail: string;
-  title: string;
-}
+type Props = Omit<Post, 'category' | 'content' | 'isPopular' | 'slug'>;
 
 export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
   return (
