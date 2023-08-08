@@ -9,7 +9,7 @@ const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
 
 export const getPostsFiles = () => fs.readdirSync(POSTS_DIRECTORY);
 
-export function getPostData(postIdentifier: string): Post {
+export const getPostData = (postIdentifier: string): Post => {
   const postSlug = postIdentifier.replace(/\.md$/, '');
   const filePath = path.join(POSTS_DIRECTORY, `${postSlug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -28,9 +28,9 @@ export function getPostData(postIdentifier: string): Post {
   };
 
   return PostData;
-}
+};
 
-export function getAllPosts(): Post[] {
+export const getAllPosts = (): Post[] => {
   const postFiles = getPostsFiles();
 
   const allPosts = postFiles.map((postFile) => {
@@ -42,19 +42,22 @@ export function getAllPosts(): Post[] {
   );
 
   return sortedPosts;
-}
+};
 
-export function getPopularPosts(): Post[] {
+export const getPopularPosts = (): Post[] => {
   const popularPosts = getAllPosts().filter((post) => post.isPopular);
   popularPosts
     .sort((a, b) => (a.date > b.date ? -1 : 1))
     .slice(0, POPULAR_POSTS_COUNT);
 
   return popularPosts;
-}
+};
 
-export const getAllCategories = () =>
-  getAllPosts().flatMap(({ category }) => category);
+export const getAllCategories = () => {
+  const categories = getAllPosts().map((post) => post.category);
+
+  return Array.from(new Set(categories));
+};
 
 export const getPostsByCategory = (category: string) =>
   getAllPosts().filter((post) => post.category === category);

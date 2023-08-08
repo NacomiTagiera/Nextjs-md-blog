@@ -18,12 +18,18 @@ export default function PostPreview({
   title,
 }: Props) {
   return (
-    <li className='relative max-w-sm overflow-hidden rounded-b-lg bg-white shadow-md md:max-w-none'>
-      <CustomImage src={thumbnail} alt={title} width={768} height={432} />
+    <li className='max-w-sm overflow-hidden rounded-b-lg bg-white shadow-md md:max-w-none'>
+      <Link href={`/posty/${slug}`}>
+        <CustomImage src={thumbnail} alt={title} width={768} height={432} />
+      </Link>
       <div className='p-4 text-primary'>
         <div className='mb-3 flex items-start justify-between'>
           <div>
-            <h3 className='text-xl font-semibold leading-6'>{title}</h3>
+            <Link href={`/posty/${slug}`}>
+              <h3 className='text-xl font-semibold leading-6 transition duration-200 hover:text-slate-600'>
+                {title}
+              </h3>
+            </Link>
             <time className='flex items-center text-sm'>
               <BiTimeFive className='mr-1' />
               {date}
@@ -33,7 +39,6 @@ export default function PostPreview({
         </div>
         <p>{excerpt}</p>
       </div>
-      <Link href={`/posty/${slug}`} className='absolute inset-0' />
     </li>
   );
 }

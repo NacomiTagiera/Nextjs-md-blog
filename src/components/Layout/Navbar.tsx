@@ -33,7 +33,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className='text-lg font-medium transition hover:text-secondary'
+                    className='text-lg font-medium transition duration-300 hover:text-secondary'
                   >
                     {link.text}
                   </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className='block text-center text-base font-medium transition hover:text-secondary'
+                    className='block text-center text-base font-medium transition duration-300 hover:text-secondary'
                   >
                     {text}
                   </Link>

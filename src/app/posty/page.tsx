@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import CategoryList from '@/components/Category/CategoryList';
 import Intro from '@/components/Common/Intro';
 import PostList from '@/components/Post/PostList';
 import { getAllPosts } from '@/lib/postsUtils';
@@ -18,6 +19,7 @@ export default function PostsPage() {
         header='Wszystkie wpisy'
         introText='Poznaj najlepsze tytuły ze świata gier z różnych kategorii.'
       />
+      <CategoryList />
       <PostList posts={posts} />
     </article>
   );
