@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
           <Logo />
-          <nav className='hidden md:block'>
+          <nav role='main' className='hidden md:block'>
             <ul className='ml-10 flex items-baseline space-x-6 lg:space-x-9'>
               {navLinks.map((link) => (
                 <li key={link.href}>

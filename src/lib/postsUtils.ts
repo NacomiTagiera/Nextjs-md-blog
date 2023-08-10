@@ -4,6 +4,7 @@ import path from 'path';
 
 import { POPULAR_POSTS_COUNT } from '@/constants';
 import Post from '@/interfaces/Post';
+import convertText from '@/utils/convertText';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
 
@@ -60,4 +61,6 @@ export const getAllCategories = () => {
 };
 
 export const getPostsByCategory = (category: string) =>
-  getAllPosts().filter((post) => post.category === category);
+  getAllPosts().filter(
+    (post) => convertText(post.category, { withHyphens: true }) === category
+  );
