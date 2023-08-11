@@ -5,6 +5,7 @@ import convertText from '@/utils/convertText';
 
 export default function CategoryList() {
   const categories = getAllCategories();
+  categories.unshift('wszystkie');
 
   return (
     <nav role='sub' className='bg-secondary bg-opacity-50 px-6 py-3'>
@@ -12,9 +13,13 @@ export default function CategoryList() {
         {categories.map((category, index) => (
           <li key={index}>
             <Link
-              href={`/kategorie/${convertText(category, {
-                withHyphens: true,
-              })}`}
+              href={
+                category === 'wszystkie'
+                  ? '/posty'
+                  : `/posty/kategorie/${convertText(category, {
+                      withHyphens: true,
+                    })}`
+              }
               className='group text-slate-200 transition duration-300 hover:text-white'
             >
               {convertText(category, { capitalize: true })}

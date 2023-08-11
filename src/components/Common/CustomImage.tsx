@@ -1,13 +1,4 @@
-import Image from 'next/image';
-
-interface Props {
-  alt: string;
-  src: string;
-  height: number;
-  width: number;
-  className?: string;
-  priority?: boolean;
-}
+import Image, { ImageProps } from 'next/image';
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -35,7 +26,7 @@ export default function CustomImage({
   width,
   className,
   priority = false,
-}: Props) {
+}: ImageProps) {
   return (
     <Image
       className={className}
@@ -45,9 +36,7 @@ export default function CustomImage({
       height={height}
       priority={priority}
       placeholder='blur'
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
-      )}`}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(768, 432))}`}
       style={{
         width: '100%',
         height: 'auto',
