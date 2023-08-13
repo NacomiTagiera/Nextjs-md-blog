@@ -26,6 +26,7 @@ export default function CustomImage({
   width,
   className,
   priority = false,
+  ...rest
 }: ImageProps) {
   return (
     <Image
@@ -41,6 +42,7 @@ export default function CustomImage({
         width: '100%',
         height: 'auto',
       }}
+      {...rest}
     />
   );
 }

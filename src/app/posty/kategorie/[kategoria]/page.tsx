@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import CategoryList from '@/components/Category/CategoryList';
 import Intro from '@/components/Common/Intro';
-import PostList from '@/components/Post/PostList';
+import AllPosts from '@/components/Post/AllPosts';
 import { getAllCategories, getPostsByCategory } from '@/lib/postsUtils';
 import convertText from '@/utils/convertText';
 
@@ -43,7 +43,7 @@ export default function SingleCategoryPage({ params: { kategoria } }: Props) {
         introText={`Wszystkie posty z kategorii ${categoryCapitalized}`}
       />
       <CategoryList />
-      <PostList posts={posts} />
+      <AllPosts posts={posts} />
     </article>
   );
 }

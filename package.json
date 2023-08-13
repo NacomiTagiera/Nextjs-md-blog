@@ -11,10 +11,10 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@types/node": "20.4.8",
-    "@types/react": "18.2.18",
+    "@types/node": "20.4.10",
+    "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-config-next": "^13.4.13",
     "formik": "^2.4.3",
     "gray-matter": "^4.0.3",
@@ -40,7 +40,7 @@
     "lint-staged": "^13.2.3",
     "postcss": "^8.4.27",
     "prettier": "^3.0.1",
-    "prettier-plugin-tailwindcss": "^0.4.1",
+    "prettier-plugin-tailwindcss": "^0.5.2",
     "react-icons": "^4.10.1",
     "tailwindcss": "^3.3.3"
   },

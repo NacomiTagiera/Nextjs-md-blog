@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import CategoryList from '@/components/Category/CategoryList';
 import Intro from '@/components/Common/Intro';
-import PostList from '@/components/Post/PostList';
+import AllPosts from '@/components/Post/AllPosts';
 import { getAllPosts } from '@/lib/postsUtils';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function PostsPage() {
         introText='Poznaj najlepsze tytuły ze świata gier z różnych kategorii.'
       />
       <CategoryList />
-      <PostList posts={posts} />
+      <AllPosts posts={posts} />
     </article>
   );
 }
