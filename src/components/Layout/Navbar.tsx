@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { navLinks } from '@/constants';
+
+import CustomLink from '../Common/CustomLink';
 
 import Logo from './Logo';
 
@@ -23,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className='py-7'>
+    <header className='py-7 duration-300 animate-in slide-in-from-top'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
           <Logo />
@@ -31,12 +32,14 @@ export default function Navbar() {
             <ul className='ml-10 flex items-baseline space-x-6 lg:space-x-9'>
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <CustomLink
                     href={link.href}
-                    className='text-lg font-medium transition duration-300 hover:text-secondary'
+                    className='text-lg font-medium'
+                    underline
+                    underlineColor='secondary'
                   >
                     {link.text}
-                  </Link>
+                  </CustomLink>
                 </li>
               ))}
             </ul>
@@ -61,12 +64,14 @@ export default function Navbar() {
             <ul className='space-y-8 px-2 pb-3 pt-2'>
               {navLinks.map(({ text, href }) => (
                 <li key={href}>
-                  <Link
+                  <CustomLink
                     href={href}
-                    className='block text-center text-base font-medium transition duration-300 hover:text-secondary'
+                    className='mx-auto block text-base font-medium'
+                    underline
+                    underlineColor='secondary'
                   >
                     {text}
-                  </Link>
+                  </CustomLink>
                 </li>
               ))}
             </ul>

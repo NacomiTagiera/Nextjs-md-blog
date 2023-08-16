@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image';
 
-const shimmer = (w: number, h: number) => `
+const shimmer = (w: number | `${number}`, h: number | `${number}`) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="g">
@@ -22,26 +22,22 @@ const toBase64 = (str: string) =>
 export default function CustomImage({
   alt,
   src,
-  height,
-  width,
-  className,
-  priority = false,
+  height = 432,
+  width = 768,
+  className = '',
   ...rest
 }: ImageProps) {
   return (
     <Image
-      className={className}
+      className={`object-cover object-center ${className}`}
       src={src}
       alt={alt}
       width={width}
       height={height}
-      priority={priority}
       placeholder='blur'
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(768, 432))}`}
-      style={{
-        width: '100%',
-        height: 'auto',
-      }}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(
+        shimmer(width, height)
+      )}`}
       {...rest}
     />
   );

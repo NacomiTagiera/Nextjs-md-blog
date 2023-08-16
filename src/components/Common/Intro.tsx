@@ -5,7 +5,7 @@ interface Props {
 
 export default function Intro({ header, introText }: Props) {
   return (
-    <hgroup className='space-y-2 pb-8 pt-6 md:space-y-5'>
+    <hgroup className='space-y-2 pb-8 pt-6 duration-300 animate-in slide-in-from-left md:space-y-5'>
       <h2 className='md:leading-14 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl'>
         {header}
       </h2>

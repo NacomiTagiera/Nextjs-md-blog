@@ -14,15 +14,18 @@ export const navLinks = [
 
 export const socials = [
   {
-    icon: <AiOutlineGithub size={45} />,
+    icon: AiOutlineGithub,
+    name: 'GitHub',
     href: 'https://github.com/NacomiTagiera',
   },
   {
-    icon: <AiFillLinkedin size={45} />,
+    icon: AiFillLinkedin,
+    name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/jakub-pawlak-frontend-dev',
   },
   {
-    icon: <AiFillFacebook size={45} />,
+    icon: AiFillFacebook,
+    name: 'Facebook',
     href: 'https://www.facebook.com/kubapawlak123321',
   },
 ];
