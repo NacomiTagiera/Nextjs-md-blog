@@ -7,7 +7,6 @@ import {
 export const POPULAR_POSTS_COUNT = 3;
 
 export const navLinks = [
-  { text: 'Strona główna', href: '/' },
   { text: 'Posty', href: '/posty' },
   { text: 'Kontakt', href: '/kontakt' },
 ];

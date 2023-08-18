@@ -84,7 +84,7 @@ export default function ContactForm() {
       </Formik>
 
       {requestStatus === 'success' && (
-        <p className=' py-3 text-center text-lg text-green-500'>
+        <p className='py-3 text-center text-lg text-green-500'>
           Wiadomość została wysłana
         </p>
       )}

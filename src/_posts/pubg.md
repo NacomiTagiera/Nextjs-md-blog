@@ -1,8 +1,8 @@
 ---
 category: 'strzelanki'
-date: '20-03-2023'
+date: '21-04-2023'
 title: 'PUBG'
-excerpt: 'PlayerUnknown’s Battlegrounds to wieloosobowa gra komputerowa typu battle royale wyprodukowana i wydana przez przedsiębiorstwo Krafton. Gra została wydana we wczesnym dostępie na PC w marcu 2017, premiera gry na Xbox One odbyła się 12 grudnia 2017, natomiast 21 grudnia tego samego roku została wydana wersja 1.0 na PC.'
+excerpt: 'Wieloosobowa gra komputerowa typu battle royale wyprodukowana i wydana przez przedsiębiorstwo Krafton. Gra została wydana we wczesnym dostępie na PC w marcu 2017, premiera gry na Xbox One odbyła się 12 grudnia 2017, natomiast 9 dni później została wydana wersja 1.0 na PC.'
 thumbnail: '/images/posts/pubg/thumbnail.jpg'
 isPopular: false
 ---
@@ -11,7 +11,7 @@ isPopular: false
 
 Gra należy do gatunku battle royale. Jednocześnie na serwerze może grać maksymalnie 100 osób. Na początku rozgrywki postać gracza wyskakuje ze spadochronem z samolotu. Po wylądowaniu, gracz próbuje znaleźć ekwipunek ukryty w losowych miejscach na mapie, który może być pomocny w przetrwaniu. Głównym zadaniem gracza jest wyeliminowanie innych graczy oraz unikanie kontaktu z otaczającą obszar rozgrywki zabójczą barierą, która nieustannie się zmniejsza i ogranicza teren działań dla graczy. Mecz wygrywa gracz, którego postać jako jedyna na mapie pozostanie żywa. W grze występuje też możliwość rozgrywki drużynowej. W grze nie występuje system craftingu oraz perków dla postaci.
 
-### Produkcja 
+### Produkcja
 
 W 2016 roku PUBG Corporation (wtedy jeszcze występujące pod nazwą Bluehole Ginno Games) rozpoczęło produkcję PlayerUnknown’s Battlegrounds. Na rynku było dostępnych tylko kilka tytułów battle royale: The Culling, H1Z1 oraz modyfikacje do gier z serii Arma. W studiu pracowało wtedy 25 osób (w tym ludzie odpowiedzialni m.in. za marketing, czy PR), była to część zespołu odpowiedzialnego za grę akcji MMORPG Devilian z 2015 roku. Większość pracowników miała ponad 10 lat doświadczenia w tworzeniu gier nastawionych na rozgrywki wieloosobowe, jednakże nie mieli doświadczenia w tworzeniu strzelanek.
 

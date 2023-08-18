@@ -8,7 +8,7 @@ interface Props {
 
 export default function PostList({ posts }: Props) {
   return (
-    <ul className='mb-14 mt-10 grid justify-center gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-7'>
+    <ul className='mb-14 mt-10 grid justify-center gap-5 duration-500 animate-in fade-in md:grid-cols-2 xl:grid-cols-3 xl:gap-7'>
       {posts.map((post, index) => (
         <PostPreview
           key={index}

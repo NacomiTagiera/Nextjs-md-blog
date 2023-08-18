@@ -1,6 +1,6 @@
 ---
 category: 'gry sportowe'
-date: '22-03-2023'
+date: '10-06-2023'
 title: 'FIFA'
 excerpt: 'FIFA to najbardziej znany cykl piłkarskich symulacji i zarazem jedna z najpopularniejszych serii sportowych w historii branży gier wideo. Seria ta została stworzona przez EA Sports i od lat cieszy się dużą popularnością wśród graczy na całym świecie.'
 thumbnail: '/images/posts/fifa/thumbnail.jpg'
@@ -11,7 +11,7 @@ isPopular: false
 
 ### Rozwój gry
 
-Gry o tematyce piłki nożnej, takie jak Tehkan World Cup, Sensible Soccer, Kick Off i Match Day zostały opracowane od końca 1980 roku, i były już konkurencyjne na rynku gier, gdy EA Sports ogłosił grę piłkarską jako kolejny dodatek do ich etykiety. Kiedy seria rozpoczęła się z FIFA International Soccer na Sega Mega Drive w późnym 1993 roku, to było godne uwagi dla bycia pierwszym, aby mieć oficjalną licencję z FIFA, światowego organu zarządzającego piłki nożnej. Główna seria została uzupełniona o dodatkowe części oparte na pojedynczych dużych turniejach, takich jak FIFA World Cup, UEFA Champions League, UEFA Europa League i UEFA European Football Championship, a także serię tytułów zarządzania piłką nożną. Od lat 90. głównym konkurentem serii jest *Pro Evolution Soccer* (PES) firmy Konami (obecnie znany jako eFootball).
+Gry o tematyce piłki nożnej, takie jak Tehkan World Cup, Sensible Soccer, Kick Off i Match Day zostały opracowane od końca 1980 roku, i były już konkurencyjne na rynku gier, gdy EA Sports ogłosił grę piłkarską jako kolejny dodatek do ich etykiety. Kiedy seria rozpoczęła się z FIFA International Soccer na Sega Mega Drive w późnym 1993 roku, to było godne uwagi dla bycia pierwszym, aby mieć oficjalną licencję z FIFA, światowego organu zarządzającego piłki nożnej. Główna seria została uzupełniona o dodatkowe części oparte na pojedynczych dużych turniejach, takich jak FIFA World Cup, UEFA Champions League, UEFA Europa League i UEFA European Football Championship, a także serię tytułów zarządzania piłką nożną. Od lat 90. głównym konkurentem serii jest _Pro Evolution Soccer_ (PES) firmy Konami (obecnie znany jako eFootball).
 
 FIFA 12 posiada rekord "najszybciej sprzedającej się gry sportowej w historii" z ponad 3,2 mln sprzedanych gier i ponad 186 mln dolarów wygenerowanych w sprzedaży detalicznej w pierwszym tygodniu od premiery. Najnowsza odsłona franczyzy, FIFA 23, wydana na całym świecie 30 września 2022 roku. Jest dostępna na wiele systemów gier, w tym PlayStation 4, Xbox One, Nintendo Switch, PC, PlayStation 5, Xbox Series X i Series S oraz Stadia.
 

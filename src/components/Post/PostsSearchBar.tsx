@@ -21,7 +21,7 @@ export default function PostsSearchBar({ posts, onSearch }: Props) {
         value={value}
         spellCheck={false}
         onChange={handleInputChange}
-        className='w-full rounded-md bg-gray-100 px-4 py-2 text-primary shadow-sm focus:border-secondary focus:ring focus:ring-[#b63e3e] focus:ring-opacity-50 sm:max-w-[340px]'
+        className='form-input w-full rounded-md bg-gray-100 px-4 py-2 text-primary shadow-sm focus:border-secondary focus:ring focus:ring-[#b63e3e] focus:ring-opacity-50 sm:max-w-[365px]'
       />
       <BiSearch
         className='pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xl text-neutral-500'

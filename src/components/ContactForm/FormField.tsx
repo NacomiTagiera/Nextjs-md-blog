@@ -27,7 +27,7 @@ export default function FormField({
         required={true}
       />
       <ErrorMessage
-        className='text-sm text-red-500'
+        className='mt-2 text-sm text-red-500'
         name={fieldName}
         component='p'
       />
