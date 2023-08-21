@@ -47,9 +47,7 @@ export const getAllPosts = (): Post[] => {
 
 export const getPopularPosts = (): Post[] => {
   const popularPosts = getAllPosts().filter((post) => post.isPopular);
-  popularPosts
-    .sort((a, b) => (a.date > b.date ? -1 : 1))
-    .slice(0, POPULAR_POSTS_COUNT);
+  popularPosts.slice(0, POPULAR_POSTS_COUNT);
 
   return popularPosts;
 };

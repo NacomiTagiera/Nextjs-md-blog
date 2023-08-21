@@ -14,19 +14,18 @@ export default function PostsSearchBar({ posts, onSearch }: Props) {
   const { value, handleInputChange } = usePostsSearchBar({ posts, onSearch });
 
   return (
-    <div className='relative mt-5 text-right'>
+    <label className='relative mt-5 block sm:max-w-[365px]'>
+      <span className='sr-only'>Wyszukaj</span>
+      <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
+        <BiSearch className='h-5 w-5 fill-slate-300' />
+      </span>
       <input
-        type='text'
+        className='block w-full rounded-md bg-gray-100 py-2 pl-9 pr-3 text-primary shadow-sm placeholder:italic placeholder:text-slate-400 sm:text-sm'
+        type='search'
         placeholder='Wyszukaj post'
         value={value}
-        spellCheck={false}
         onChange={handleInputChange}
-        className='form-input w-full rounded-md bg-gray-100 px-4 py-2 text-primary shadow-sm focus:border-secondary focus:ring focus:ring-[#b63e3e] focus:ring-opacity-50 sm:max-w-[365px]'
       />
-      <BiSearch
-        className='pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xl text-neutral-500'
-        aria-label='Wyszukaj post'
-      />
-    </div>
+    </label>
   );
 }

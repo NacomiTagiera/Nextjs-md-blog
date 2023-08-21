@@ -1,6 +1,6 @@
 # Kocham Gry
 
-Welcome to my blog about my favorite video games, built with Next.js and Tailwind CSS! **Live demo**: [https://kocham-gry.vercel.app](https://kocham-gry-blog.vercel.app)
+Welcome to my blog about my favorite video games, built with Next.js and Tailwind CSS! **Live demo**: [https://kocham-gry.vercel.app](https://kocham-gry.vercel.app)
 
 ## Introduction
 

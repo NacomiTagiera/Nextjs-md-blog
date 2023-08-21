@@ -17,13 +17,14 @@ export default function AllPosts({ posts }: Props) {
   return (
     <Fragment>
       <PostsSearchBar posts={posts} onSearch={setFilteredPosts} />
-      {!filteredPosts.length && (
-        <p className='p-5 text-center text-lg font-medium uppercase text-slate-300'>
+      {!filteredPosts.length ? (
+        <p className='p-10 text-center text-lg font-medium uppercase text-slate-300'>
           Przepraszamy, nie znaleziono żadnych wpisów. Spróbuj wyszukać
           ponownie.
         </p>
+      ) : (
+        <PostList posts={filteredPosts} />
       )}
-      <PostList posts={filteredPosts} />
     </Fragment>
   );
 }

@@ -1,31 +1,36 @@
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 
-interface Props {
+import { cn } from '@/lib/cn';
+
+interface Props extends LinkProps {
   children: React.ReactNode;
   className?: string;
-  href: string;
   underline?: boolean;
   underlineColor?: string;
 }
 
 export default function CustomLink({
   children,
-  className = '',
+  className,
   href,
   underline,
   underlineColor = 'white',
   ...rest
 }: Props) {
-  const isInternalLink = href.startsWith('/') || href.startsWith('#');
-  const commonLinkStyles = `transition duration-300 hover:text-white ${className}`;
+  const hrefStr = href.toString();
+  const isInternalLink = hrefStr.startsWith('/') || hrefStr.startsWith('#');
+  const commonLinkStyles = cn(
+    'transition duration-300 hover:text-white',
+    className
+  );
 
   if (isInternalLink) {
     return (
       <Link
         href={href}
-        className={`max-w-fit text-slate-200 ${commonLinkStyles} ${
-          underline ? 'group' : ''
-        }`}
+        className={cn('text-slate-200', commonLinkStyles, {
+          'group max-w-fit': underline,
+        })}
         {...rest}
       >
         {children}
@@ -42,7 +47,7 @@ export default function CustomLink({
     <a
       target='_blank'
       rel='noopener noreferrer'
-      href={href}
+      href={hrefStr}
       className={commonLinkStyles}
       {...rest}
     >

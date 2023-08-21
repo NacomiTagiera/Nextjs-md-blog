@@ -3,8 +3,9 @@ import { Roboto } from 'next/font/google';
 
 import Footer from '@/components/Layout/Footer';
 import Navbar from '@/components/Layout/Navbar';
+import { cn } from '@/lib/cn';
 
-import './globals.css';
+import '../styles/globals.css';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -25,7 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pl'>
-      <body className={roboto.className}>
+      <body
+        className={cn(
+          'min-h-screen overflow-x-hidden bg-primary text-white',
+          roboto.className
+        )}
+      >
         <Navbar />
         <main className='mx-auto mb-32 max-w-4xl flex-grow px-4 sm:px-6 xl:max-w-6xl xl:px-0'>
           {children}
