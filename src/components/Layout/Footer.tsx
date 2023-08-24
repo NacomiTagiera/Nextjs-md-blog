@@ -1,4 +1,4 @@
-import { socials } from '@/constants';
+import { socials } from '@/utils/constants';
 
 import CustomLink from '../Common/CustomLink';
 

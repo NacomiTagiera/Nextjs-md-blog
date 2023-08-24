@@ -1,36 +1,68 @@
-import { ErrorMessage, Field } from 'formik';
+import { useField } from 'formik';
+
+import { cn } from '@/lib/cn';
 
 interface Props {
-  fieldName: string;
   label: string;
-  large?: boolean;
+  name: string;
+  autoComplete?: string;
+  component?: 'input' | 'textarea';
+  placeholder?: string;
   type?: string;
 }
 
 export default function FormField({
-  fieldName,
   label,
-  large = false,
-  type = 'text',
+  name,
+  component = 'input',
+  ...rest
 }: Props) {
+  const [field, meta] = useField(name);
+  const className = cn(
+    'px-3 py-2 shadow-sm border placeholder:text-slate-400 placeholder:italic focus:outline-none block w-full rounded-md sm:text-sm',
+    meta.touched && !!meta.error
+      ? 'text-[#D41976] border-[#D41976] bg-[#F4C6DD] placeholder:text-pink-400'
+      : 'text-primary border-slate-300 bg-gray-100 focus:bg-white focus:border-sky-500 focus:ring-sky-500 focus:ring-1'
+  );
+
   return (
-    <div>
-      <label htmlFor={fieldName} className='mb-2 block font-medium'>
+    <div className='flex flex-col gap-y-1'>
+      <label
+        htmlFor={field.name}
+        className='block font-medium after:ml-0.5 after:text-red-500 after:content-["*"]'
+      >
         {label}
       </label>
-      <Field
-        id={fieldName}
-        className='appearance-none rounded border-2 border-gray-300 bg-gray-200 px-4 py-2 leading-tight text-primary focus:border-slate-500 focus:bg-white focus:outline-none'
-        as={large ? 'textarea' : 'input'}
-        type={type}
-        name={fieldName}
-        required={true}
-      />
-      <ErrorMessage
-        className='mt-2 text-sm text-red-500'
-        name={fieldName}
-        component='p'
-      />
+      {component === 'input' ? (
+        <input
+          type='text'
+          className={className}
+          id={name}
+          name={name}
+          value={field.value}
+          required
+          onChange={field.onChange}
+          onBlur={field.onBlur}
+          {...rest}
+        />
+      ) : (
+        <textarea
+          rows={3}
+          className={className}
+          id={name}
+          name={name}
+          value={field.value}
+          required
+          onChange={field.onChange}
+          onBlur={field.onBlur}
+          {...rest}
+        />
+      )}
+      {meta.touched && meta.error ? (
+        <p className='text-center text-sm text-red-500'>{meta.error}</p>
+      ) : (
+        ''
+      )}
     </div>
   );
 }

@@ -1,93 +1,77 @@
 'use client';
 
-import { Fragment, useEffect, useState } from 'react';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { Form, Formik, FormikHelpers } from 'formik';
 
+import { sendForm } from '@/actions';
 import ContactFormValues from '@/interfaces/ContactFormValues';
 import ContactFormSchema from '@/lib/formSchema';
 
 import FormField from './FormField';
 
-async function sendContactData(contactDetails: ContactFormValues) {
-  const response = await fetch('/api/contact', {
-    method: 'POST',
-    body: JSON.stringify(contactDetails),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || 'Something went wrong!');
-  }
-}
-
 export default function ContactForm() {
-  const [requestStatus, setRequestStatus] = useState<
-    'success' | 'pending' | 'error' | undefined
-  >(undefined);
-
-  useEffect(() => {
-    if (requestStatus === 'success' || requestStatus === 'error') {
-      const timer = setTimeout(() => {
-        setRequestStatus(undefined);
-      }, 3000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [requestStatus]);
+  const [isPending, setIsPending] = useState<boolean>(false);
 
   const handleSubmit = async (
     values: ContactFormValues,
     { resetForm }: FormikHelpers<ContactFormValues>
   ) => {
-    setRequestStatus('pending');
+    setIsPending(true);
+
     try {
-      await sendContactData(values);
-      setRequestStatus('success');
+      await sendForm(values);
+      toast.success('Wiadomość została wysłana!');
       resetForm();
     } catch (error) {
       if (error instanceof Error) {
-        setRequestStatus('error');
+        toast.error('Coś poszło nie tak. Spróbuj ponownie później');
       }
     }
+
+    setIsPending(false);
   };
 
   return (
-    <Fragment>
-      <Formik
-        initialValues={{ name: '', email: '', message: '' }}
-        validationSchema={ContactFormSchema}
-        onSubmit={handleSubmit}
+    <Formik
+      initialValues={{ name: '', email: '', message: '' }}
+      validationSchema={ContactFormSchema}
+      onSubmit={handleSubmit}
+    >
+      <Form
+        noValidate
+        className='mx-auto flex max-w-sm flex-col gap-y-6 px-6 py-5'
       >
-        <Form className='space-y-6 text-center'>
-          <FormField fieldName='name' label='Imię' />
-          <FormField fieldName='email' label='Email' type='email' />
-          <FormField fieldName='message' label='Wiadomość' large />
-
-          {requestStatus === 'error' && (
-            <p className='text-sm text-red-500'>
-              Coś poszło nie tak. Spróbuj ponownie później
-            </p>
-          )}
-
+        <FormField
+          name='name'
+          label='Imię'
+          placeholder='Jan Kowalski'
+          type='text'
+          autoComplete='name'
+        />
+        <FormField
+          name='email'
+          label='Email'
+          placeholder='j.kowalski@gmail.com'
+          type='email'
+          autoComplete='email'
+        />
+        <FormField
+          component='textarea'
+          name='message'
+          label='Wiadomość'
+          type='text'
+        />
+        <div className='text-center'>
           <button
             type='submit'
-            className='mx-auto rounded bg-secondary px-4 py-2 font-bold transition duration-500 hover:bg-red-500'
-            disabled={requestStatus === 'pending'}
+            className='rounded bg-gradient-to-r from-secondary to-red-800 px-4 py-2 font-bold shadow transition-all duration-300 hover:scale-95 hover:opacity-80 disabled:opacity-50'
+            disabled={isPending}
           >
-            {requestStatus === 'pending' ? 'Wysyłanie...' : 'Wyślij'}
+            {isPending ? 'Wysyłanie...' : 'Wyślij'}
           </button>
-        </Form>
-      </Formik>
-
-      {requestStatus === 'success' && (
-        <p className='py-3 text-center text-lg text-green-500'>
-          Wiadomość została wysłana
-        </p>
-      )}
-    </Fragment>
+        </div>
+      </Form>
+    </Formik>
   );
 }

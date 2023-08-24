@@ -1,3 +1,5 @@
+import { Toaster } from 'react-hot-toast';
+
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 
@@ -37,6 +39,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster position='top-right' />
       </body>
     </html>
   );

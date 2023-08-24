@@ -1,4 +1,4 @@
-import { navLinks } from '@/constants';
+import { navLinks } from '@/utils/constants';
 
 import CustomLink from '../Common/CustomLink';
 

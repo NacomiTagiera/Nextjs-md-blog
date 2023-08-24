@@ -6,7 +6,7 @@ interface Props extends LinkProps {
   children: React.ReactNode;
   className?: string;
   underline?: boolean;
-  underlineColor?: string;
+  underlineColor?: 'white' | 'secondary';
 }
 
 export default function CustomLink({
@@ -36,7 +36,10 @@ export default function CustomLink({
         {children}
         {underline && (
           <span
-            className={`block h-0.5 max-w-0 bg-${underlineColor} transition-all duration-300 group-hover:max-w-full`}
+            className={cn(
+              'block h-0.5 max-w-0 transition-all duration-300 group-hover:max-w-full',
+              underlineColor === 'white' ? 'bg-white' : 'bg-secondary'
+            )}
           ></span>
         )}
       </Link>

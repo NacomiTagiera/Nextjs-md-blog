@@ -33,7 +33,9 @@
             "groups": [
               ["^react", "^@?\\w"],
               ["^next", "^@?\\w"],
-              ["^(@|components|lib|utils|constants|interfaces|_posts)(/.*|$)"],
+              [
+                "^(@|components|hooks|lib|utils|constants|interfaces|_posts)(/.*|$)"
+              ],
               ["^\\u0000"],
               ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
               ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
