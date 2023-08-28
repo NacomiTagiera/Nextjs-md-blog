@@ -1,6 +1,6 @@
 ---
 category: 'rpg'
-date: '29-05-2023'
+date: '2023-05-29'
 title: 'Wiedźmin 3: Dziki Gon'
 excerpt: 'Gra stworzona przez polskie studio CD Projekt RED, jest trzecią odsłoną popularnej serii gier RPG opartych na powieściach Andrzeja Sapkowskiego. Oferuje niezwykłą przygodę w świecie fantasy, pełną niebezpieczeństw, tajemnic i emocjonujących wyborów, które mają wpływ na dalszy rozwój fabuły.'
 thumbnail: '/images/posts/wiedzmin-3-dziki-gon/thumbnail.jpg'

@@ -1,15 +1,24 @@
 import { Fragment } from 'react';
 
 import Post from '@/interfaces/Post';
+import { formatDate } from '@/utils/formatDate';
 
 import CustomImage from '../Common/CustomImage';
 
 type Props = Omit<Post, 'category' | 'content' | 'isPopular' | 'slug'>;
 
 export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
+  const creationDate = new Date(date);
+
   return (
     <Fragment>
-      <time className='text-sm text-secondary md:text-lg'>{date}</time>
+      <time
+        className='text-sm text-secondary md:text-lg'
+        dateTime={creationDate.toISOString()}
+        aria-label={`Artykuł dodano ${formatDate(creationDate)}`}
+      >
+        {formatDate(creationDate)}
+      </time>
       <h2 className='mb-4 text-center text-3xl font-bold tracking-wide sm:text-4xl md:mb-6 md:text-5xl'>
         {title}
       </h2>

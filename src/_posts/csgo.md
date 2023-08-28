@@ -1,6 +1,6 @@
 ---
 category: 'strzelanki'
-date: '06-08-2023'
+date: '2023-05-02'
 title: 'CS:GO'
 excerpt: 'Counter-Strike: Global Offensive to wieloosobowa strzelanka pierwszoosobowa, stworzona oraz wydana przez Valve. Jest to czwarta gra z serii Counter-Strike, została wydana na Windows, macOS, Xbox 360, Xbox One, PlayStation 3 i Linuxa.'
 thumbnail: '/images/posts/csgo/thumbnail.jpg'

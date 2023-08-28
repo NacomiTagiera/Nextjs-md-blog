@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
           <Logo />
-          <nav role='main' className='ml-10'>
+          <nav className='ml-10'>
             <ul className='flex items-baseline space-x-6 lg:space-x-9'>
               {navLinks.map((link) => (
                 <li key={link.href}>

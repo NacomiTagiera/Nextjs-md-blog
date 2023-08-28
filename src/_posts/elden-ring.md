@@ -1,6 +1,6 @@
 ---
 category: 'rpg'
-date: '01-08-2023'
+date: '2023-08-01'
 title: 'Elden Ring'
 excerpt: 'Elden Ring to trzecioosobowa gra RPG wyprodukowana przez FromSoftware i wydana przez Namco Bandai Games. W Elden Ring gracz kontroluje postać, która wyrusza w podróż, aby naprawić Eldeński Krąg i zostać nowym Eldeńskim Władcą. Gracz swobodnie przemierza fikcyjną krainę Ziemie Pomiędzy.'
 thumbnail: '/images/posts/elden-ring/thumbnail.jpg'

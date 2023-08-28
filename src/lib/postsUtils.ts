@@ -38,8 +38,8 @@ export const getAllPosts = (): Post[] => {
     return getPostData(postFile);
   });
 
-  const sortedPosts = allPosts.sort((postA, postB) =>
-    postA.date > postB.date ? -1 : 1
+  const sortedPosts = allPosts.sort((a, b) =>
+    Date.parse(a.date) > Date.parse(b.date) ? -1 : 1
   );
 
   return sortedPosts;

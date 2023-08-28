@@ -1,6 +1,6 @@
 ---
 category: 'gry sportowe'
-date: '10-06-2023'
+date: '2023-06-10'
 title: 'FIFA'
 excerpt: 'FIFA to najbardziej znany cykl piłkarskich symulacji i zarazem jedna z najpopularniejszych serii sportowych w historii branży gier wideo. Seria ta została stworzona przez EA Sports i od lat cieszy się dużą popularnością wśród graczy na całym świecie.'
 thumbnail: '/images/posts/fifa/thumbnail.jpg'
