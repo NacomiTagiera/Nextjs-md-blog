@@ -19,10 +19,10 @@ export default function PostPreview({
   const creationDate = new Date(date);
 
   return (
-    <li className='max-w-sm overflow-hidden rounded-b-md bg-white shadow-md md:max-w-none'>
+    <li className='max-w-sm overflow-hidden rounded-b-md bg-dark shadow-md md:max-w-none'>
       <CustomLink href={`/posty/${slug}`}>
         <CustomImage src={thumbnail} alt={title} width={414} height={233} />
-        <div className='p-4 text-primary'>
+        <div className='p-4 text-light'>
           <div className='mb-3 flex items-start justify-between'>
             <div>
               <h3 className='text-xl font-semibold leading-6'>{title}</h3>
@@ -35,11 +35,11 @@ export default function PostPreview({
                 {formatDate(creationDate)}
               </time>
             </div>
-            <span className='rounded-md bg-secondary px-2 py-1 text-sm uppercase text-white md:rounded-lg'>
+            <span className='rounded-md bg-seagreen-800 px-2 py-1 text-sm uppercase text-light md:rounded-lg'>
               {category}
             </span>
           </div>
-          <p className='text-primary'>{excerpt}</p>
+          <p className='text-light'>{excerpt}</p>
         </div>
       </CustomLink>
     </li>

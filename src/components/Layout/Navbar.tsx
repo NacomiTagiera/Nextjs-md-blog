@@ -18,7 +18,7 @@ export default function Navbar() {
                     href={link.href}
                     className='text-lg font-medium'
                     underline
-                    underlineColor='secondary'
+                    underlineColor='seagreen'
                   >
                     {link.text}
                   </CustomLink>

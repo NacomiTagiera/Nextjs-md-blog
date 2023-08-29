@@ -44,7 +44,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   const contentHtml = await markdownToHtml(content);
 
   return (
-    <article className='prose prose-invert mx-auto max-w-3xl md:prose-lg lg:prose-xl prose-headings:text-secondary prose-h4:italic prose-h4:text-white prose-p:text-justify'>
+    <article className='prose prose-invert mx-auto max-w-3xl md:prose-lg lg:prose-xl prose-headings:text-seagreen prose-h4:italic prose-h4:text-light prose-p:text-justify'>
       <PostHeader
         date={date}
         excerpt={excerpt}

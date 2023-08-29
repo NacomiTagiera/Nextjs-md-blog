@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <section className='container mx-auto my-8 flex h-full flex-col items-center justify-center p-16'>
       <div className='max-w-md text-center'>
-        <h2 className='text-9xl font-extrabold text-secondary'>
+        <h2 className='text-9xl font-extrabold text-seagreen'>
           <span className='sr-only'>Error</span>404
         </h2>
         <p className='my-8 text-2xl font-semibold md:text-3xl'>
@@ -17,7 +17,7 @@ export default function NotFound() {
         </p>
         <Link
           href='/'
-          className='rounded-lg bg-secondary px-8 py-3 text-lg font-semibold'
+          className='rounded-lg bg-seagreen px-8 py-3 text-lg font-semibold'
         >
           Strona główna
         </Link>

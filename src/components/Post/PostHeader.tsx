@@ -13,7 +13,7 @@ export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
   return (
     <Fragment>
       <time
-        className='text-sm text-secondary md:text-lg'
+        className='text-sm text-seagreen md:text-lg'
         dateTime={creationDate.toISOString()}
         aria-label={`Artykuł dodano ${formatDate(creationDate)}`}
       >

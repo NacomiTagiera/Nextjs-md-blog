@@ -65,7 +65,7 @@ export default function ContactForm() {
         <div className='text-center'>
           <button
             type='submit'
-            className='rounded bg-gradient-to-r from-secondary to-red-800 px-4 py-2 font-bold shadow transition-all duration-300 hover:scale-95 hover:opacity-80 disabled:opacity-50'
+            className='rounded bg-gradient-to-r from-seagreen to-seagreen-700 px-4 py-2 font-bold shadow transition-all duration-300 hover:scale-95 hover:opacity-80 disabled:opacity-50'
             disabled={isPending}
           >
             {isPending ? 'Wysyłanie...' : 'Wyślij'}

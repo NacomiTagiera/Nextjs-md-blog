@@ -9,7 +9,7 @@ export default function Intro({ header, introText }: Props) {
       <h2 className='md:leading-14 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl'>
         {header}
       </h2>
-      <p className='text-lg leading-7 text-slate-300'>{introText}</p>
+      <p className='text-lg leading-7 text-smoky-200'>{introText}</p>
     </hgroup>
   );
 }

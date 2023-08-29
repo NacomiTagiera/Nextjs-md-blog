@@ -19,10 +19,10 @@ export default function FormField({
 }: Props) {
   const [field, meta] = useField(name);
   const className = cn(
-    'px-3 py-2 shadow-sm border placeholder:text-slate-400 placeholder:italic focus:outline-none block w-full rounded-md sm:text-sm',
+    'px-3 py-2 shadow-sm border placeholder:text-smoky-600 placeholder:italic focus:outline-none block w-full rounded-md sm:text-sm',
     meta.touched && !!meta.error
       ? 'text-[#D41976] border-[#D41976] bg-[#F4C6DD] placeholder:text-pink-400'
-      : 'text-primary border-slate-300 bg-gray-100 focus:bg-white focus:border-sky-500 focus:ring-sky-500 focus:ring-1'
+      : 'text-seagreen-700 border-smoky-400 bg-smoky-50 focus:bg-light focus:border-seagreen-100 focus:ring-seagreen-300 focus:ring-1'
   );
 
   return (

@@ -8,9 +8,10 @@ export default function Logo() {
       href='/'
       className='flex flex-shrink-0 flex-row justify-center py-5 text-4xl font-bold md:text-5xl'
     >
-      <GiConsoleController size={50} className='mr-2' />
+      <span className='sr-only'>Strona Główna</span>
+      <GiConsoleController size={50} className='mr-2' aria-hidden='true' />
       <h1 className='hidden sm:block'>
-        <span className='text-secondary'>KOCHAM </span>
+        <span className='text-seagreen'>KOCHAM </span>
         GRY
       </h1>
     </CustomLink>

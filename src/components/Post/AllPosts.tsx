@@ -20,7 +20,7 @@ export default function AllPosts({ posts }: Props) {
         <PostsSearchBar posts={posts} onSearch={setFilteredPosts} />
       </div>
       {!filteredPosts.length ? (
-        <p className='p-10 text-center text-lg font-medium uppercase text-slate-300'>
+        <p className='p-10 text-center text-lg font-medium uppercase text-smoky-300'>
           Przepraszamy, nie znaleziono żadnych wpisów. Spróbuj wyszukać
           ponownie.
         </p>

@@ -101,11 +101,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/manifest.json',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
 };
 
 export default function RootLayout({
@@ -117,7 +112,7 @@ export default function RootLayout({
     <html lang='pl'>
       <body
         className={cn(
-          'min-h-screen overflow-x-hidden bg-primary text-white',
+          'min-h-screen overflow-x-hidden bg-smoky text-light',
           roboto.className
         )}
       >

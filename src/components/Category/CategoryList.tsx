@@ -8,10 +8,11 @@ export default function CategoryList() {
   categories.unshift('wszystkie');
 
   return (
-    <ul className='text-md flex w-full flex-wrap justify-around gap-x-3 bg-secondary bg-opacity-50 px-6 py-3 md:text-lg'>
+    <ul className='flex w-full flex-wrap justify-around gap-4 bg-seagreen-700 px-6 py-3'>
       {categories.map((category, index) => (
         <li key={index}>
           <CustomLink
+            className='text-base text-light md:text-lg md:font-medium'
             href={
               category === 'wszystkie'
                 ? '/posty'

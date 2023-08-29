@@ -6,7 +6,7 @@ interface Props extends LinkProps {
   children: React.ReactNode;
   className?: string;
   underline?: boolean;
-  underlineColor?: 'white' | 'secondary';
+  underlineColor?: 'light' | 'seagreen';
 }
 
 export default function CustomLink({
@@ -14,21 +14,17 @@ export default function CustomLink({
   className,
   href,
   underline,
-  underlineColor = 'white',
+  underlineColor = 'light',
   ...rest
 }: Props) {
   const hrefStr = href.toString();
   const isInternalLink = hrefStr.startsWith('/') || hrefStr.startsWith('#');
-  const commonLinkStyles = cn(
-    'transition duration-300 hover:text-white',
-    className
-  );
 
   if (isInternalLink) {
     return (
       <Link
         href={href}
-        className={cn('text-slate-200', commonLinkStyles, {
+        className={cn('text-smoky-100', className, {
           'group max-w-fit': underline,
         })}
         {...rest}
@@ -38,7 +34,7 @@ export default function CustomLink({
           <span
             className={cn(
               'block h-0.5 max-w-0 transition-all duration-300 group-hover:max-w-full',
-              underlineColor === 'white' ? 'bg-white' : 'bg-secondary'
+              underlineColor === 'light' ? 'bg-light' : 'bg-seagreen'
             )}
           ></span>
         )}
@@ -51,7 +47,7 @@ export default function CustomLink({
       target='_blank'
       rel='noopener noreferrer'
       href={hrefStr}
-      className={commonLinkStyles}
+      className={className}
       {...rest}
     >
       {children}
