@@ -1,5 +1,5 @@
 import { getAllCategories } from '@/lib/postsUtils';
-import convertText from '@/utils/convertText';
+import { convertText } from '@/utils/convertText';
 
 import CustomLink from '../Common/CustomLink';
 
@@ -12,7 +12,8 @@ export default function CategoryList() {
       {categories.map((category, index) => (
         <li key={index}>
           <CustomLink
-            className='text-base text-light md:text-lg md:font-medium'
+            className='group max-w-fit text-base text-light hover:text-smoky-50 md:text-lg md:font-medium'
+            activeClassName='underline underline-offset-8 decoration-light decoration-2 text-smoky-50'
             href={
               category === 'wszystkie'
                 ? '/posty'
@@ -20,9 +21,9 @@ export default function CategoryList() {
                     withHyphens: true,
                   })}`
             }
-            underline={true}
           >
             {convertText(category, { capitalize: true })}
+            <span className='block h-0.5 max-w-0 bg-light transition-all duration-300 group-hover:max-w-full'></span>
           </CustomLink>
         </li>
       ))}

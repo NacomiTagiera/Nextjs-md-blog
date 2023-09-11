@@ -1,7 +1,7 @@
-interface Props {
+type Props = {
   header: string;
   introText: string;
-}
+};
 
 export default function Intro({ header, introText }: Props) {
   return (

@@ -1,4 +1,4 @@
-import Post from '@/interfaces/Post';
+import { type Post } from '@/types/Post';
 
 type Props = Pick<Post, 'content'>;
 

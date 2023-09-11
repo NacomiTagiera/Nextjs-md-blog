@@ -16,11 +16,11 @@ export default function Navbar() {
                 <li key={link.href}>
                   <CustomLink
                     href={link.href}
-                    className='text-lg font-medium'
-                    underline
-                    underlineColor='seagreen'
+                    className='group max-w-fit text-lg font-medium text-smoky-100 hover:text-smoky-50'
+                    activeClassName='underline underline-offset-8 decoration-seagreen decoration-2 text-smoky-50'
                   >
                     {link.text}
+                    <span className='block h-0.5 max-w-0 bg-seagreen transition-all duration-300 group-hover:max-w-full'></span>
                   </CustomLink>
                 </li>
               ))}

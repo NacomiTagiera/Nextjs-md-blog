@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -15,10 +15,7 @@ export default function NotFound() {
         <p className='my-8 text-2xl font-semibold md:text-3xl'>
           Nie udało nam się znaleźć strony, której szukasz
         </p>
-        <Link
-          href='/'
-          className='rounded-lg bg-seagreen px-8 py-3 text-lg font-semibold'
-        >
+        <Link href='/' className='rounded-lg bg-seagreen px-8 py-3 text-lg font-semibold'>
           Strona główna
         </Link>
       </div>

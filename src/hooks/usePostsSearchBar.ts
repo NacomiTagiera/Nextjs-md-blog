@@ -1,24 +1,21 @@
-import { ChangeEvent, useState } from 'react';
+import { type ChangeEvent, useState } from 'react';
 
-import Post from '../interfaces/Post';
+import { type Post } from '../types/Post';
 
-export default function usePostsSearchBar({
+export const usePostsSearchBar = ({
   posts,
   onSearch,
 }: {
   posts: Post[];
   onSearch: (posts: Post[]) => void;
-}) {
-  const [value, setValue] = useState<string>('');
+}) => {
+  const [value, setValue] = useState('');
 
-  const handleInputChange = ({
-    target: { value },
-  }: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
     const searchValue = value.trim().toLowerCase();
     const filteredPosts = posts.filter(
       ({ title, excerpt }) =>
-        title.toLowerCase().includes(searchValue) ||
-        excerpt.toLowerCase().includes(searchValue)
+        title.toLowerCase().includes(searchValue) || excerpt.toLowerCase().includes(searchValue)
     );
 
     onSearch(filteredPosts);
@@ -26,4 +23,4 @@ export default function usePostsSearchBar({
   };
 
   return { value, handleInputChange };
-}
+};

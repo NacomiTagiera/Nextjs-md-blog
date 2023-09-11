@@ -2,9 +2,9 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-import Post from '@/interfaces/Post';
+import { type Post } from '@/types/Post';
 import { POPULAR_POSTS_COUNT } from '@/utils/constants';
-import convertText from '@/utils/convertText';
+import { convertText } from '@/utils/convertText';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
 
@@ -14,21 +14,16 @@ export const getPostData = (postIdentifier: string): Post => {
   const postSlug = postIdentifier.replace(/\.md$/, '');
   const filePath = path.join(POSTS_DIRECTORY, `${postSlug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(fileContent);
-  const { category, date, excerpt, isPopular, title, thumbnail } = data;
-
-  const PostData: Post = {
-    category,
-    content,
-    date,
-    excerpt,
-    isPopular,
-    slug: postSlug,
-    thumbnail,
-    title,
+  const { data, content } = matter(fileContent) as unknown as {
+    data: Omit<Post, 'content' | 'slug'>;
+    content: string;
   };
 
-  return PostData;
+  return {
+    content,
+    slug: postSlug,
+    ...data,
+  };
 };
 
 export const getAllPosts = (): Post[] => {
@@ -38,9 +33,7 @@ export const getAllPosts = (): Post[] => {
     return getPostData(postFile);
   });
 
-  const sortedPosts = allPosts.sort((a, b) =>
-    Date.parse(a.date) > Date.parse(b.date) ? -1 : 1
-  );
+  const sortedPosts = allPosts.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date) ? -1 : 1));
 
   return sortedPosts;
 };
@@ -59,6 +52,4 @@ export const getAllCategories = () => {
 };
 
 export const getPostsByCategory = (category: string) =>
-  getAllPosts().filter(
-    (post) => convertText(post.category, { withHyphens: true }) === category
-  );
+  getAllPosts().filter((post) => convertText(post.category, { withHyphens: true }) === category);

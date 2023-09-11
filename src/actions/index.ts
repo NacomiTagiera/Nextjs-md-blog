@@ -2,9 +2,9 @@
 
 import { ValidationError } from 'yup';
 
-import ContactFormValues from '@/interfaces/ContactFormValues';
-import ContactFormSchema from '@/lib/formSchema';
+import { ContactFormSchema } from '@/lib/formSchema';
 import { insertContactForm } from '@/lib/mongodb';
+import type { ContactFormValues } from '@/types/ContactFormValues';
 
 export const sendForm = async (data: ContactFormValues) => {
   try {

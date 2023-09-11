@@ -1,25 +1,23 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 
 import CategoryList from '@/components/Category/CategoryList';
 import Intro from '@/components/Common/Intro';
 import AllPosts from '@/components/Post/AllPosts';
 import { getAllCategories, getPostsByCategory } from '@/lib/postsUtils';
-import convertText from '@/utils/convertText';
+import { convertText } from '@/utils/convertText';
 
-interface Props {
+type Props = {
   params: {
     kategoria: string;
   };
-}
+};
 
 export const generateStaticParams = () =>
   getAllCategories().map((category) => ({
     kategoria: convertText(category, { withHyphens: true }),
   }));
 
-export const generateMetadata = ({
-  params: { kategoria },
-}: Props): Metadata => {
+export const generateMetadata = ({ params: { kategoria } }: Props): Metadata => {
   const category = convertText(kategoria, {
     capitalize: true,
   }).replaceAll('-', ' ');

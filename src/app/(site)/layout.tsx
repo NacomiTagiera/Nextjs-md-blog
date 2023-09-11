@@ -24,13 +24,7 @@ export const metadata: Metadata = {
   description: 'Witaj na moim blogu poświęconym najlepszym grom komputerowym!',
   applicationName: 'Kocham Gry',
   referrer: 'origin-when-cross-origin',
-  keywords: [
-    'Kocham Gry',
-    'Blog o grach',
-    'Blog',
-    'Gry komputerowe',
-    'Jakub Pawlak',
-  ],
+  keywords: ['Kocham Gry', 'Blog o grach', 'Blog', 'Gry komputerowe', 'Jakub Pawlak'],
   authors: {
     name: 'Jakub Pawlak',
     url: 'https://www.linkedin.com/in/jakub-pawlak-frontend-dev',
@@ -49,8 +43,7 @@ export const metadata: Metadata = {
       default: 'Kocham Gry',
       template: `%s | Kocham Gry`,
     },
-    description:
-      'Witaj na moim blogu poświęconym najlepszym grom komputerowym!',
+    description: 'Witaj na moim blogu poświęconym najlepszym grom komputerowym!',
     siteName: 'Kocham Gry',
     url: 'https://kocham-gry.vercel.app',
     locale: 'pl_PL',
@@ -103,19 +96,10 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='pl'>
-      <body
-        className={cn(
-          'min-h-screen overflow-x-hidden bg-smoky text-light',
-          roboto.className
-        )}
-      >
+      <body className={cn('min-h-screen overflow-x-hidden bg-smoky text-light', roboto.className)}>
         <Navbar />
         <main className='mx-auto mb-32 max-w-4xl flex-grow px-4 sm:px-6 xl:max-w-6xl xl:px-0'>
           {children}

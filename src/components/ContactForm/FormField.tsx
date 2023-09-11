@@ -2,21 +2,16 @@ import { useField } from 'formik';
 
 import { cn } from '@/lib/cn';
 
-interface Props {
+type Props = {
   label: string;
   name: string;
   autoComplete?: string;
   component?: 'input' | 'textarea';
   placeholder?: string;
   type?: string;
-}
+};
 
-export default function FormField({
-  label,
-  name,
-  component = 'input',
-  ...rest
-}: Props) {
+export default function FormField({ label, name, component = 'input', ...rest }: Props) {
   const [field, meta] = useField(name);
   const className = cn(
     'px-3 py-2 shadow-sm border placeholder:text-smoky-600 placeholder:italic focus:outline-none block w-full rounded-md sm:text-sm',
@@ -39,7 +34,7 @@ export default function FormField({
           className={className}
           id={name}
           name={name}
-          value={field.value}
+          value={field.value as string}
           required
           onChange={field.onChange}
           onBlur={field.onBlur}
@@ -51,7 +46,7 @@ export default function FormField({
           className={className}
           id={name}
           name={name}
-          value={field.value}
+          value={field.value as string}
           required
           onChange={field.onChange}
           onBlur={field.onBlur}

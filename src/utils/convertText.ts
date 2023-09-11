@@ -1,4 +1,4 @@
-const convertText = (
+export const convertText = (
   text: string,
   options: {
     withHyphens?: boolean;
@@ -10,8 +10,7 @@ const convertText = (
   if (options.capitalize) {
     formattedText =
       formattedText.length > 3
-        ? formattedText.charAt(0).toUpperCase() +
-          formattedText.slice(1).toLowerCase()
+        ? formattedText.charAt(0).toUpperCase() + formattedText.slice(1).toLowerCase()
         : formattedText.toUpperCase();
   }
 
@@ -21,5 +20,3 @@ const convertText = (
 
   return formattedText;
 };
-
-export default convertText;

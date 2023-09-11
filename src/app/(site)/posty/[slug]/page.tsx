@@ -2,14 +2,14 @@ import { notFound } from 'next/navigation';
 
 import PostBody from '@/components/Post/PostBody';
 import PostHeader from '@/components/Post/PostHeader';
-import markdownToHtml from '@/lib/markdownToHtml';
+import { markdownToHtml } from '@/lib/markdownToHtml';
 import { getAllPosts, getPostData } from '@/lib/postsUtils';
 
-interface Props {
+type Props = {
   params: {
     slug: string;
   };
-}
+};
 
 export function generateStaticParams() {
   const posts = getAllPosts();
@@ -45,12 +45,7 @@ export default async function PostPage({ params: { slug } }: Props) {
 
   return (
     <article className='prose prose-invert mx-auto max-w-3xl md:prose-lg lg:prose-xl prose-headings:text-seagreen prose-h4:italic prose-h4:text-light prose-p:text-justify'>
-      <PostHeader
-        date={date}
-        excerpt={excerpt}
-        thumbnail={thumbnail}
-        title={title}
-      />
+      <PostHeader date={date} excerpt={excerpt} thumbnail={thumbnail} title={title} />
       <PostBody content={contentHtml} />
     </article>
   );

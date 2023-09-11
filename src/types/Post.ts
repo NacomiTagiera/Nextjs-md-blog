@@ -1,4 +1,4 @@
-export default interface Post {
+export type Post = {
   category: string;
   content: string;
   date: string;
@@ -7,4 +7,4 @@ export default interface Post {
   slug: string;
   thumbnail: string;
   title: string;
-}
+};

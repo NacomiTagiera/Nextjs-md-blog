@@ -1,6 +1,6 @@
-import { Db, MongoClient, MongoClientOptions } from 'mongodb';
+import { type Db, MongoClient, type MongoClientOptions } from 'mongodb';
 
-import ContactFormValues from '@/interfaces/ContactFormValues';
+import { type ContactFormValues } from '@/types/ContactFormValues';
 
 async function connectToDatabase(): Promise<Db> {
   const { MONGODB_URI, MONGODB_DB } = process.env;
@@ -15,9 +15,7 @@ async function connectToDatabase(): Promise<Db> {
   return client.db(MONGODB_DB);
 }
 
-export async function insertContactForm(
-  data: ContactFormValues
-): Promise<void> {
+export async function insertContactForm(data: ContactFormValues): Promise<void> {
   const db = await connectToDatabase();
   const collection = db.collection('messages');
   await collection.insertOne(data);

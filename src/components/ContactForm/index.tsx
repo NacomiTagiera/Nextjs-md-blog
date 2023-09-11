@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { Form, Formik, FormikHelpers } from 'formik';
+import { Form, Formik, type FormikHelpers } from 'formik';
 
 import { sendForm } from '@/actions';
-import ContactFormValues from '@/interfaces/ContactFormValues';
-import ContactFormSchema from '@/lib/formSchema';
+import { ContactFormSchema } from '@/lib/formSchema';
+import { type ContactFormValues } from '@/types/ContactFormValues';
 
 import FormField from './FormField';
 
 export default function ContactForm() {
-  const [isPending, setIsPending] = useState<boolean>(false);
+  const [isPending, setIsPending] = useState(false);
 
   const handleSubmit = async (
     values: ContactFormValues,
@@ -38,10 +38,7 @@ export default function ContactForm() {
       validationSchema={ContactFormSchema}
       onSubmit={handleSubmit}
     >
-      <Form
-        noValidate
-        className='mx-auto flex max-w-sm flex-col gap-y-6 px-6 py-5'
-      >
+      <Form noValidate className='mx-auto flex max-w-sm flex-col gap-y-6 px-6 py-5'>
         <FormField
           name='name'
           label='Imię'
@@ -56,12 +53,7 @@ export default function ContactForm() {
           type='email'
           autoComplete='email'
         />
-        <FormField
-          component='textarea'
-          name='message'
-          label='Wiadomość'
-          type='text'
-        />
+        <FormField component='textarea' name='message' label='Wiadomość' type='text' />
         <div className='text-center'>
           <button
             type='submit'

@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 
 import CategoryList from '@/components/Category/CategoryList';
 import Intro from '@/components/Common/Intro';

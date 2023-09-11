@@ -2,13 +2,13 @@
 
 import { BiSearch } from 'react-icons/bi';
 
-import usePostsSearchBar from '@/hooks/usePostsSearchBar';
-import Post from '@/interfaces/Post';
+import { usePostsSearchBar } from '@/hooks/usePostsSearchBar';
+import { type Post } from '@/types/Post';
 
-interface Props {
+type Props = {
   posts: Post[];
   onSearch: (posts: Post[]) => void;
-}
+};
 
 export default function PostsSearchBar({ posts, onSearch }: Props) {
   const { value, handleInputChange } = usePostsSearchBar({ posts, onSearch });

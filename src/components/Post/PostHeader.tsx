@@ -1,6 +1,4 @@
-import { Fragment } from 'react';
-
-import Post from '@/interfaces/Post';
+import { type Post } from '@/types/Post';
 import { formatDate } from '@/utils/formatDate';
 
 import CustomImage from '../Common/CustomImage';
@@ -11,7 +9,7 @@ export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
   const creationDate = new Date(date);
 
   return (
-    <Fragment>
+    <>
       <time
         className='text-sm text-seagreen md:text-lg'
         dateTime={creationDate.toISOString()}
@@ -33,6 +31,6 @@ export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
           className='rounded-md shadow-md md:rounded-lg md:shadow-lg'
         />
       </div>
-    </Fragment>
+    </>
   );
 }

@@ -1,6 +1,4 @@
-import { Fragment } from 'react';
-
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 
 import Intro from '@/components/Common/Intro';
 import ContactForm from '@/components/ContactForm';
@@ -13,12 +11,9 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <Fragment>
-      <Intro
-        header='Kontakt'
-        introText='Masz jakieś pytania? Napisz do mnie!'
-      />
+    <>
+      <Intro header='Kontakt' introText='Masz jakieś pytania? Napisz do mnie!' />
       <ContactForm />
-    </Fragment>
+    </>
   );
 }

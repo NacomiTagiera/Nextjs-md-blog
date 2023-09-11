@@ -1,4 +1,6 @@
-import Image, { ImageProps } from 'next/image';
+import Image, { type ImageProps } from 'next/image';
+
+import { cn } from '@/lib/cn';
 
 const shimmer = (w: number | `${number}`, h: number | `${number}`) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -15,9 +17,7 @@ const shimmer = (w: number | `${number}`, h: number | `${number}`) => `
 </svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str);
+  typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str);
 
 export default function CustomImage({
   alt,
@@ -29,15 +29,13 @@ export default function CustomImage({
 }: ImageProps) {
   return (
     <Image
-      className={`object-cover object-center ${className}`}
+      className={cn('object-cover object-center', className)}
       src={src}
       alt={alt}
       width={width}
       height={height}
       placeholder='blur'
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
-      )}`}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(width, height))}`}
       {...rest}
     />
   );

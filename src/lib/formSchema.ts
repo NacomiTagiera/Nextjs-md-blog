@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-const ContactFormSchema = Yup.object().shape({
+export const ContactFormSchema = Yup.object().shape({
   name: Yup.string()
     .required('Imię jest wymagane')
     .trim('Usuń początkowe i końcowe spacje')
@@ -17,5 +17,3 @@ const ContactFormSchema = Yup.object().shape({
     .strict(true)
     .min(2, 'Wiadomość jest za krótka'),
 });
-
-export default ContactFormSchema;
