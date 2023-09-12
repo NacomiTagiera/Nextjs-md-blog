@@ -1,7 +1,5 @@
 'use client';
 
-import { type UrlObject } from 'url';
-
 import { type Route } from 'next';
 import Link, { type LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,15 +7,20 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/cn';
 
 type Props<T extends string> = {
-  children: React.ReactNode;
-  href: Route | UrlObject | LinkProps<T>['href'];
+  href: Route<T> | URL;
+  children?: React.ReactNode;
   className?: string;
   activeClassName?: string;
-};
+} & LinkProps<T>;
 
-export default function CustomLink({ children, activeClassName, className, href }: Props<string>) {
+export default function ActiveLink<T extends string>({
+  children,
+  activeClassName,
+  className,
+  href,
+}: Props<T>) {
   const pathname = usePathname();
-  const isActive = pathname === (typeof href === 'string' ? href : href.pathname);
+  const isActive = pathname === (typeof href === 'object' ? href.pathname : href);
 
   return (
     <Link href={href} className={cn(className, isActive && activeClassName)}>

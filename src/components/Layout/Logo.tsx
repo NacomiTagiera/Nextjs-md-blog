@@ -1,10 +1,10 @@
 import { GiConsoleController } from 'react-icons/gi';
 
-import CustomLink from '../Common/CustomLink';
+import Link from 'next/link';
 
 export default function Logo() {
   return (
-    <CustomLink
+    <Link
       href='/'
       className='flex flex-shrink-0 flex-row justify-center py-5 text-4xl font-bold md:text-5xl'
     >
@@ -14,6 +14,6 @@ export default function Logo() {
         <span className='text-seagreen'>KOCHAM </span>
         GRY
       </h1>
-    </CustomLink>
+    </Link>
   );
 }

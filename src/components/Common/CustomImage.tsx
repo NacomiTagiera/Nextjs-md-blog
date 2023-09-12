@@ -20,11 +20,11 @@ const toBase64 = (str: string) =>
   typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str);
 
 export default function CustomImage({
-  alt,
   src,
+  alt,
   height = 432,
   width = 768,
-  className = '',
+  className,
   ...rest
 }: ImageProps) {
   return (
