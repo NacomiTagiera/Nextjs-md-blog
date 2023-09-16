@@ -1,15 +1,14 @@
-import { BiTimeFive } from 'react-icons/bi';
-
 import Link from 'next/link';
 
 import { type Post } from '@/types/Post';
-import { formatDate } from '@/utils/formatDate';
 
-import CustomImage from '../Common/CustomImage';
+import { CustomImage } from '../Common/CustomImage';
 
-type Props = Omit<Post, 'content' | 'isPopular'> & { priority?: boolean };
+import { PostDate } from './PostDate';
 
-export default function PostPreview({
+type Props = Omit<Post, 'content'> & { priority?: boolean };
+
+export const PostPreview = ({
   category,
   date,
   excerpt,
@@ -17,11 +16,9 @@ export default function PostPreview({
   thumbnail,
   title,
   priority,
-}: Props) {
-  const creationDate = new Date(date);
-
+}: Props) => {
   return (
-    <li className='group max-w-sm overflow-hidden rounded-b-md bg-dark text-light shadow-md transition hover:bg-dark/70 md:max-w-none'>
+    <li className='group relative max-w-sm overflow-hidden rounded-b-md bg-dark text-light shadow-md transition hover:bg-dark/70 md:max-w-none'>
       <Link href={`/posty/${slug}`}>
         <CustomImage src={thumbnail} alt={title} width={414} height={233} priority={priority} />
         <div className='p-4'>
@@ -30,22 +27,16 @@ export default function PostPreview({
               <h3 className='text-xl font-semibold leading-6 decoration-seagreen group-hover:underline'>
                 {title}
               </h3>
-              <time
-                className='flex items-center text-sm'
-                aria-label={`Wpis dodano ${formatDate(creationDate)}`}
-                dateTime={creationDate.toISOString()}
-              >
-                <BiTimeFive className='mr-1' />
-                {formatDate(creationDate)}
-              </time>
+              <PostDate date={date} />
             </div>
-            <span className='rounded-md bg-seagreen-800 px-2 py-1 text-sm uppercase md:rounded-lg'>
+            <p className='rounded-md bg-seagreen-700 px-2 py-1 text-sm uppercase md:rounded-lg'>
               {category}
-            </span>
+            </p>
           </div>
-          <p>{excerpt}</p>
+          <p className='pb-3'>{excerpt}</p>
+          <p className='absolute bottom-1 right-4 text-base font-medium underline'>Czytaj dalej</p>
         </div>
       </Link>
     </li>
   );
-}
+};

@@ -1,7 +1,5 @@
 import { type Post } from '@/types/Post';
 
-type Props = Pick<Post, 'content'>;
-
-export default function PostBody({ content }: Props) {
+export const PostBody = ({ content }: { content: Post['content'] }) => {
   return <div dangerouslySetInnerHTML={{ __html: content }} />;
-}
+};

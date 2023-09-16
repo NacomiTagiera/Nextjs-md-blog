@@ -9,18 +9,15 @@ export const usePostsSearchBar = ({
   posts: Post[];
   onSearch: (posts: Post[]) => void;
 }) => {
-  const [value, setValue] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
     const searchValue = value.trim().toLowerCase();
-    const filteredPosts = posts.filter(
-      ({ title, excerpt }) =>
-        title.toLowerCase().includes(searchValue) || excerpt.toLowerCase().includes(searchValue)
-    );
+    const filteredPosts = posts.filter(({ title }) => title.toLowerCase().includes(searchValue));
 
     onSearch(filteredPosts);
-    setValue(value);
+    setSearchTerm(value);
   };
 
-  return { value, handleInputChange };
+  return { searchTerm, handleInputChange };
 };

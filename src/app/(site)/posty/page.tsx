@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
-import CategoryList from '@/components/Category/CategoryList';
-import Intro from '@/components/Common/Intro';
-import AllPosts from '@/components/Post/AllPosts';
+import { CategoryList } from '@/components/Category/CategoryList';
+import { PageContentHeader } from '@/components/Common/PageContentHeader';
+import { AllPosts } from '@/components/Post/AllPosts';
 import { getAllPosts } from '@/lib/postsUtils';
 
 export const metadata: Metadata = {
@@ -15,9 +15,9 @@ export default function PostsPage() {
 
   return (
     <article>
-      <Intro
+      <PageContentHeader
         header='Wszystkie wpisy'
-        introText='Poznaj najlepsze tytuły ze świata gier z różnych kategorii.'
+        subheader='Poznaj najlepsze tytuły ze świata gier z różnych kategorii.'
       />
       <CategoryList />
       <AllPosts posts={posts} />

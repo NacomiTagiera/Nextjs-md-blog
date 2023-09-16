@@ -8,5 +8,6 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "tailwindCSS.classAttributes": ["className", "activeClassName"]
 }

@@ -10,11 +10,11 @@ type Props = {
   onSearch: (posts: Post[]) => void;
 };
 
-export default function PostsSearchBar({ posts, onSearch }: Props) {
-  const { value, handleInputChange } = usePostsSearchBar({ posts, onSearch });
+export const PostsSearchBar = ({ posts, onSearch }: Props) => {
+  const { searchTerm, handleInputChange } = usePostsSearchBar({ posts, onSearch });
 
   return (
-    <label className='relative mt-5 block w-full sm:max-w-[365px]'>
+    <label className='relative block w-full sm:max-w-[365px]'>
       <span className='sr-only'>Wyszukaj</span>
       <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
         <BiSearch className='h-5 w-5 fill-smoky-600' />
@@ -24,11 +24,11 @@ export default function PostsSearchBar({ posts, onSearch }: Props) {
         type='search'
         name='search'
         placeholder='Wyszukaj post...'
-        value={value}
+        value={searchTerm}
         autoComplete='off'
         spellCheck={false}
         onChange={handleInputChange}
       />
     </label>
   );
-}
+};

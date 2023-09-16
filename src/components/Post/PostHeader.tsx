@@ -1,22 +1,15 @@
 import { type Post } from '@/types/Post';
-import { formatDate } from '@/utils/formatDate';
 
-import CustomImage from '../Common/CustomImage';
+import { CustomImage } from '../Common/CustomImage';
 
-type Props = Omit<Post, 'category' | 'content' | 'isPopular' | 'slug'>;
+import { PostDate } from './PostDate';
 
-export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
-  const creationDate = new Date(date);
+type Props = Omit<Post, 'category' | 'content' | 'slug'>;
 
+export const PostHeader = ({ date, excerpt, thumbnail, title }: Props) => {
   return (
     <>
-      <time
-        className='text-sm text-seagreen md:text-lg'
-        dateTime={creationDate.toISOString()}
-        aria-label={`Artykuł dodano ${formatDate(creationDate)}`}
-      >
-        {formatDate(creationDate)}
-      </time>
+      <PostDate date={date} className='text-seagreen md:text-lg' />
       <h2 className='mb-4 text-center text-3xl font-bold tracking-wide sm:text-4xl md:mb-6 md:text-5xl'>
         {title}
       </h2>
@@ -33,4 +26,4 @@ export default function PostHeader({ date, excerpt, thumbnail, title }: Props) {
       </div>
     </>
   );
-}
+};

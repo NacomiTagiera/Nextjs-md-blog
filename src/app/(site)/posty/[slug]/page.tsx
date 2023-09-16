@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 
-import PostBody from '@/components/Post/PostBody';
-import PostHeader from '@/components/Post/PostHeader';
+import { PostBody } from '@/components/Post/PostBody';
+import { PostHeader } from '@/components/Post/PostHeader';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 import { getAllPosts, getPostData } from '@/lib/postsUtils';
 
@@ -40,12 +40,12 @@ export default async function PostPage({ params: { slug } }: Props) {
 
   if (!posts.find((post) => post.slug === slug)) notFound();
 
-  const { content, date, excerpt, thumbnail, title } = getPostData(slug);
-  const contentHtml = await markdownToHtml(content);
+  const post = getPostData(slug);
+  const contentHtml = await markdownToHtml(post.content);
 
   return (
     <article className='prose prose-invert mx-auto max-w-3xl md:prose-lg lg:prose-xl prose-headings:text-seagreen prose-h4:italic prose-h4:text-light prose-p:text-justify'>
-      <PostHeader date={date} excerpt={excerpt} thumbnail={thumbnail} title={title} />
+      <PostHeader {...post} />
       <PostBody content={contentHtml} />
     </article>
   );

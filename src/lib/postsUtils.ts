@@ -3,7 +3,6 @@ import matter from 'gray-matter';
 import path from 'path';
 
 import { type Post } from '@/types/Post';
-import { POPULAR_POSTS_COUNT } from '@/utils/constants';
 import { convertText } from '@/utils/convertText';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
@@ -26,30 +25,25 @@ export const getPostData = (postIdentifier: string): Post => {
   };
 };
 
-export const getAllPosts = (): Post[] => {
+export const getAllPosts = (count?: number): Post[] => {
   const postFiles = getPostsFiles();
 
   const allPosts = postFiles.map((postFile) => {
     return getPostData(postFile);
   });
 
-  const sortedPosts = allPosts.sort((a, b) => (Date.parse(a.date) > Date.parse(b.date) ? -1 : 1));
-
-  return sortedPosts;
+  return count ? allPosts.slice(0, count) : allPosts;
 };
 
-export const getPopularPosts = (): Post[] => {
-  const popularPosts = getAllPosts().filter((post) => post.isPopular);
-  popularPosts.slice(0, POPULAR_POSTS_COUNT);
-
-  return popularPosts;
-};
+export const getPostsByCategory = (category: string) =>
+  getAllPosts().filter(
+    (post) =>
+      convertText(post.category, { withHyphens: true }) ===
+      convertText(category, { withHyphens: true })
+  );
 
 export const getAllCategories = () => {
   const categories = getAllPosts().map((post) => post.category);
 
   return Array.from(new Set(categories));
 };
-
-export const getPostsByCategory = (category: string) =>
-  getAllPosts().filter((post) => convertText(post.category, { withHyphens: true }) === category);

@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
-import CategoryList from '@/components/Category/CategoryList';
-import Intro from '@/components/Common/Intro';
-import AllPosts from '@/components/Post/AllPosts';
+import { CategoryList } from '@/components/Category/CategoryList';
+import { PageContentHeader } from '@/components/Common/PageContentHeader';
+import { AllPosts } from '@/components/Post/AllPosts';
 import { getAllCategories, getPostsByCategory } from '@/lib/postsUtils';
 import { convertText } from '@/utils/convertText';
 
@@ -24,7 +24,7 @@ export const generateMetadata = ({ params: { kategoria } }: Props): Metadata => 
 
   return {
     title: category,
-    description: `Wszystkie posty z kategorii ${category}}`,
+    description: `Wszystkie posty z kategorii ${category}`,
   };
 };
 
@@ -36,9 +36,9 @@ export default function SingleCategoryPage({ params: { kategoria } }: Props) {
 
   return (
     <article>
-      <Intro
+      <PageContentHeader
         header={categoryCapitalized}
-        introText={`Wszystkie posty z kategorii ${categoryCapitalized}`}
+        subheader={`Wszystkie posty z kategorii ${categoryCapitalized}`}
       />
       <CategoryList />
       <AllPosts posts={posts} />

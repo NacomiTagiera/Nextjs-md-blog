@@ -1,9 +1,9 @@
 import { socials } from '@/utils/constants';
 
-export default function Footer() {
+export const Footer = () => {
   return (
-    <footer className=' text-smoky-200'>
-      <div className='mx-auto max-w-6xl'>
+    <footer className='text-smoky-200'>
+      <div className='mx-auto mt-8 max-w-6xl'>
         <hr className='border-smoky-200' />
         <div className='px-4 pb-10 pt-8 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
           <div className='flex items-center justify-center space-x-6 md:order-2'>
@@ -27,4 +27,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};

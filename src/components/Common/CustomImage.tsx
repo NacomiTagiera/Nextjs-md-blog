@@ -19,14 +19,14 @@ const shimmer = (w: number | `${number}`, h: number | `${number}`) => `
 const toBase64 = (str: string) =>
   typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str);
 
-export default function CustomImage({
+export const CustomImage = ({
   src,
   alt,
   height = 432,
   width = 768,
   className,
   ...rest
-}: ImageProps) {
+}: ImageProps) => {
   return (
     <Image
       className={cn('object-cover object-center', className)}
@@ -39,4 +39,4 @@ export default function CustomImage({
       {...rest}
     />
   );
-}
+};

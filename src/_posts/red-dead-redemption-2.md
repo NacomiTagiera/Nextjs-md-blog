@@ -3,8 +3,7 @@ category: 'gry akcji'
 date: '2023-08-18'
 title: 'Red Dead Redemption 2'
 excerpt: 'Przygodowa gra akcji osadzona w realiach Dzikiego Zachodu, stworzona i wydana przez Rockstar Games. Historia rozgrywa się w 1899 roku i skupia się na losie przestępcy Arthura Morgana, członka gangu Van der Lindego, w fikcyjnym świecie zachodnich, środkowo-zachodnich i południowych Stanów Zjednoczonych.'
-thumbnail: '/images/posts/red-dead-redemption-2/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/red-dead-redemption-2/thumbnail.webp'
 ---
 
 ### Rozgrywka

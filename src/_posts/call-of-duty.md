@@ -3,8 +3,7 @@ category: 'strzelanki'
 date: '2023-06-18'
 title: 'Call of Duty'
 excerpt: 'To seria gier komputerowych z gatunku strzelanek pierwszoosobowych o tematyce wojennej, których głównym wydawcą jest Activision. Początkowo poszczególne gry z serii były skoncentrowane na tematyce II wojny światowej, natomiast od 2007 roku osadzone są w realiach współczesnych.'
-thumbnail: '/images/posts/call-of-duty/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/call-of-duty/thumbnail.webp'
 ---
 
 ### Historia

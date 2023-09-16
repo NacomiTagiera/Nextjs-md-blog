@@ -1,19 +1,26 @@
 import { type Metadata } from 'next';
 
-import Intro from '@/components/Common/Intro';
-import ContactForm from '@/components/ContactForm';
+import { PageContentHeader } from '@/components/Common/PageContentHeader';
+import { ContactForm } from '@/components/Contact/ContactForm';
+import { ContactInfo } from '@/components/Contact/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Kontakt',
   description:
-    'Chcesz się dowiedzieć o mnie więcej? Zostaw swoje dane kontaktowe, na pewno się odezwę!',
+    'Masz do mnie jakieś pytania lub sugestie? Koniecznie daj mi o tym znać! Postaram się na nie odpowiedzieć tak szybko jak to możliwe.',
 };
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <>
-      <Intro header='Kontakt' introText='Masz jakieś pytania? Napisz do mnie!' />
-      <ContactForm />
+      <PageContentHeader
+        header='Kontakt'
+        subheader='Masz do mnie jakieś pytania lub sugestie? Koniecznie daj mi o tym znać! Postaram się na nie odpowiedzieć tak szybko jak to możliwe.'
+      />
+      <div className='grid grid-cols-1 gap-x-4 lg:grid-cols-2'>
+        <ContactInfo />
+        <ContactForm />
+      </div>
     </>
   );
 }

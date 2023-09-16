@@ -6,17 +6,17 @@ type Props = {
   label: string;
   name: string;
   autoComplete?: string;
-  component?: 'input' | 'textarea';
   placeholder?: string;
+  component?: 'input' | 'textarea';
   type?: string;
 };
 
-export default function FormField({ label, name, component = 'input', ...rest }: Props) {
+export const ContactFormField = ({ label, name, component = 'input', ...rest }: Props) => {
   const [field, meta] = useField(name);
   const className = cn(
-    'px-3 py-2 shadow-sm border placeholder:text-smoky-600 placeholder:italic focus:outline-none block w-full rounded-md sm:text-sm',
+    'px-3 py-2 shadow-sm border focus:outline-none block w-full rounded-md sm:text-sm',
     meta.touched && !!meta.error
-      ? 'text-[#D41976] border-[#D41976] bg-[#F4C6DD] placeholder:text-pink-400'
+      ? 'text-[#D41976] border-[#D41976] bg-[#F4C6DD]'
       : 'text-seagreen-700 border-smoky-400 bg-smoky-50 focus:bg-light focus:border-seagreen-100 focus:ring-seagreen-300 focus:ring-1'
   );
 
@@ -60,4 +60,4 @@ export default function FormField({ label, name, component = 'input', ...rest }:
       )}
     </div>
   );
-}
+};

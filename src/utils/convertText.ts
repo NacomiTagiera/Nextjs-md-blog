@@ -15,7 +15,7 @@ export const convertText = (
   }
 
   if (options.withHyphens) {
-    formattedText = formattedText.replaceAll(' ', '-');
+    formattedText = formattedText.toLowerCase().replaceAll(' ', '-');
   }
 
   return formattedText;

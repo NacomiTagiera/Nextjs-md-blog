@@ -3,8 +3,7 @@ category: 'gry sportowe'
 date: '2023-06-10'
 title: 'FIFA'
 excerpt: 'FIFA to najbardziej znany cykl piłkarskich symulacji i zarazem jedna z najpopularniejszych serii sportowych w historii branży gier wideo. Seria ta została stworzona przez EA Sports i od lat cieszy się dużą popularnością wśród graczy na całym świecie.'
-thumbnail: '/images/posts/fifa/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/fifa/thumbnail.webp'
 ---
 
 **FIFA**, znana również jako FIFA Football od sierpnia/września 2023 roku, to seria gier wideo o tematyce piłkarskiej opracowana i wydawana co roku przez Electronic Arts pod szyldem EA Sports. W 2011 roku gra FIFA została przetłumaczona na 18 języków i jest dostępna w 51 krajach. Wymieniona w Księdze Rekordów Guiness'a jako najlepiej sprzedająca się sportowa franczyza gier wideo na świecie, seria FIFA sprzedała się w ponad 325 milionach egzemplarzy od 2021 roku. 10 maja 2022 roku ogłoszono, że 30-letnie partnerstwo EA i FIFA zakończy się od 12 lipca 2023 roku; seria zostanie przemianowana na EA Sports FC. FIFA zamierza nawiązać partnerstwo z nowym deweloperem, aby wyprodukować "prawdziwą grę, która ma nazwę FIFA". FIFA 23 jest ostatnim wejściem do franczyzy pod nazwą FIFA.

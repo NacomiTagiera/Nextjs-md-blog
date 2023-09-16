@@ -3,8 +3,7 @@ category: 'gry sportowe'
 date: '2023-07-31'
 title: 'NBA 2K23'
 excerpt: 'NBA 2K23 to dwudziesta czwarta gra z cyklu koszykarskich gier sportowych na licencji amerykańskiej ligi NBA. Za produkcję nowej odsłony ponownie odpowiada zespół Visual Concepts wspierany przez firmę Take-Two Interactive.'
-thumbnail: '/images/posts/nba-2k23/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/nba-2k23/thumbnail.webp'
 ---
 
 ### Mechanika

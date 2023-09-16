@@ -2,7 +2,7 @@ import { GiConsoleController } from 'react-icons/gi';
 
 import Link from 'next/link';
 
-export default function Logo() {
+export const Logo = () => {
   return (
     <Link
       href='/'
@@ -10,10 +10,10 @@ export default function Logo() {
     >
       <span className='sr-only'>Strona Główna</span>
       <GiConsoleController size={50} className='mr-2' aria-hidden='true' />
-      <h1 className='hidden sm:block'>
-        <span className='text-seagreen'>KOCHAM </span>
-        GRY
+      <h1 className='hidden uppercase sm:block'>
+        <span className='text-seagreen'>Kocham </span>
+        Gry
       </h1>
     </Link>
   );
-}
+};

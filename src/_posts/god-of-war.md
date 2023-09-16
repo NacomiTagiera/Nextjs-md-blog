@@ -3,8 +3,7 @@ category: 'gry akcji'
 date: '2023-05-22'
 title: 'God of War'
 excerpt: 'Seria God of War to seria gier wideo skupionych wokół mitologii greckiej, a po zakończeniu God of War III także mitologii nordyckiej. Spartański wojownik Kratos, który urodził się jako półbóg i stał się bogiem wojny, walczy z ludźmi, potworami, a nawet bogami w jego dążeniu do zemsty.'
-thumbnail: '/images/posts/god-of-war/thumbnail.jpg'
-isPopular: true
+thumbnail: '/images/posts/god-of-war/thumbnail.webp'
 ---
 
 **God of War** to gra akcji opracowana przez Santa Monica Studio i opublikowana przez Sony Interactive Entertainment. Został wydany na konsolę PlayStation 4 w kwietniu 2018 roku, z portem dla systemu Windows w styczniu 2022 roku. Gra jest ósmą odsłoną serii God of War, ósmą chronologicznie i sequelem God of War III z 2010 roku. W przeciwieństwie do poprzednich gier, które były luźno oparte na mitologii greckiej, ta rata jest luźno inspirowana mitologią norweską, z większością osadzoną w starożytnej Skandynawii w królestwie Midgard. Po raz pierwszy w serii pojawia się dwóch protagonistów: Kratos, dawny grecki Bóg Wojny, który pozostaje jedyną grywalną postacią, oraz jego młody syn, Atreus. Po śmierci drugiej żony Kratosa, Faye (matki Atreusa), obaj wyruszają w podróż, by spełnić jej prośbę o rozsypanie prochów na najwyższym szczycie dziewięciu królestw. Kratos utrzymuje swoją trudną przeszłość w tajemnicy przed Atreusem, który nie jest świadomy swojej boskiej natury. Podczas swojej podróży wchodzą w konflikt z potworami i bogami norweskiego świata.

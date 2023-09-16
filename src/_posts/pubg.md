@@ -3,8 +3,7 @@ category: 'strzelanki'
 date: '2023-04-21'
 title: 'PUBG'
 excerpt: 'Wieloosobowa gra komputerowa typu battle royale wyprodukowana i wydana przez przedsiębiorstwo Krafton. Gra została wydana we wczesnym dostępie na PC w marcu 2017, premiera gry na Xbox One odbyła się 12 grudnia 2017, natomiast 9 dni później została wydana wersja 1.0 na PC.'
-thumbnail: '/images/posts/pubg/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/pubg/thumbnail.webp'
 ---
 
 ### Rozgrywka

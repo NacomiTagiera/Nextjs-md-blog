@@ -3,8 +3,7 @@ category: 'gry karciane'
 date: '2023-03-12'
 title: 'Hearthstone'
 excerpt: 'Pierwotnie Hearthstone: Heroes of Warcraft to kolekcjonerska gra karciana wyprodukowana i wydana przez Blizzard Entertainment. Gra oparta jest na modelu free-to-play z systemem mikropłatności, a głównym elementem rozgrywki są pojedynki online przeciwko innym graczom w serwisie Battle.net.'
-thumbnail: '/images/posts/hearthstone/thumbnail.jpg'
-isPopular: false
+thumbnail: '/images/posts/hearthstone/thumbnail.webp'
 ---
 
 ### Świat gry
