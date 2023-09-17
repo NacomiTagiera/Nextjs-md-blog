@@ -2,13 +2,12 @@ import Link from 'next/link';
 
 import { type Post } from '@/types/Post';
 
-import { CustomImage } from '../Common/CustomImage';
-
-import { PostDate } from './PostDate';
+import { CustomImage } from '../atoms/CustomImage';
+import { PostDate } from '../atoms/PostDate';
 
 type Props = Omit<Post, 'content'> & { priority?: boolean };
 
-export const PostPreview = ({
+export const PostListItem = ({
   category,
   date,
   excerpt,

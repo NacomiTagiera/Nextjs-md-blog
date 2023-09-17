@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 
-import { PostBody } from '@/components/Post/PostBody';
-import { PostHeader } from '@/components/Post/PostHeader';
+import { PostArticleBody } from '@/components/atoms/PostArticleBody';
+import { PostArticleHeader } from '@/components/molecules/PostArticleHeader';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 import { getAllPosts, getPostData } from '@/lib/postsUtils';
 
@@ -45,8 +45,8 @@ export default async function PostPage({ params: { slug } }: Props) {
 
   return (
     <article className='prose prose-invert mx-auto max-w-3xl md:prose-lg lg:prose-xl prose-headings:text-seagreen prose-h4:italic prose-h4:text-light prose-p:text-justify'>
-      <PostHeader {...post} />
-      <PostBody content={contentHtml} />
+      <PostArticleHeader {...post} />
+      <PostArticleBody content={contentHtml} />
     </article>
   );
 }

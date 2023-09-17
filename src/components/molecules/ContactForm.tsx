@@ -8,8 +8,8 @@ import { sendForm } from '@/actions';
 import { ContactFormSchema } from '@/lib/formSchema';
 import { type ContactFormValues } from '@/types/ContactFormValues';
 
-import { ContactFormField } from './ContactFormField';
-import { ContactFormSubmitButton } from './ContactFormSubmitButton';
+import { ContactFormField } from '../atoms/ContactFormField';
+import { ContactFormSubmitButton } from '../atoms/ContactFormSubmitButton';
 
 export const ContactForm = () => {
   const [isPending, setIsPending] = useState(false);

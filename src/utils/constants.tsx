@@ -4,8 +4,8 @@ import { GiSmartphone } from 'react-icons/gi';
 
 import { type Route } from 'next';
 
-import { type ContactInfoItem } from '@/components/Contact/ContactInfoItem';
-import { type SortingOption } from '@/components/Post/SortPostsSelect';
+import { type ContactInfoItem } from '@/components/atoms/ContactInfoItem';
+import { type SortingOption } from '@/components/atoms/SortPostsSelect';
 
 export const navLinks: { text: string; href: Route }[] = [
   { text: 'Posty', href: '/posty' },
@@ -38,18 +38,18 @@ export const contactInfo: ContactInfoItem[] = [
 
 export const socials = [
   {
-    icon: AiFillLinkedin,
-    name: 'LinkedIn',
+    Icon: AiFillLinkedin,
     href: 'https://www.linkedin.com/in/jakub-pawlak-frontend-dev',
+    name: 'LinkedIn',
   },
   {
-    icon: AiOutlineGithub,
-    name: 'GitHub',
+    Icon: AiOutlineGithub,
     href: 'https://github.com/NacomiTagiera',
+    name: 'GitHub',
   },
   {
-    icon: AiFillFacebook,
-    name: 'Facebook',
+    Icon: AiFillFacebook,
     href: 'https://www.facebook.com/kubapawlak123321',
+    name: 'Facebook',
   },
 ];

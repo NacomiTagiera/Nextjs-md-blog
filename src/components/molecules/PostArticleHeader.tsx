@@ -1,12 +1,11 @@
 import { type Post } from '@/types/Post';
 
-import { CustomImage } from '../Common/CustomImage';
-
-import { PostDate } from './PostDate';
+import { CustomImage } from '../atoms/CustomImage';
+import { PostDate } from '../atoms/PostDate';
 
 type Props = Omit<Post, 'category' | 'content' | 'slug'>;
 
-export const PostHeader = ({ date, excerpt, thumbnail, title }: Props) => {
+export const PostArticleHeader = ({ date, excerpt, thumbnail, title }: Props) => {
   return (
     <>
       <PostDate date={date} className='text-seagreen md:text-lg' />

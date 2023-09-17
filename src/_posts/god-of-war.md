@@ -1,6 +1,6 @@
 ---
 category: 'gry akcji'
-date: '2023-05-22'
+date: '2023-08-18'
 title: 'God of War'
 excerpt: 'Seria God of War to seria gier wideo skupionych wokół mitologii greckiej, a po zakończeniu God of War III także mitologii nordyckiej. Spartański wojownik Kratos, który urodził się jako półbóg i stał się bogiem wojny, walczy z ludźmi, potworami, a nawet bogami w jego dążeniu do zemsty.'
 thumbnail: '/images/posts/god-of-war/thumbnail.webp'

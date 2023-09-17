@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
-import { PageContentHeader } from '@/components/Common/PageContentHeader';
-import { ContactForm } from '@/components/Contact/ContactForm';
-import { ContactInfo } from '@/components/Contact/ContactInfo';
+import { PageContentHeader } from '@/components/atoms/PageContentHeader';
+import { ContactForm } from '@/components/molecules/ContactForm';
+import { ContactInfo } from '@/components/molecules/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Kontakt',

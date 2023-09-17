@@ -2,8 +2,8 @@ import { Toaster } from 'react-hot-toast';
 
 import type { Metadata } from 'next';
 
-import { Footer } from '@/components/Layout/Footer';
-import { Navbar } from '@/components/Layout/Navbar';
+import { Footer } from '@/components/organisms/Footer';
+import { Navbar } from '@/components/organisms/Navbar';
 
 import '@/styles/globals.css';
 

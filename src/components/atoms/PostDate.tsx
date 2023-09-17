@@ -13,7 +13,7 @@ export const PostDate = ({ date, className }: { date: Post['date']; className?: 
       aria-label={`Artykuł dodano ${formatDate(creationDate)}`}
       dateTime={creationDate.toISOString()}
     >
-      <BiTimeFive className='mr-1' />
+      <BiTimeFive className='me-1' />
       {formatDate(creationDate)}
     </time>
   );

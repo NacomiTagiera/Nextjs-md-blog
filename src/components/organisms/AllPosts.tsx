@@ -5,9 +5,10 @@ import { useState } from 'react';
 import { type Post } from '@/types/Post';
 import { sortingOptions } from '@/utils/constants';
 
+import { PostsSearchBar } from '../atoms/PostsSearchBar';
+import { type SortingOption, SortPostsSelect } from '../atoms/SortPostsSelect';
+
 import { PostList } from './PostList';
-import { PostsSearchBar } from './PostsSearchBar';
-import { type SortingOption, SortPostsSelect } from './SortPostsSelect';
 
 export const AllPosts = ({ posts }: { posts: Post[] }) => {
   const [filteredAndSortedPosts, setFilteredAndSortedPosts] = useState<Post[]>(posts);
@@ -23,8 +24,8 @@ export const AllPosts = ({ posts }: { posts: Post[] }) => {
 
   return (
     <>
-      <form className='flex justify-end'>
-        <div className='flex'>
+      <form className='mb-7 flex justify-end'>
+        <div className='flex w-full md:w-1/2'>
           <SortPostsSelect
             sortingOption={sortingOption}
             onSelect={setSortingOption}

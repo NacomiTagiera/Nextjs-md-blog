@@ -23,7 +23,7 @@ export const SortPostsSelect = ({ sortingOption, onSelect, options }: Props) => 
         value={sortingOption}
         id='sorting-options'
         onChange={(e) => onSelect(e.target.value as SortingOption)}
-        className='block w-full rounded-lg border border-smoky-300 bg-smoky-50 p-2 text-sm text-smoky focus:border-seagreen focus:ring-seagreen'
+        className='block w-full rounded-lg rounded-e-none border border-smoky-300 bg-smoky-50 p-2 text-smoky-900 shadow-sm focus:border-seagreen focus:outline-none focus:ring-1 focus:ring-seagreen'
       >
         {options.map(({ value, label }) => (
           <option key={value} value={value}>

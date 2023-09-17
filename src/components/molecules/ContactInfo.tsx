@@ -1,6 +1,6 @@
 import { contactInfo } from '@/utils/constants';
 
-import { ContactInfoItem } from './ContactInfoItem';
+import { ContactInfoItem } from '../atoms/ContactInfoItem';
 
 export const ContactInfo = () => {
   return (

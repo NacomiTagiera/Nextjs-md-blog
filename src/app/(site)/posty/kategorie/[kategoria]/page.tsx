@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
-import { CategoryList } from '@/components/Category/CategoryList';
-import { PageContentHeader } from '@/components/Common/PageContentHeader';
-import { AllPosts } from '@/components/Post/AllPosts';
+import { PageContentHeader } from '@/components/atoms/PageContentHeader';
+import { CategoryList } from '@/components/molecules/CategoryList';
+import { AllPosts } from '@/components/organisms/AllPosts';
 import { getAllCategories, getPostsByCategory } from '@/lib/postsUtils';
 import { convertText } from '@/utils/convertText';
 

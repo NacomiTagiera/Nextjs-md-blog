@@ -4,13 +4,13 @@ export const ContactFormSubmitButton = ({ disabled }: { disabled: boolean }) => 
   return (
     <button
       type='submit'
-      className='inline-flex max-w-fit items-center rounded-md bg-seagreen-500 px-4 py-2 text-sm font-semibold leading-6 shadow transition-all duration-300 hover:bg-seagreen-600 hover:shadow-lg disabled:cursor-not-allowed disabled:bg-seagreen-700'
+      className='inline-flex max-w-fit items-center rounded-md bg-seagreen-300 px-4 py-2 text-sm font-semibold leading-6 text-smoky-900 shadow transition-all duration-300 hover:bg-seagreen-400 hover:shadow-lg disabled:cursor-not-allowed disabled:bg-seagreen-500'
       disabled={disabled}
     >
       {disabled ? (
         <>
           <svg
-            className='-ml-1 mr-3 h-5 w-5 animate-spin text-light'
+            className='-ms-1 me-3 h-5 w-5 animate-spin text-smoky-900'
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'

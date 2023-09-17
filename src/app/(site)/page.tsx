@@ -2,8 +2,8 @@ import { RiArrowRightFill } from 'react-icons/ri';
 
 import Link from 'next/link';
 
-import { PageContentHeader } from '@/components/Common/PageContentHeader';
-import { PostList } from '@/components/Post/PostList';
+import { PageContentHeader } from '@/components/atoms/PageContentHeader';
+import { PostList } from '@/components/organisms/PostList';
 import { getAllPosts } from '@/lib/postsUtils';
 
 export default function HomePage() {
@@ -23,7 +23,7 @@ export default function HomePage() {
         href='/posty'
         className='absolute bottom-0 right-0 inline-flex items-center text-lg font-semibold text-seagreen-400 transition hover:text-seagreen'
       >
-        Wszystkie artykuły <RiArrowRightFill className='ml-1 h-6 w-6' />
+        Wszystkie artykuły <RiArrowRightFill className='ms-1 h-6 w-6' />
       </Link>
     </article>
   );
