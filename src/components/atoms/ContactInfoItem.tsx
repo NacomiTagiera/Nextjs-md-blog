@@ -29,7 +29,7 @@ export const ContactInfoItem = ({ Icon, text, type }: ContactInfoItem) => {
   return (
     <div className='mb-8 flex flex-wrap items-center'>
       <span className='sr-only'>{type}</span>
-      <Icon className='me-4 text-4xl text-seagreen' aria-hidden='true' />
+      <Icon className='me-4 text-4xl text-seagreen' aria-hidden />
       {link}
     </div>
   );

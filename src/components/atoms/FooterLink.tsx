@@ -9,6 +9,6 @@ type Props = {
 export const FooterLink = ({ Icon, href, name }: Props) => (
   <a href={href} target='_blank' rel='noopener noreferrer' className='hover:animate-jelly'>
     <span className='sr-only'>{name}</span>
-    <Icon className='h-9 w-9' aria-hidden='true' />
+    <Icon className='h-9 w-9' aria-hidden />
   </a>
 );

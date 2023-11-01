@@ -1,7 +1,6 @@
-import { Toaster } from 'react-hot-toast';
+import type { Metadata, Viewport } from 'next';
 
-import type { Metadata } from 'next';
-
+import { ToastNotification } from '@/components/atoms/ToastNotification';
 import { Footer } from '@/components/organisms/Footer';
 import { Navbar } from '@/components/organisms/Navbar';
 
@@ -22,8 +21,6 @@ export const metadata: Metadata = {
     name: 'Jakub Pawlak',
     url: 'https://www.linkedin.com/in/jakub-pawlak-frontend-dev',
   },
-  themeColor: '#303030',
-  colorScheme: 'dark',
   creator: 'Jakub Pawlak',
   formatDetection: {
     telephone: true,
@@ -84,11 +81,16 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#303030',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='pl'>
       <body className='flex min-h-screen flex-col overflow-x-hidden bg-smoky text-light'>
-        <Toaster position='top-right' />
+        <ToastNotification />
         <Navbar />
         <main className='mx-auto mb-32 max-w-4xl flex-grow px-4 sm:px-6 xl:max-w-6xl xl:px-0'>
           {children}

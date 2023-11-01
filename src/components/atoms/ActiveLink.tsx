@@ -8,8 +8,6 @@ import { cn } from '@/lib/cn';
 
 type Props<T extends string> = {
   href: Route<T> | URL;
-  children?: React.ReactNode;
-  className?: string;
   activeClassName?: string;
   underlineClassName?: string;
 } & LinkProps<T>;

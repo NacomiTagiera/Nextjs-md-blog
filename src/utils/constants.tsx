@@ -5,7 +5,7 @@ import { GiSmartphone } from 'react-icons/gi';
 import { type Route } from 'next';
 
 import { type ContactInfoItem } from '@/components/atoms/ContactInfoItem';
-import { type SortingOption } from '@/components/atoms/SortPostsSelect';
+import { type SortingOption } from '@/types';
 
 export const navLinks: { text: string; href: Route }[] = [
   { text: 'Posty', href: '/posty' },
@@ -13,8 +13,8 @@ export const navLinks: { text: string; href: Route }[] = [
 ];
 
 export const sortingOptions: { value: SortingOption; label: string }[] = [
-  { value: 'najnowsze', label: 'Najnowsze' },
-  { value: 'najstarsze', label: 'Najstarsze' },
+  { value: 'najnowsze', label: 'Od najnowszych' },
+  { value: 'najstarsze', label: 'Od najstarszych' },
   { value: 'alfabetycznie', label: 'Alfabetycznie' },
 ];
 

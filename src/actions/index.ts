@@ -1,20 +1,42 @@
 'use server';
 
-import { ValidationError } from 'yup';
-
 import { ContactFormSchema } from '@/lib/formSchema';
 import { insertContactForm } from '@/lib/mongodb';
-import type { ContactFormValues } from '@/types/ContactFormValues';
 
-export const sendForm = async (data: ContactFormValues) => {
+export type FormState = {
+  errors?: {
+    name?: string[];
+    email?: string[];
+    message?: string[];
+    serverError?: boolean;
+  };
+  message?: string;
+};
+
+export const sendForm = async (_prevState: FormState, formData: FormData) => {
+  const validatedFields = ContactFormSchema.safeParse({
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
+  });
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Popraw pola formularza i spróbuj ponownie',
+    };
+  }
+
   try {
-    await ContactFormSchema.validate(data, { abortEarly: false });
-    await insertContactForm(data);
-  } catch (error) {
-    if (error instanceof ValidationError) {
-      throw new Error('Validation Error');
-    }
+    await insertContactForm(validatedFields.data);
 
-    throw new Error('Internal Server Error');
+    return {
+      message: 'Wiadomość została wysyłana!',
+    };
+  } catch (error) {
+    return {
+      errors: { serverError: true },
+      message: 'Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później.',
+    };
   }
 };

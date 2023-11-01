@@ -1,6 +1,6 @@
-import { type Db, MongoClient, type MongoClientOptions } from 'mongodb';
+import { type Db, MongoClient } from 'mongodb';
 
-import { type ContactFormValues } from '@/types/ContactFormValues';
+import { type ContactFormValues } from '@/types';
 
 async function connectToDatabase(): Promise<Db> {
   const { MONGODB_URI, MONGODB_DB } = process.env;
@@ -8,10 +8,7 @@ async function connectToDatabase(): Promise<Db> {
     throw new Error('Please add your Mongo URI and DB name to .env.local');
   }
 
-  const client = await MongoClient.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  } as MongoClientOptions & { useNewUrlParser: boolean });
+  const client = await MongoClient.connect(MONGODB_URI);
   return client.db(MONGODB_DB);
 }
 

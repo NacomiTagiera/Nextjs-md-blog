@@ -1,62 +1,51 @@
-import { useField } from 'formik';
-
 import { cn } from '@/lib/cn';
 
-type Props = {
+type BaseProps = {
   label: string;
-  name: string;
-  autoComplete?: string;
-  placeholder?: string;
-  component?: 'input' | 'textarea';
-  type?: string;
+  errors?: string[];
 };
 
-export const ContactFormField = ({ label, name, component = 'input', ...rest }: Props) => {
-  const [field, meta] = useField(name);
+type InputProps = BaseProps & React.InputHTMLAttributes<HTMLInputElement> & { component?: 'input' };
+
+type TextareaProps = BaseProps &
+  React.TextareaHTMLAttributes<HTMLTextAreaElement> & { component?: 'textarea' };
+
+type Props = InputProps | TextareaProps;
+
+export const ContactFormField = ({ label, errors, name, component = 'input', ...rest }: Props) => {
   const className = cn(
     'px-3 py-2 shadow-sm border focus:outline-none block w-full rounded-md sm:text-sm',
-    meta.touched && !!meta.error
-      ? 'text-[#D41976] border-[#D41976] bg-[#F4C6DD]'
+    errors
+      ? 'text-error border-error bg-error-200'
       : 'text-seagreen-700 border-smoky-400 bg-smoky-50 focus:bg-light focus:border-seagreen-100 focus:ring-seagreen-300 focus:ring-1'
   );
-
   return (
     <div className='flex flex-col gap-y-1'>
       <label
-        htmlFor={field.name}
-        className='block font-medium after:ml-0.5 after:text-red-500 after:content-["*"]'
+        htmlFor={name}
+        className='block font-medium after:ml-0.5 after:text-error-300 after:content-["*"]'
       >
         {label}
       </label>
       {component === 'input' ? (
         <input
-          type='text'
-          className={className}
           id={name}
           name={name}
-          value={field.value as string}
-          required
-          onChange={field.onChange}
-          onBlur={field.onBlur}
-          {...rest}
+          className={className}
+          {...(rest as React.InputHTMLAttributes<HTMLInputElement>)}
         />
       ) : (
         <textarea
-          rows={3}
-          className={className}
           id={name}
           name={name}
-          value={field.value as string}
-          required
-          onChange={field.onChange}
-          onBlur={field.onBlur}
-          {...rest}
+          className={className}
+          {...(rest as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
         />
       )}
-      {meta.touched && meta.error ? (
-        <p className='text-center text-sm text-red-500'>{meta.error}</p>
-      ) : (
-        ''
+      {errors && (
+        <p className='text-center text-sm text-error-300' aria-live='polite'>
+          {errors[0]}
+        </p>
       )}
     </div>
   );

@@ -4,8 +4,13 @@ export const content = ['./src/**/*.{js,ts,jsx,tsx}'];
 export const theme = {
   extend: {
     colors: {
-      dark: '#5E5E5E',
-      light: '#F2ECFF',
+      dark: '#5e5e5e',
+      light: '#f2ecff',
+      error: {
+        200: '#f4c6dd',
+        300: '#ef4444',
+        DEFAULT: '#d41976',
+      },
       smoky: {
         50: '#f6f6f6',
         100: '#e7e7e7',
@@ -25,12 +30,12 @@ export const theme = {
         200: '#a0fad8',
         300: '#63f2c5',
         400: '#25e2ac',
-        DEFAULT: '#00c896',
         500: '#00a47b',
         600: '#008367',
         700: '#006752',
         800: '#005545',
         900: '#003028',
+        DEFAULT: '#00c896',
       },
     },
     keyframes: {

@@ -16,7 +16,7 @@ export default function HomePage() {
         subheader='Witajcie na moim blogu poświęconym fascynującemu światu gier! Chciałbym podzielić się z Wami moimi ulubionymi grami z różnych kategorii, które z pewnością zapewnią Wam wiele godzin rozrywki i niezapomnianych chwil. Niezależnie od tego, czy jesteście miłośnikami gier akcji, RPG, czy strzelanek, znajdziecie tutaj propozycje, które zachwycą Was swoją jakością i niepowtarzalnym klimatem.'
       />
       <h3 className='mb-5 text-center text-2xl font-bold tracking-wide text-seagreen md:text-left md:text-3xl'>
-        Najnowsze wpisy
+        Popularne wpisy
       </h3>
       <PostList posts={posts} />
       <Link

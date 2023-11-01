@@ -1,19 +1,13 @@
-import * as Yup from 'yup';
+import { object, string } from 'zod';
 
-export const ContactFormSchema = Yup.object().shape({
-  name: Yup.string()
-    .required('Imię jest wymagane')
-    .trim('Usuń początkowe i końcowe spacje')
-    .strict(true)
-    .min(2, 'Wprowadź prawidłowe imię'),
-  email: Yup.string()
-    .email('Nieprawidłlowy adres email')
-    .required('Email jest wymagany')
-    .trim('Usuń początkowe i końcowe spacje')
-    .strict(true),
-  message: Yup.string()
-    .required('Wiadomość jest wymagana')
-    .trim('Usuń początkowe i końcowe spacje')
-    .strict(true)
-    .min(2, 'Wiadomość jest za krótka'),
+export const ContactFormSchema = object({
+  name: string()
+    .trim()
+    .min(1, 'Imię jest wymagane')
+    .max(50, 'Imię nie może mieć więcej niż 50 liter'),
+  email: string().trim().min(1, 'E-mail jest wymagany').email('Nieprawidłowy adres e-mail'),
+  message: string()
+    .trim()
+    .min(1, 'Wiadomość jest wymagana')
+    .max(500, 'Wiadomość nie może mieć więcej niż 500 znaków'),
 });
