@@ -1,6 +1,6 @@
 import { type Route } from 'next';
 
-import { ActiveLink } from './ActiveLink';
+import { ActiveLink } from '../atoms/ActiveLink';
 
 type Props<T extends string> = {
   href: Route<T> | URL;

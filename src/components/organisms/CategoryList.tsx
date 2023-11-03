@@ -1,6 +1,6 @@
 import { getAllCategories } from '@/lib/postsUtils';
 
-import { CategoryListLink } from '../atoms/CategoryListLink';
+import { CategoryListLink } from '../molecules/CategoryListLink';
 
 export const CategoryList = () => {
   const categories = getAllCategories();

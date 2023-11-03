@@ -1,4 +1,4 @@
-import { type Post } from '@/types/Post';
+import { type Post } from '@/types';
 
 import { PostListItem } from '../molecules/PostListItem';
 

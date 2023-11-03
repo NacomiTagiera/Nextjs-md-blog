@@ -31,29 +31,37 @@ export const ContactForm = () => {
   }, [errors, message]);
 
   return (
-    <form ref={ref} action={formAction} className='mx-auto max-w-sm pt-5'>
+    <form ref={ref} action={formAction} className='mx-auto md:mx-0'>
+      <h2 className='text-heading -mt-1 pb-6 text-2xl font-bold sm:text-3xl md:pb-10 md:text-4xl lg:pb-7'>
+        Napisz wiadomość
+      </h2>
       <fieldset className='mb-5 flex flex-col items-center gap-y-6'>
         <ContactFormField
           name='name'
-          label='Imię'
+          placeholder='Imię'
           autoComplete='name'
           type='text'
+          required
+          max={50}
           errors={errors?.name}
           disabled={pending}
         />
         <ContactFormField
           name='email'
-          label='E-mail'
+          placeholder='E-mail'
           autoComplete='email'
           type='email'
+          required
           errors={errors?.email}
           disabled={pending}
         />
         <ContactFormField
           component='textarea'
           name='message'
-          label='Wiadomość'
+          placeholder='Wiadomość'
           rows={3}
+          required
+          maxLength={500}
           errors={errors?.message}
           disabled={pending}
         />

@@ -1,7 +1,7 @@
 import { navLinks } from '@/utils/constants';
 
-import { NavbarLink } from '../atoms/NavbarLink';
 import { NavbarLogo } from '../atoms/NavbarLogo';
+import { NavbarLink } from '../molecules/NavbarLink';
 
 export const Navbar = () => {
   return (

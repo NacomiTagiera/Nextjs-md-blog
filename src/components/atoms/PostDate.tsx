@@ -1,7 +1,7 @@
 import { BiTimeFive } from 'react-icons/bi';
 
 import { cn } from '@/lib/cn';
-import { type Post } from '@/types/Post';
+import { type Post } from '@/types';
 import { formatDate } from '@/utils/formatDate';
 
 export const PostDate = ({ date, className }: { date: Post['date']; className?: string }) => {

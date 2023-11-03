@@ -9,7 +9,7 @@ export const ContactFormSubmitButton = () => {
   return (
     <button
       type='submit'
-      className='inline-flex max-w-fit items-center rounded-md bg-seagreen-300 px-4 py-2 text-sm font-semibold leading-6 text-smoky-900 shadow transition-all duration-300 hover:bg-seagreen-400 hover:shadow-lg aria-disabled:cursor-wait aria-disabled:bg-seagreen-500'
+      className='mt-5 inline-flex max-w-fit items-center rounded-md bg-seagreen-300 px-4 py-2 text-sm font-semibold leading-6 text-smoky-900 shadow transition-all duration-300 hover:bg-seagreen-400 hover:shadow-lg aria-disabled:cursor-wait aria-disabled:bg-seagreen-500'
       aria-disabled={pending}
     >
       {pending ? (

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { type Post } from '@/types/Post';
+import { type Post } from '@/types';
 
 import { CustomImage } from '../atoms/CustomImage';
 import { PostDate } from '../atoms/PostDate';

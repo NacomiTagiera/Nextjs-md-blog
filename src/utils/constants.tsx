@@ -1,6 +1,11 @@
-import { AiFillFacebook, AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
-import { CiLocationOn } from 'react-icons/ci';
-import { GiSmartphone } from 'react-icons/gi';
+import {
+  AiFillFacebook,
+  AiFillHome,
+  AiFillLinkedin,
+  AiFillPhone,
+  AiOutlineGithub,
+  AiOutlineMail,
+} from 'react-icons/ai';
 
 import { type Route } from 'next';
 
@@ -20,18 +25,18 @@ export const sortingOptions: { value: SortingOption; label: string }[] = [
 
 export const contactInfo: ContactInfoItem[] = [
   {
-    Icon: CiLocationOn,
-    text: 'Białystok, Podlaskie',
-    type: 'adres',
+    Icon: AiFillHome,
+    text: 'Białystok, Podlaskie, Polska',
+    type: 'lokalizacja',
   },
   {
     Icon: AiOutlineMail,
     text: 'kubapawlak1051@wp.pl',
-    type: 'email',
+    type: 'e-mail',
   },
   {
-    Icon: GiSmartphone,
-    text: '+48 123 456 789',
+    Icon: AiFillPhone,
+    text: '(+48) 123 456 789',
     type: 'numer telefonu',
   },
 ];
