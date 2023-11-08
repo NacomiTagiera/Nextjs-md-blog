@@ -37,7 +37,7 @@ export const contactInfo: ContactInfoItem[] = [
   {
     Icon: AiFillPhone,
     text: '(+48) 123 456 789',
-    type: 'numer telefonu',
+    type: 'telefon',
   },
 ];
 

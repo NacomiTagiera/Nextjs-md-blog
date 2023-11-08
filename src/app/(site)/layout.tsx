@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     siteName: 'Kocham Gry',
     url: 'https://kocham-gry.vercel.app',
     locale: 'pl_PL',
+    title: {
+      default: 'Kocham Gry',
+      template: '%s | Kocham Gry',
+    },
+    description:
+      'Witajcie na moim blogu poświęconym fascynującemu światu gier! Chciałbym podzielić się z Wami moimi ulubionymi grami z różnych kategorii, które z pewnością zapewnią Wam wiele godzin rozrywki i niezapomnianych chwil. Niezależnie od tego, czy jesteście miłośnikami gier akcji, RPG, czy strzelanek, znajdziecie tutaj propozycje, które zachwycą Was swoją jakością i niepowtarzalnym klimatem.',
   },
   robots: {
     index: true,

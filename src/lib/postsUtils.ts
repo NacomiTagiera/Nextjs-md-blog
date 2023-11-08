@@ -2,7 +2,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-import type { Post, SortingOption } from '@/types';
+import type { Post } from '@/types';
+import { convertText } from '@/utils/convertText';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'src/_posts');
 
@@ -34,37 +35,12 @@ export const getAllPosts = (count?: number): Post[] => {
   return count ? allPosts.slice(0, count) : allPosts;
 };
 
-export const getFilteredAndSortedPosts = (
-  postCategory?: string,
-  searchQuery?: string,
-  sortingOption?: SortingOption
-) => {
-  let posts = getAllPosts();
-
-  if (postCategory) {
-    posts = posts.filter(({ category }) => category === postCategory);
-  }
-
-  if (searchQuery) {
-    posts = posts.filter(({ title }) =>
-      title.toLowerCase().includes(searchQuery.trim().toLowerCase())
-    );
-  }
-
-  switch (sortingOption) {
-    case 'najstarsze':
-      posts = posts.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
-      break;
-    case 'alfabetycznie':
-      posts = posts.sort((a, b) => a.title.localeCompare(b.title));
-      break;
-    default:
-      posts = posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)); // najnowsze
-      break;
-  }
-
-  return posts;
-};
+export const getPostsByCategory = (category: string) =>
+  getAllPosts().filter(
+    (post) =>
+      convertText(post.category, { withHyphens: true }) ===
+      convertText(category, { withHyphens: true })
+  );
 
 export const getAllCategories = () => {
   const categories = getAllPosts().map((post) => post.category);

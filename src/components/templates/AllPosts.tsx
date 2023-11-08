@@ -1,12 +1,20 @@
 'use client';
 
+import { useFilterPosts } from '@/hooks/useFilterPosts';
 import type { Post } from '@/types';
 
 import { PostsSearchBar } from '../molecules/PostsSearchBar';
 import { SortPostsSelect } from '../molecules/SortPostsSelect';
 import { PostList } from '../organisms/PostList';
 
-export const AllPosts = ({ posts }: { posts: Post[] }) => {
+type Props = {
+  posts: Post[];
+  postsCategory?: string;
+};
+
+export const AllPosts = ({ posts, postsCategory }: Props) => {
+  const filteredPosts = useFilterPosts(posts, postsCategory);
+
   return (
     <>
       <form className='mb-7 flex justify-end'>
@@ -15,12 +23,12 @@ export const AllPosts = ({ posts }: { posts: Post[] }) => {
           <PostsSearchBar />
         </div>
       </form>
-      {!posts.length ? (
+      {!filteredPosts.length ? (
         <p className='p-10 text-center text-lg font-medium uppercase text-smoky-300'>
           Przepraszamy, nie znaleziono żadnych wpisów. Spróbuj wyszukać ponownie.
         </p>
       ) : (
-        <PostList posts={posts} />
+        <PostList posts={filteredPosts} />
       )}
     </>
   );

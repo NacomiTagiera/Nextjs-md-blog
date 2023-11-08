@@ -1,32 +1,23 @@
 'use client';
 
-import { type ChangeEvent, useCallback, useEffect, useState } from 'react';
+import { type ChangeEvent, useRef, useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 
-import { useDebounce } from '@/hooks/useDebounce';
 import { useQueryParams } from '@/hooks/useQueryParams';
 
 export const PostsSearchBar = () => {
   const { queryParams, setQueryParams } = useQueryParams<{ fraza?: string }>();
   const [searchTerm, setSearchTerm] = useState(queryParams?.get('fraza') || '');
-  const debouncedValue = useDebounce(searchTerm, 500);
+  const debounceTimer = useRef<NodeJS.Timeout>();
 
-  const handleInputChange = useCallback(
-    ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
-      if (!value) {
-        setQueryParams({ fraza: undefined });
-        setSearchTerm('');
-        return;
-      }
+  const handleInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+    clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => {
+      setQueryParams({ fraza: value.trim() });
+    }, 500);
 
-      setSearchTerm(value);
-    },
-    [setQueryParams]
-  );
-
-  useEffect(() => {
-    setQueryParams({ fraza: debouncedValue });
-  }, [debouncedValue, setQueryParams]);
+    setSearchTerm(value);
+  };
 
   return (
     <label className='relative block w-full'>

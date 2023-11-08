@@ -12,6 +12,7 @@ export const NavbarLink = <T extends string>({ href, text }: Props<T>) => {
     <li>
       <ActiveLink
         href={href}
+        exact={false}
         className='text-lg font-medium text-smoky-100 hover:text-smoky-50'
         activeClassName='text-smoky-50'
         underlineClassName='bg-seagreen'

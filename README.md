@@ -9,20 +9,20 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 ## Features
 
 - Markdown support for easy formatting of blog posts
+- Posts filtering and searching
 - Tailwind CSS for customizable and reusable styling
+- Server-side form validation using Zod
 - Integration with MongoDB to store messages sent by contact form
-- Form validation using Formik and Yup
 - Responsive design that looks great on any device
 
 ## Technologies used
 
-- [Next.js](https://nextjs.org/docs) - a React.js framework for building server-side rendered web applications
-- [Tailwind CSS](https://tailwindcss.com/) - a utility-first CSS framework for building custom designs quickly and easily
-- [Formik](https://formik.org/docs/overview) - a library for building and validating forms in React
-- [Yup](https://docs.yup.io/) - a JavaScript schema validation library
-- [MongoDB](https://www.mongodb.com/docs/) - a NoSQL document database used for data storage and retrieval
-- [Remark](https://remark.js.org/) - a Markdown processor for parsing and rendering Markdown content
-- [Remark-HTML](https://github.com/remarkjs/remark-html) - a library for converting Markdown to HTML
+- [Next.js](https://nextjs.org/docs) - React.js framework for building server-side rendered web applications
+- [Tailwind CSS](https://tailwindcss.com/) - tility-first CSS framework for building custom designs quickly and easily
+- [Zod](https://zod.dev/) - JavaScript schema validation library
+- [MongoDB](https://www.mongodb.com/docs/) - NoSQL document database used for data storage and retrieval
+- [Remark](https://remark.js.org/) - Markdown processor for parsing and rendering Markdown content
+- [Remark-HTML](https://github.com/remarkjs/remark-html) - library for converting Markdown to HTML
 
 ## Usage
 

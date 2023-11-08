@@ -8,6 +8,9 @@ import { cn } from '@/lib/cn';
 
 type Props<T extends string> = {
   href: Route<T> | URL;
+  children?: React.ReactNode;
+  exact?: boolean;
+  className?: string;
   activeClassName?: string;
   underlineClassName?: string;
 } & LinkProps<T>;
@@ -15,17 +18,23 @@ type Props<T extends string> = {
 export const ActiveLink = <T extends string>({
   href,
   children,
+  exact = true,
   activeClassName,
   className,
   underlineClassName,
   ...rest
 }: Props<T>) => {
   const pathname = usePathname();
-  const isActive = pathname === (typeof href === 'object' ? href.pathname : href);
+  const url = typeof href === 'object' ? href.pathname : href;
+  const query = typeof href === 'object' ? href.query : {};
+  const isActive = exact ? pathname === url : pathname.includes(url);
 
   return (
     <Link
-      href={href}
+      href={{
+        pathname: url,
+        query,
+      }}
       className={cn('group max-w-fit', className, activeClassName && isActive)}
       {...rest}
     >

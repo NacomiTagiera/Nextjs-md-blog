@@ -18,7 +18,7 @@ export const PostListItem = ({
 }: Props) => {
   return (
     <li className='group relative max-w-sm overflow-hidden rounded-b-md bg-dark text-light shadow-md transition hover:bg-dark/70 md:max-w-none'>
-      <Link href={`/posty/${slug}`}>
+      <Link href={`/blog/${slug}`}>
         <CustomImage src={thumbnail} alt={title} width={414} height={233} priority={priority} />
         <div className='p-4'>
           <div className='mb-3 flex items-start justify-between'>

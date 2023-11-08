@@ -18,7 +18,7 @@ export const useQueryParams = <T>() => {
 
     const search = urlSearchParams.toString();
     const query = search ? `?${search}` : '';
-    router.replace(`${pathname}${query}` as Route);
+    router.replace(`${pathname}${query}` as Route, { scroll: false });
   };
 
   return { queryParams: searchParams, setQueryParams };

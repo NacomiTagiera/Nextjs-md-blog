@@ -5,7 +5,7 @@ import { convertText } from '@/utils/convertText';
 export type ContactInfoItem = {
   Icon: IconType;
   text: string;
-  type: 'e-mail' | 'numer telefonu' | 'lokalizacja';
+  type: 'e-mail' | 'telefon' | 'lokalizacja';
 };
 
 export const ContactInfoItem = ({ Icon, text, type }: ContactInfoItem) => {
