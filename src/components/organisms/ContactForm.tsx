@@ -31,7 +31,7 @@ export const ContactForm = () => {
   }, [errors, message]);
 
   return (
-    <form ref={ref} action={formAction} className='mx-auto md:mx-0'>
+    <form ref={ref} action={formAction} className='mx-auto md:col-span-3 md:mx-0'>
       <h2 className='text-heading -mt-1 pb-6 text-2xl font-bold sm:text-3xl md:pb-10 md:text-4xl lg:pb-7'>
         Napisz wiadomość
       </h2>

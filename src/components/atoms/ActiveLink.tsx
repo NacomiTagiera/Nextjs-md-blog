@@ -1,5 +1,7 @@
 'use client';
 
+import { type UrlObject } from 'url';
+
 import { type Route } from 'next';
 import Link, { type LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -7,7 +9,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/cn';
 
 type Props<T extends string> = {
-  href: Route<T> | URL;
+  href: Route<T> | UrlObject;
   children?: React.ReactNode;
   exact?: boolean;
   className?: string;
@@ -25,9 +27,10 @@ export const ActiveLink = <T extends string>({
   ...rest
 }: Props<T>) => {
   const pathname = usePathname();
+
   const url = typeof href === 'object' ? href.pathname : href;
   const query = typeof href === 'object' ? href.query : {};
-  const isActive = exact ? pathname === url : pathname.includes(url);
+  const isActive = exact ? pathname === url : pathname.includes(url!);
 
   return (
     <Link

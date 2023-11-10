@@ -26,18 +26,18 @@ export const sortingOptions: { value: SortingOption; label: string }[] = [
 export const contactInfo: ContactInfoItem[] = [
   {
     Icon: AiFillHome,
-    text: 'Białystok, Podlaskie, Polska',
+    text: 'Białystok, Polska',
     type: 'lokalizacja',
   },
   {
-    Icon: AiOutlineMail,
-    text: 'kubapawlak1051@wp.pl',
-    type: 'e-mail',
+    Icon: AiFillPhone,
+    text: '123 456 789',
+    type: 'telefon',
   },
   {
-    Icon: AiFillPhone,
-    text: '(+48) 123 456 789',
-    type: 'telefon',
+    Icon: AiOutlineMail,
+    text: 'kpawlak02@wp.pl',
+    type: 'e-mail',
   },
 ];
 

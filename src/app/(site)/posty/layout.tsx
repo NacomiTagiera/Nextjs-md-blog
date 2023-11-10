@@ -6,6 +6,10 @@ import { CategoryList } from '@/components/organisms/CategoryList';
 export const metadata: Metadata = {
   title: 'Wszystkie wpisy',
   description: 'Poznaj najlepsze tytuły ze świata gier z różnych kategorii.',
+  openGraph: {
+    title: 'Wszystkie wpisy',
+    description: 'Poznaj najlepsze tytuły ze świata gier z różnych kategorii.',
+  },
 };
 
 export default function PostListLayout({ children }: { children: React.ReactNode }) {

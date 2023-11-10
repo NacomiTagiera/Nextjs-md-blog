@@ -23,10 +23,13 @@ export const generateMetadata = ({ params: { kategoria } }: Props): Metadata => 
   return {
     title: category,
     description: `Wszystkie posty z kategorii ${category}`,
+    openGraph: {
+      title: category,
+      description: `Wszystkie posty z kategorii ${category}`,
+    },
   };
 };
 
 export default function CategoryPage({ params: { kategoria } }: Props) {
-  const posts = getAllPosts();
-  return <AllPosts posts={posts} postsCategory={kategoria} />;
+  return <AllPosts posts={getAllPosts()} postsCategory={kategoria} />;
 }

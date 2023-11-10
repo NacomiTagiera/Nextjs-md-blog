@@ -1,4 +1,4 @@
-# Kocham Gry
+# Kocham Gry - Next.js 13 Markdown Blog
 
 Welcome to my blog about my favorite video games, built with Next.js and Tailwind CSS! **Live demo**: [https://kocham-gry.vercel.app](https://kocham-gry.vercel.app)
 

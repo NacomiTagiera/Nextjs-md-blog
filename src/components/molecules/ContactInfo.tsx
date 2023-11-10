@@ -4,7 +4,7 @@ import { ContactInfoItem } from '../atoms/ContactInfoItem';
 
 export const ContactInfo = () => {
   return (
-    <div className='mb-10'>
+    <div className='mb-10 md:col-span-4'>
       <h2 className='text-heading -mt-1 pb-6 text-2xl font-bold sm:text-3xl md:pb-10 md:text-4xl lg:pb-7'>
         Moje dane
       </h2>

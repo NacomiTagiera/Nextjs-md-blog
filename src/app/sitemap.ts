@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categories = getAllCategories();
   const categoriesUrls = categories.map((category) => ({
-    url: `${baseUrl}/posty/kategorie/${category}`,
+    url: `${baseUrl}/posty/${category}`,
     lastModified: new Date(),
   }));
 

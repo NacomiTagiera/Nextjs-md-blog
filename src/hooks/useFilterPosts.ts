@@ -7,11 +7,15 @@ import { convertText } from '@/utils/convertText';
 
 export const useFilterPosts = (posts: Post[], postsCategory?: string) => {
   const searchParams = useSearchParams();
-  const searchQuery = searchParams.get('fraza');
+  const searchQuery = searchParams.get('query');
   const sortingOption = (searchParams.get('order') || 'najnowsze') as SortingOption;
 
   const filteredPosts = useMemo(() => {
-    let filteredPosts = posts || [];
+    if (!posts.length) {
+      return [];
+    }
+
+    let filteredPosts = posts;
 
     if (postsCategory) {
       filteredPosts = filteredPosts.filter(

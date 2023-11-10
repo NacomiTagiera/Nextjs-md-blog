@@ -7,11 +7,16 @@ export const metadata: Metadata = {
   title: 'Kontakt',
   description:
     'Masz do mnie jakieś pytania lub sugestie? Koniecznie daj mi o tym znać! Postaram się na nie odpowiedzieć tak szybko jak to możliwe.',
+  openGraph: {
+    title: 'Kontakt',
+    description:
+      'Masz do mnie jakieś pytania lub sugestie? Koniecznie daj mi o tym znać! Postaram się na nie odpowiedzieć tak szybko jak to możliwe.',
+  },
 };
 
 export default function ContactPage() {
   return (
-    <section className='mx-auto mt-20 grid grid-cols-1 gap-x-14 md:grid-cols-2'>
+    <section className='mx-auto mt-20 grid grid-cols-1 gap-x-14 md:grid-cols-7'>
       <ContactInfo />
       <ContactForm />
     </section>

@@ -6,14 +6,14 @@ import { BiSearch } from 'react-icons/bi';
 import { useQueryParams } from '@/hooks/useQueryParams';
 
 export const PostsSearchBar = () => {
-  const { queryParams, setQueryParams } = useQueryParams<{ fraza?: string }>();
-  const [searchTerm, setSearchTerm] = useState(queryParams?.get('fraza') || '');
+  const { queryParams, setQueryParams } = useQueryParams<{ query?: string }>();
+  const [searchTerm, setSearchTerm] = useState(queryParams?.get('query') || '');
   const debounceTimer = useRef<NodeJS.Timeout>();
 
   const handleInputChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
     clearTimeout(debounceTimer.current);
     debounceTimer.current = setTimeout(() => {
-      setQueryParams({ fraza: value.trim() });
+      setQueryParams({ query: value.trim() });
     }, 500);
 
     setSearchTerm(value);
