@@ -9,5 +9,9 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "tailwindCSS.classAttributes": ["className", "activeClassName"]
+  "tailwindCSS.classAttributes": ["className", "activeClassName"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }

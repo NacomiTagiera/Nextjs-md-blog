@@ -38,6 +38,7 @@ export const ActiveLink = <T extends string>({
         pathname: url,
         query,
       }}
+      aria-current={isActive ? 'page' : undefined}
       className={cn('group max-w-fit', className, activeClassName && isActive)}
       {...rest}
     >

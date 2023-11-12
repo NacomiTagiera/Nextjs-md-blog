@@ -21,7 +21,7 @@ export const generateMetadata = ({ params: { kategoria } }: Props): Metadata => 
   }).replaceAll('-', ' ');
 
   return {
-    title: category,
+    title: `${category} | Kocham Gry`,
     description: `Wszystkie posty z kategorii ${category}`,
     openGraph: {
       title: category,

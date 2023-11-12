@@ -1,9 +1,11 @@
+import { type UrlObject } from 'url';
+
 import { type Route } from 'next';
 
 import { ActiveLink } from '../atoms/ActiveLink';
 
 type Props<T extends string> = {
-  href: Route<T> | URL;
+  href: Route<T> | UrlObject;
   text: string;
 };
 
