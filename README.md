@@ -34,7 +34,6 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 
 ## To-Do
 
-- Reusable Input and Label components
 - Cypress e2e tests
 
 ## Getting Started
