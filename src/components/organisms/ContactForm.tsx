@@ -45,6 +45,7 @@ export const ContactForm = () => {
           max={50}
           errors={errors?.name}
           disabled={pending}
+          data-cy='contact-name-input'
         />
         <ContactFormField
           name='email'
@@ -54,6 +55,7 @@ export const ContactForm = () => {
           required
           errors={errors?.email}
           disabled={pending}
+          data-cy='contact-email-input'
         />
         <ContactFormField
           component='textarea'
@@ -64,6 +66,7 @@ export const ContactForm = () => {
           maxLength={500}
           errors={errors?.message}
           disabled={pending}
+          data-cy='contact-message-input'
         />
       </fieldset>
       <ContactFormSubmitButton />

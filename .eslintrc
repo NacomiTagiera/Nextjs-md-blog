@@ -9,6 +9,7 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:cypress/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "prettier"

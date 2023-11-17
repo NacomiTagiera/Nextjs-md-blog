@@ -1,4 +1,4 @@
-import Image, { type ImageProps } from 'next/image';
+import NextImage, { type ImageProps } from 'next/image';
 
 import { cn } from '@/lib/cn';
 
@@ -28,7 +28,7 @@ export const CustomImage = ({
   ...rest
 }: ImageProps) => {
   return (
-    <Image
+    <NextImage
       className={cn('object-cover object-center', className)}
       src={src}
       alt={alt}
