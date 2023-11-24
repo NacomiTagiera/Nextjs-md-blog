@@ -36,6 +36,7 @@ export const CategoryListLink = ({ category }: { category: string }) => {
           },
         }}
         scroll={false}
+        data-cy='category-link'
       >
         {convertText(category, { capitalize: true })}
       </ActiveLink>

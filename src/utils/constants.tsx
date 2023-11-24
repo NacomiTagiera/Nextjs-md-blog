@@ -13,8 +13,8 @@ import { type ContactInfoItem } from '@/components/atoms/ContactInfoItem';
 import { type SortingOption } from '@/types';
 
 export const navLinks: { text: string; href: Route }[] = [
-  { text: 'Posty', href: '/posty' },
-  { text: 'Kontakt', href: '/kontakt' },
+  { text: 'posty', href: '/posty' },
+  { text: 'kontakt', href: '/kontakt' },
 ];
 
 export const sortingOptions: { value: SortingOption; label: string }[] = [

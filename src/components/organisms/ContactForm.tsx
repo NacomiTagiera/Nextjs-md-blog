@@ -32,7 +32,10 @@ export const ContactForm = () => {
 
   return (
     <form ref={ref} action={formAction} className='mx-auto md:col-span-3 md:mx-0'>
-      <h2 className='text-heading -mt-1 pb-6 text-2xl font-bold sm:text-3xl md:pb-10 md:text-4xl lg:pb-7'>
+      <h2
+        className='text-heading -mt-1 pb-6 text-2xl font-bold sm:text-3xl md:pb-10 md:text-4xl lg:pb-7'
+        data-cy='contact-form-header'
+      >
         Napisz wiadomość
       </h2>
       <fieldset className='mb-5 flex flex-col items-center gap-y-6'>

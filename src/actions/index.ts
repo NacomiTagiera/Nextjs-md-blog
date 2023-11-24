@@ -31,7 +31,7 @@ export const sendForm = async (_prevState: FormState, formData: FormData) => {
     await insertContactForm(validatedFields.data);
 
     return {
-      message: 'Wiadomość została wysyłana!',
+      message: 'Wiadomość została wysłana!',
     };
   } catch (error) {
     return {

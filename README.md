@@ -26,11 +26,12 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 
 ## What did I learn?
 
-- Working with forms: server actions, useFormState and useFormStatus hooks
+- Working with forms in Next.js 13: server actions, useFormState, and useFormStatus hooks
 - Defining dynamic routes and generating static params
 - Updating query params in Next.js
+- SEO optimazation techniques
 - Zod schema declaration and validation
-- Storing data in MongoDB
+- Sending requests to the MongoDB database and storing data
 
 ## To-Do
 

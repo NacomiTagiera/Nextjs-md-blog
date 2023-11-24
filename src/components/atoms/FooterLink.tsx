@@ -7,7 +7,13 @@ type Props = {
 };
 
 export const FooterLink = ({ Icon, href, name }: Props) => (
-  <a href={href} target='_blank' rel='noopener noreferrer' className='hover:animate-jelly'>
+  <a
+    href={href}
+    target='_blank'
+    rel='noopener noreferrer'
+    className='hover:animate-jelly'
+    data-cy='footer-social-link'
+  >
     <span className='sr-only'>{name}</span>
     <Icon className='h-9 w-9' aria-hidden />
   </a>
