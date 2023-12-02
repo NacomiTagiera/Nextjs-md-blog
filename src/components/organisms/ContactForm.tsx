@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { toast } from 'react-toastify';
 
 import { type FormState, sendForm } from '@/actions';
@@ -12,7 +12,6 @@ import { ContactFormSubmitButton } from '../atoms/ContactFormSubmitButton';
 export const ContactForm = () => {
   const initialState: FormState = { errors: undefined, message: undefined };
   const [state, formAction] = useFormState(sendForm, initialState);
-  const { pending } = useFormStatus();
   const ref = useRef<HTMLFormElement>(null);
 
   const { errors, message } = state;
@@ -47,7 +46,6 @@ export const ContactForm = () => {
           required
           max={50}
           errors={errors?.name}
-          disabled={pending}
           data-cy='contact-name-input'
         />
         <ContactFormField
@@ -57,7 +55,6 @@ export const ContactForm = () => {
           type='email'
           required
           errors={errors?.email}
-          disabled={pending}
           data-cy='contact-email-input'
         />
         <ContactFormField
@@ -68,7 +65,6 @@ export const ContactForm = () => {
           required
           maxLength={500}
           errors={errors?.message}
-          disabled={pending}
           data-cy='contact-message-input'
         />
       </fieldset>

@@ -14,7 +14,7 @@ export const Footer = () => {
             ))}
           </div>
           <p className='mt-8 text-center text-base uppercase md:order-1 md:mt-0 md:text-lg lg:text-left'>
-            Jakub Pawlak &copy; 2023
+            Jakub Pawlak &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

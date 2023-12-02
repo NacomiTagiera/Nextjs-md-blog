@@ -3,6 +3,10 @@
 This blog is dedicated to showcasing my favorite video games and sharing my experiences with them. With the use of the latest web technologies and design trends, I have created a modern and responsive blog that is easy to navigate and enjoyable to use. From action-packed first-person shooters to engaging role-playing games, this blog covers a variety of genres and titles!
 **Live demo**: [https://kocham-gry.vercel.app](https://kocham-gry.vercel.app)
 
+![Home Page](https://github.com/NacomiTagiera/Nextjs-md-blog/assets/106376178/508db29f-6e5a-4cef-a87c-a87f5d8f4feb)
+![Posts Page](https://github.com/NacomiTagiera/Nextjs-md-blog/assets/106376178/668138dc-9ce5-42b0-b061-64c68342e8af)
+![Contact Page](https://github.com/NacomiTagiera/Nextjs-md-blog/assets/106376178/599a399a-a40d-4e03-b0f1-8defeff0f5ad)
+
 ## Technologies used
 
 - [Next.js](https://nextjs.org/docs) - React.js framework for building server-side rendered web applications
@@ -11,7 +15,6 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 - [MongoDB](https://www.mongodb.com/docs/) - NoSQL document database used for data storage and retrieval
 - [Remark](https://remark.js.org/) - Markdown processor for parsing and rendering Markdown content
 - [Remark-HTML](https://github.com/remarkjs/remark-html) - library for converting Markdown to HTML
--
 
 ## Features
 
@@ -26,7 +29,7 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 
 ## What did I learn?
 
-- Working with forms in Next.js 13: server actions, useFormState, and useFormStatus hooks
+- Working with forms in Next.js 14: server actions, useFormState, and useFormStatus hooks
 - Defining dynamic routes and generating static params
 - Updating query params in Next.js
 - SEO optimazation techniques

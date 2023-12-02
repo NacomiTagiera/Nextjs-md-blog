@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className='mx-auto mt-20 grid grid-cols-1 gap-x-14 md:grid-cols-7'>
+    <section className='mx-auto mt-20 grid grid-cols-1 gap-x-14 md:mt-52 md:grid-cols-7'>
       <ContactInfo />
       <ContactForm />
     </section>
