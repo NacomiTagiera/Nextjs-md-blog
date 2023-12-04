@@ -36,6 +36,7 @@ export const PostsSearchBar = () => {
         spellCheck={false}
         value={searchTerm}
         onChange={handleInputChange}
+        data-cy='search-input'
       />
     </label>
   );

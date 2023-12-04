@@ -9,7 +9,10 @@ export const PostArticleHeader = ({ date, excerpt, thumbnail, title }: Props) =>
   return (
     <>
       <PostDate date={date} className='text-seagreen md:text-lg' />
-      <h2 className='mb-4 text-center text-3xl font-bold tracking-wide sm:text-4xl md:mb-6 md:text-5xl'>
+      <h2
+        className='mb-4 text-center text-3xl font-bold tracking-wide sm:text-4xl md:mb-6 md:text-5xl'
+        data-cy='blog-post-header'
+      >
         {title}
       </h2>
       <p className='lead'>{excerpt}</p>

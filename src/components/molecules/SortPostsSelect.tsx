@@ -23,6 +23,7 @@ export const SortPostsSelect = () => {
         id='sorting-options'
         onChange={handleSelect}
         className='block w-full rounded-s-lg border border-smoky-300 bg-smoky-50 p-2 text-smoky-900 shadow-sm focus:border-seagreen focus:bg-light focus:outline-none focus:ring-1 focus:ring-seagreen-300'
+        data-cy='sort-select'
       >
         {sortingOptions.map(({ value, label }) => (
           <option key={value} value={value}>
