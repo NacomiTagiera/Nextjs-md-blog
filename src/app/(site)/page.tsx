@@ -22,6 +22,7 @@ export default function HomePage() {
       <Link
         href='/posty'
         className='absolute bottom-0 right-0 inline-flex items-center text-lg font-semibold text-seagreen-400 transition hover:text-seagreen'
+        data-cy='all-posts-link'
       >
         Wszystkie artykuły <RiArrowRightFill className='ms-1 h-6 w-6' />
       </Link>
