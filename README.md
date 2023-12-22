@@ -15,6 +15,7 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 - [MongoDB](https://www.mongodb.com/docs/) - NoSQL document database used for data storage and retrieval
 - [Remark](https://remark.js.org/) - Markdown processor for parsing and rendering Markdown content
 - [Remark-HTML](https://github.com/remarkjs/remark-html) - library for converting Markdown to HTML
+- [Cypress](https://docs.cypress.io/guides/overview/why-cypress) - JavaScript end-to-end testing framework
 
 ## Features
 
@@ -26,6 +27,7 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 - Server-side form validation using Zod
 - Customizable and reusable styling with Tailwind CSS
 - Integration with MongoDB to store messages sent by contact form
+- End-to-End tests for the contact form and posts page with Cypress
 
 ## What did I learn?
 
@@ -35,10 +37,7 @@ This blog is dedicated to showcasing my favorite video games and sharing my expe
 - SEO optimazation techniques
 - Zod schema declaration and validation
 - Sending requests to the MongoDB database and storing data
-
-## To-Do
-
-- Cypress e2e tests
+- End-to-End testing with Cypress
 
 ## Getting Started
 
@@ -63,3 +62,28 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Running E2E tests
+
+To run the Cypress E2E tests, follow these steps:
+
+1. Open a terminal in your project directory.
+2. Run the following command to open the Cypress Test Runner:
+
+```bash
+npx cypress open
+```
+
+This will open the Cypress Test Runner window.
+
+3. Click on the test file you want to run in the Cypress Test Runner.
+
+## Running E2E tests in headless mode
+
+If you prefer to run the tests in the terminal without opening the Cypress Test Runner window, you can use the following command:
+
+```bash
+npx cypress run
+```
+
+This will execute the tests headlessly, and the results will be displayed in the terminal.
